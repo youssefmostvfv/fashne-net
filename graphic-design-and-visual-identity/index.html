@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,8 @@
     <!-- Google Font: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <!-- AOS Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
@@ -22,13 +24,16 @@
             scroll-behavior: smooth;
             scroll-padding-top: 85px;
         }
-        * { 
-            font-family: 'Cairo', sans-serif; 
+
+        * {
+            font-family: 'Cairo', sans-serif;
         }
-        body { 
-            background: #faf9f6; 
+
+        body {
+            background: #faf9f6;
             overflow-x: hidden;
         }
+
         /* Glassmorphic utilities */
         .glass-card {
             background: rgba(255, 255, 255, 0.85);
@@ -36,15 +41,18 @@
         }
     </style>
 </head>
+
 <body class="text-gray-800 antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- ===== NAVBAR (ثابت أعلى الصفحة) ===== -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-xs transition-all duration-300">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-xs transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-            
+
             <!-- Logo Brand -->
-            <a href="../index.html" class="flex items-center gap-3 group">
-                <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 p-0.5 shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300">
+            <a href="../" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 p-0.5 shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300">
                     <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5">
                         <img src="../img/logo.png" alt="شركة الفشني" class="w-full h-full object-contain">
                     </div>
@@ -57,54 +65,67 @@
 
             <!-- Desktop Nav Links -->
             <nav class="hidden lg:flex items-center gap-8">
-                <a href="../index.html" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
-                
+                <a href="../" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
+
                 <!-- Services Trigger (Opens Side Drawer) -->
-                <button type="button" id="services-drawer-toggle" class="font-bold text-blue-600 hover:text-blue-700 transition-colors inline-flex items-center gap-1.5 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100">
+                <button type="button" id="services-drawer-toggle"
+                    class="font-bold text-blue-600 hover:text-blue-700 transition-colors inline-flex items-center gap-1.5 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100">
                     <span>الخدمات</span>
                     <i class="fas fa-chevron-down text-xs text-blue-500"></i>
                 </button>
 
-                <a href="../our-portfolio/index.html" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">سابقة أعمالنا</a>
-                <a href="../about-us/index.html" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">من نحن</a>
-                <a href="../contact-us/index.html" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">تواصل معنا</a>
+                <a href="../our-portfolio/" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">سابقة
+                    أعمالنا</a>
+                <a href="../about-us/" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">من نحن</a>
+                <a href="../contact-us/" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">تواصل
+                    معنا</a>
             </nav>
 
             <!-- CTA Call Button & Mobile Menu Toggle -->
             <div class="flex items-center gap-3">
-                <a href="../contact-us/index.html" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-extrabold text-sm px-5 py-2.5 rounded-full shadow-md shadow-blue-500/20 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <a href="../contact-us/"
+                    class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-extrabold text-sm px-5 py-2.5 rounded-full shadow-md shadow-blue-500/20 hover:shadow-lg transition-all duration-300 hover:scale-105">
                     <i class="fas fa-paper-plane text-xs"></i>
                     <span>احجز استشارة</span>
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button type="button" id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-slate-200 transition-colors" aria-label="فتح القائمة">
+                <button type="button" id="mobile-menu-btn"
+                    class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-slate-200 transition-colors"
+                    aria-label="فتح القائمة">
                     <i class="fas fa-bars text-lg" id="menu-icon"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-gray-200/90 shadow-xl px-4 pt-3 pb-6 transition-all">
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-gray-200/90 shadow-xl px-4 pt-3 pb-6 transition-all">
             <div class="flex flex-col space-y-3 max-w-md mx-auto">
-                <a href="../index.html" class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                <a href="../"
+                    class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     <i class="fas fa-home text-blue-500 ml-2"></i>الرئيسية
                 </a>
-                <button type="button" id="mobile-services-drawer-toggle" class="w-full text-right px-4 py-3 rounded-xl font-bold text-blue-600 bg-blue-50 flex items-center justify-between">
+                <button type="button" id="mobile-services-drawer-toggle"
+                    class="w-full text-right px-4 py-3 rounded-xl font-bold text-blue-600 bg-blue-50 flex items-center justify-between">
                     <span class="flex items-center"><i class="fas fa-layer-group text-blue-500 ml-2"></i>الخدمات</span>
                     <i class="fas fa-chevron-left text-xs text-blue-400"></i>
                 </button>
-                <a href="../our-portfolio/index.html" class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                <a href="../our-portfolio/"
+                    class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     <i class="fas fa-briefcase text-blue-500 ml-2"></i>سابقة أعمالنا
                 </a>
-                <a href="../about-us/index.html" class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                <a href="../about-us/"
+                    class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     <i class="fas fa-users text-blue-500 ml-2"></i>من نحن
                 </a>
-                <a href="../contact-us/index.html" class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                <a href="../contact-us/"
+                    class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     <i class="fas fa-envelope text-blue-500 ml-2"></i>تواصل معنا
                 </a>
                 <div class="border-t border-gray-100 pt-3 space-y-2">
-                    <a href="tel:+201111263618" class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-50 text-blue-700 font-bold">
+                    <a href="tel:+201111263618"
+                        class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-50 text-blue-700 font-bold">
                         <i class="fas fa-phone-alt"></i>
                         <span>اتصل بنا: 01111263618</span>
                     </a>
@@ -115,39 +136,54 @@
 
     <!-- ===== MAIN CONTENT ===== -->
     <main class="overflow-hidden bg-[#faf9f6] pt-20">
-        
+
         <!-- ===== HERO SECTION ===== -->
-        <section class="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-slate-50" id="top">
-            
+        <section
+            class="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-slate-50"
+            id="top">
+
             <!-- Background glows -->
-            <div class="absolute top-0 right-10 w-[500px] h-[500px] bg-blue-400/5 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute bottom-0 left-10 w-[500px] h-[500px] bg-sky-400/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div
+                class="absolute top-0 right-10 w-[500px] h-[500px] bg-blue-400/5 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-10 w-[500px] h-[500px] bg-sky-400/5 rounded-full blur-[120px] pointer-events-none">
+            </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-                    
+
                     <!-- Right: Text Content -->
                     <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-right" data-aos="fade-right">
-                        
-                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs sm:text-sm font-extrabold shadow-xs">
+
+                        <div
+                            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs sm:text-sm font-extrabold shadow-xs">
                             <i class="fas fa-palette text-blue-600"></i>
                             <span>التصميم الإبداعي والهوية التجارية</span>
                         </div>
 
-                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight tracking-tight">
+                        <h1
+                            class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight tracking-tight">
                             التصميم الجرافيكي <br class="hidden sm:inline" />
                             <span class="text-blue-600">والهوية البصرية</span>
                         </h1>
 
                         <!-- Verbatim Description (NO changes to text content, only natural SEO links) -->
-                        <div class="border-r-4 border-r-blue-600 pr-5 sm:pr-6 py-2 bg-gradient-to-r from-blue-50/60 via-white to-transparent rounded-r-xl">
+                        <div
+                            class="border-r-4 border-r-blue-600 pr-5 sm:pr-6 py-2 bg-gradient-to-r from-blue-50/60 via-white to-transparent rounded-r-xl">
                             <p class="text-gray-800 text-base sm:text-lg lg:text-xl font-bold leading-relaxed">
-                                هويتك البصرية هي أول انطباع عن علامتك التجارية قبل أن يتعرف العميل على جودة خدماتك ويرى علامتك التجارية ولذلك نعمل في <a href="../about-us/index.html" class="text-blue-600 hover:text-blue-700 underline font-black">الفشني</a> على بناء تصاميم <a href="../social-media-management-and-content-writing/index.html" class="text-blue-600 hover:text-blue-700 underline font-black">وهوية بصرية</a> تمنح علامتك حضورًا احترافيًا واضحًا ومتناسقًا
+                                هويتك البصرية هي أول انطباع عن علامتك التجارية قبل أن يتعرف العميل على جودة خدماتك ويرى
+                                علامتك التجارية ولذلك نعمل في <a href="../about-us/"
+                                    class="text-blue-600 hover:text-blue-700 underline font-black">الفشني</a> على بناء
+                                تصاميم <a href="../social-media-management-and-content-writing/"
+                                    class="text-blue-600 hover:text-blue-700 underline font-black">وهوية بصرية</a> تمنح
+                                علامتك حضورًا احترافيًا واضحًا ومتناسقًا
                             </p>
                         </div>
 
                         <div class="flex flex-wrap gap-4 pt-2">
-                            <a href="../index.html#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm px-7 py-3.5 rounded-full shadow-md shadow-blue-500/20 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            <a href="../index.html#contact"
+                                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm px-7 py-3.5 rounded-full shadow-md shadow-blue-500/20 hover:shadow-lg transition-all duration-300 hover:scale-105">
                                 <i class="fas fa-paper-plane text-xs"></i>
                                 <span>ابدأ تصميم هويتك الآن</span>
                             </a>
@@ -159,649 +195,820 @@
                     <div class="lg:col-span-5 relative" data-aos="fade-left">
                         <div class="relative mx-auto max-w-[420px] lg:max-w-none">
                             <!-- Premium frame wrapper -->
-                            <div class="rounded-[32px] overflow-hidden border-8 border-white shadow-xl aspect-[4/3] sm:aspect-square relative group">
-                                <img src="../img/service_branding.png" alt="التصميم الجرافيكي والهوية البصرية" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-blue-600/5 group-hover:opacity-0 transition-opacity"></div>
+                            <div
+                                class="rounded-[32px] overflow-hidden border-8 border-white shadow-xl aspect-[4/3] sm:aspect-square relative group">
+                                <img src="../img/service_branding.png" alt="التصميم الجرافيكي والهوية البصرية"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-blue-600/5 group-hover:opacity-0 transition-opacity">
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-        <!-- ===== UNIFIED VISUAL IDENTITY & GRAPHIC DESIGN HUB ===== -->
-        <section class="py-16 sm:py-24 bg-slate-50 relative overflow-hidden" id="visual-identity-hub">
-            <!-- Ambient glows -->
-            <div class="absolute top-0 right-10 w-[550px] h-[550px] bg-blue-400/5 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute bottom-0 left-10 w-[550px] h-[550px] bg-sky-400/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                
-                <!-- Unified Main Header -->
-                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16" data-aos="fade-up">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/80 text-blue-700 text-xs sm:text-sm font-extrabold">
-                        <i class="fas fa-shapes text-blue-600"></i>
-                        <span>الهوية البصرية المتكاملة</span>
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
-                        لا نصمم الشعار منفصلًا عن باقي العلامة
-                    </h2>
+            <!-- ===== UNIFIED VISUAL IDENTITY & GRAPHIC DESIGN HUB ===== -->
+            <section class="py-16 sm:py-24 bg-slate-50 relative overflow-hidden" id="visual-identity-hub">
+                <!-- Ambient glows -->
+                <div
+                    class="absolute top-0 right-10 w-[550px] h-[550px] bg-blue-400/5 rounded-full blur-[120px] pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-0 left-10 w-[550px] h-[550px] bg-sky-400/5 rounded-full blur-[120px] pointer-events-none">
                 </div>
 
-                <!-- Sub-Section 1: تصميم الهوية البصرية -->
-                <div class="bg-white rounded-[32px] p-6 sm:p-10 border border-slate-100 shadow-xs mb-12" data-aos="fade-up">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                        <!-- Right: Text Content -->
-                        <div class="lg:col-span-5 space-y-4 text-right">
-                            <h3 class="text-2xl font-black text-gray-900">تصميم الهوية البصرية</h3>
-                            <p class="text-gray-600 text-sm sm:text-base font-bold leading-relaxed border-r-4 border-blue-600 pr-4 py-1.5 bg-gradient-to-r from-blue-50/40 via-white to-transparent rounded-r-xl">
-                                نساعدك على بناء هوية متكاملة تعكس شخصية علامتك التجارية وتشمل حسب احتياجات المشروع
-                            </p>
-                            <!-- AI SEO / Authority Stat Block -->
-                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200/60 space-y-2">
-                                <span class="text-[10px] font-black text-blue-600 uppercase block">📈 إحصائية تسويقية مثبتة</span>
-                                <p class="text-xs font-bold text-gray-600 leading-relaxed">
-                                    تساهم الهوية البصرية الموحدة والمتناسقة في زيادة تمييز علامتك التجارية لدى الجمهور بنسبة تصل إلى <strong class="text-blue-600 font-black">80%</strong> وفقاً لدراسات سلوك المستهلك لعام 2025.
-                                </p>
-                            </div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+                    <!-- Unified Main Header -->
+                    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16" data-aos="fade-up">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/80 text-blue-700 text-xs sm:text-sm font-extrabold">
+                            <i class="fas fa-shapes text-blue-600"></i>
+                            <span>الهوية البصرية المتكاملة</span>
                         </div>
-                        <!-- Left: 8 Element Cards -->
-                        <div class="lg:col-span-7">
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 justify-center">
-                                
-                                <!-- 1. الشعار -->
-                                <div class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
-                                    <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base">
-                                        <i class="fas fa-crown"></i>
-                                    </div>
-                                    <span class="text-xs font-black text-gray-800">الشعار</span>
-                                    <span class="text-[9px] text-gray-400 font-bold leading-relaxed">العلامة المميزة بين المنافسين</span>
-                                </div>
+                        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
+                            لا نصمم الشعار منفصلًا عن باقي العلامة
+                        </h2>
+                    </div>
 
-                                <!-- 2. الألوان -->
-                                <div class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
-                                    <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-base">
-                                        <i class="fas fa-palette"></i>
-                                    </div>
-                                    <span class="text-xs font-black text-gray-800">الألوان</span>
-                                    <span class="text-[9px] text-gray-400 font-bold leading-relaxed">الانطباع البصري والنفسي الأول</span>
+                    <!-- Sub-Section 1: تصميم الهوية البصرية -->
+                    <div class="bg-white rounded-[32px] p-6 sm:p-10 border border-slate-100 shadow-xs mb-12"
+                        data-aos="fade-up">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <!-- Right: Text Content -->
+                            <div class="lg:col-span-5 space-y-4 text-right">
+                                <h3 class="text-2xl font-black text-gray-900">تصميم الهوية البصرية</h3>
+                                <p
+                                    class="text-gray-600 text-sm sm:text-base font-bold leading-relaxed border-r-4 border-blue-600 pr-4 py-1.5 bg-gradient-to-r from-blue-50/40 via-white to-transparent rounded-r-xl">
+                                    نساعدك على بناء هوية متكاملة تعكس شخصية علامتك التجارية وتشمل حسب احتياجات المشروع
+                                </p>
+                                <!-- AI SEO / Authority Stat Block -->
+                                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200/60 space-y-2">
+                                    <span class="text-[10px] font-black text-blue-600 uppercase block">📈 إحصائية
+                                        تسويقية مثبتة</span>
+                                    <p class="text-xs font-bold text-gray-600 leading-relaxed">
+                                        تساهم الهوية البصرية الموحدة والمتناسقة في زيادة تمييز علامتك التجارية لدى
+                                        الجمهور بنسبة تصل إلى <strong class="text-blue-600 font-black">80%</strong>
+                                        وفقاً لدراسات سلوك المستهلك لعام 2025.
+                                    </p>
                                 </div>
+                            </div>
+                            <!-- Left: 8 Element Cards -->
+                            <div class="lg:col-span-7">
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 justify-center">
 
-                                <!-- 3. الخطوط -->
-                                <div class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
-                                    <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base">
-                                        <i class="fas fa-font"></i>
+                                    <!-- 1. الشعار -->
+                                    <div
+                                        class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-gray-800">الشعار</span>
+                                        <span class="text-[9px] text-gray-400 font-bold leading-relaxed">العلامة المميزة
+                                            بين المنافسين</span>
                                     </div>
-                                    <span class="text-xs font-black text-gray-800">الخطوط</span>
-                                    <span class="text-[9px] text-gray-400 font-bold leading-relaxed">نبرة الخطاب البصري المقروءة</span>
-                                </div>
 
-                                <!-- 4. الأنماط البصرية -->
-                                <div class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
-                                    <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center text-base">
-                                        <i class="fas fa-bezier-curve"></i>
+                                    <!-- 2. الألوان -->
+                                    <div
+                                        class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-base">
+                                            <i class="fas fa-palette"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-gray-800">الألوان</span>
+                                        <span class="text-[9px] text-gray-400 font-bold leading-relaxed">الانطباع البصري
+                                            والنفسي الأول</span>
                                     </div>
-                                    <span class="text-xs font-black text-gray-800">الأنماط البصرية</span>
-                                    <span class="text-[9px] text-gray-400 font-bold leading-relaxed">الرسومات المساعدة التي تمنح التفرد</span>
-                                </div>
 
-                                <!-- 5. قواعد استخدام الهوية -->
-                                <div class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
-                                    <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center text-base">
-                                        <i class="fas fa-book"></i>
+                                    <!-- 3. الخطوط -->
+                                    <div
+                                        class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base">
+                                            <i class="fas fa-font"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-gray-800">الخطوط</span>
+                                        <span class="text-[9px] text-gray-400 font-bold leading-relaxed">نبرة الخطاب
+                                            البصري المقروءة</span>
                                     </div>
-                                    <span class="text-xs font-black text-gray-700">قواعد استخدام الهوية</span>
-                                    <span class="text-[9px] text-gray-400 font-bold leading-relaxed">الدليل المرجعي لحفظ اتساق البراند</span>
-                                </div>
 
-                                <!-- 6. المطبوعات -->
-                                <div class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
-                                    <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center text-base">
-                                        <i class="fas fa-print"></i>
+                                    <!-- 4. الأنماط البصرية -->
+                                    <div
+                                        class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center text-base">
+                                            <i class="fas fa-bezier-curve"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-gray-800">الأنماط البصرية</span>
+                                        <span class="text-[9px] text-gray-400 font-bold leading-relaxed">الرسومات
+                                            المساعدة التي تمنح التفرد</span>
                                     </div>
-                                    <span class="text-xs font-black text-gray-800">المطبوعات</span>
-                                    <span class="text-[9px] text-gray-400 font-bold leading-relaxed">التمثيل المادي الملموس على أرض الواقع</span>
-                                </div>
 
-                                <!-- 7. التطبيقات الرقمية -->
-                                <div class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
-                                    <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base">
-                                        <i class="fas fa-laptop-code"></i>
+                                    <!-- 5. قواعد استخدام الهوية -->
+                                    <div
+                                        class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center text-base">
+                                            <i class="fas fa-book"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-gray-700">قواعد استخدام الهوية</span>
+                                        <span class="text-[9px] text-gray-400 font-bold leading-relaxed">الدليل المرجعي
+                                            لحفظ اتساق البراند</span>
                                     </div>
-                                    <span class="text-xs font-black text-gray-700">التطبيقات الرقمية</span>
-                                    <span class="text-[9px] text-gray-400 font-bold leading-relaxed">مواءمة الهوية عبر الويب والتطبيقات</span>
-                                </div>
 
-                                <!-- 8. قوالب التواصل الاجتماعي -->
-                                <div class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
-                                    <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-base">
-                                        <i class="fas fa-share-nodes"></i>
+                                    <!-- 6. المطبوعات -->
+                                    <div
+                                        class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center text-base">
+                                            <i class="fas fa-print"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-gray-800">المطبوعات</span>
+                                        <span class="text-[9px] text-gray-400 font-bold leading-relaxed">التمثيل المادي
+                                            الملموس على أرض الواقع</span>
                                     </div>
-                                    <span class="text-xs font-black text-gray-700">قوالب التواصل الاجتماعي</span>
-                                    <span class="text-[9px] text-gray-400 font-bold leading-relaxed">الإطارات الموحدة لترسيخ الوعي البصري</span>
-                                </div>
 
+                                    <!-- 7. التطبيقات الرقمية -->
+                                    <div
+                                        class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base">
+                                            <i class="fas fa-laptop-code"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-gray-700">التطبيقات الرقمية</span>
+                                        <span class="text-[9px] text-gray-400 font-bold leading-relaxed">مواءمة الهوية
+                                            عبر الويب والتطبيقات</span>
+                                    </div>
+
+                                    <!-- 8. قوالب التواصل الاجتماعي -->
+                                    <div
+                                        class="flex flex-col items-center gap-1.5 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 shadow-2xs hover:shadow-xs transition-all text-center">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-base">
+                                            <i class="fas fa-share-nodes"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-gray-700">قوالب التواصل الاجتماعي</span>
+                                        <span class="text-[9px] text-gray-400 font-bold leading-relaxed">الإطارات
+                                            الموحدة لترسيخ الوعي البصري</span>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Sub-Section 2: خدمات التصميم الجرافيكي -->
-                <div class="bg-white rounded-[32px] p-6 sm:p-10 border border-slate-100 shadow-xs" data-aos="fade-up" data-aos-delay="100">
-                    <div class="space-y-6 mb-8 text-right">
-                        <h3 class="text-2xl font-black text-gray-900">خدمات التصميم الجرافيكي</h3>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
-                        
-                        <!-- Service 1 -->
-                        <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-blue-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up">
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-blue-500 to-sky-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300"></div>
-                            <div class="space-y-4">
-                                <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg shadow-3xs group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                                    <i class="fas fa-photo-film"></i>
+                    <!-- Sub-Section 2: خدمات التصميم الجرافيكي -->
+                    <div class="bg-white rounded-[32px] p-6 sm:p-10 border border-slate-100 shadow-xs"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="space-y-6 mb-8 text-right">
+                            <h3 class="text-2xl font-black text-gray-900">خدمات التصميم الجرافيكي</h3>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
+
+                            <!-- Service 1 -->
+                            <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-blue-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                                data-aos="fade-up">
+                                <div
+                                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-blue-500 to-sky-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300">
                                 </div>
-                                <h4 class="font-black text-base text-gray-900 group-hover:text-blue-600 transition-colors">تصميم منشورات التواصل الاجتماعي</h4>
-                                <p class="text-gray-500 text-xs font-bold leading-relaxed">
-                                    تصاميم احترافية للحسابات ومنصات السوشيال ميديا
-                                </p>
-                                <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-500 text-[8px]"></i>
-                                        <span class="font-bold">بوستات انستقرام وفيس بوك مبتكرة</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-500 text-[8px]"></i>
-                                        <span class="font-bold">تنسيق الهوية البصرية للـ Grid</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-500 text-[8px]"></i>
-                                        <span class="font-bold">أبعاد مخصصة ومحسنة للموبايل</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-blue-600 flex items-center gap-1.5">
-                                <i class="fas fa-bullseye text-[12px]"></i>
-                                <span>لزيادة التفاعل اليومي المباشر</span>
-                            </div>
-                        </div>
-
-                        <!-- Service 2 -->
-                        <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-sky-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="50">
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-sky-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300"></div>
-                            <div class="space-y-4">
-                                <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-lg shadow-3xs group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
-                                    <i class="fas fa-rectangle-ad"></i>
-                                </div>
-                                <h4 class="font-black text-base text-gray-900 group-hover:text-sky-600 transition-colors">تصميم الإعلانات</h4>
-                                <p class="text-gray-500 text-xs font-bold leading-relaxed">
-                                    تصميم المواد الإعلانية للحملات
-                                </p>
-                                <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-sky-500 text-[8px]"></i>
-                                        <span class="font-bold">تصميم بنرات حملات جوجل الإعلانية</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-sky-500 text-[8px]"></i>
-                                        <span class="font-bold">محتوى بصري لإعلانات سناب وتيك توك</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-sky-500 text-[8px]"></i>
-                                        <span class="font-bold">تصاميم تركز على لفت الانتباه والتحويل</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-sky-600 flex items-center gap-1.5">
-                                <i class="fas fa-fire text-[12px]"></i>
-                                <span>لرفع معدلات التحويل المالي</span>
-                            </div>
-                        </div>
-
-                        <!-- Service 3 -->
-                        <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-indigo-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-indigo-500 to-sky-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300"></div>
-                            <div class="space-y-4">
-                                <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shadow-3xs group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                                    <i class="fas fa-file-pdf"></i>
-                                </div>
-                                <h4 class="font-black text-base text-gray-900 group-hover:text-indigo-600 transition-colors">تصميم البروشورات</h4>
-                                <p class="text-gray-500 text-xs font-bold leading-relaxed">
-                                    تصميم بروشورات تعريفية وتسويقية
-                                </p>
-                                <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-indigo-500 text-[8px]"></i>
-                                        <span class="font-bold">بروشورات مطوية ثنائية وثلاثية (Fold)</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-indigo-500 text-[8px]"></i>
-                                        <span class="font-bold">توزيع ذكي ومريح للنصوص والصور</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-indigo-500 text-[8px]"></i>
-                                        <span class="font-bold">ملفات جاهزة ومجهزة للطباعة مباشرة</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-indigo-600 flex items-center gap-1.5">
-                                <i class="fas fa-book-open text-[12px]"></i>
-                                <span>لتبسيط شرح وتصفح خدماتك</span>
-                            </div>
-                        </div>
-
-                        <!-- Service 4 -->
-                        <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-blue-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="150">
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-blue-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300"></div>
-                            <div class="space-y-4">
-                                <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center text-lg shadow-3xs group-hover:bg-blue-700 group-hover:text-white transition-all duration-300">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                                <h4 class="font-black text-base text-gray-900 group-hover:text-blue-700 transition-colors">تصميم الملفات التعريفية</h4>
-                                <p class="text-gray-500 text-xs font-bold leading-relaxed">
-                                    تصميم Company Profile والملفات التعرفيه التجارية
-                                </p>
-                                <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-600 text-[8px]"></i>
-                                        <span class="font-bold">ملفات تعريفية متناسقة مع ألوان الهوية</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-600 text-[8px]"></i>
-                                        <span class="font-bold">عرض رؤية الشركة، أهدافها، وخدماتها</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-600 text-[8px]"></i>
-                                        <span class="font-bold">تصميم احترافي لجذب الشركاء والعملاء</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-blue-700 flex items-center gap-1.5">
-                                <i class="fas fa-briefcase text-[12px]"></i>
-                                <span>لجذب المستثمرين والشركاء</span>
-                            </div>
-                        </div>
-
-                        <!-- Service 5 -->
-                        <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-sky-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-sky-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300"></div>
-                            <div class="space-y-4">
-                                <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-700 flex items-center justify-center text-lg shadow-3xs group-hover:bg-sky-700 group-hover:text-white transition-all duration-300">
-                                    <i class="fas fa-image"></i>
-                                </div>
-                                <h4 class="font-black text-base text-gray-900 group-hover:text-sky-700 transition-colors">تصميم البانرات</h4>
-                                <p class="text-gray-500 text-xs font-bold leading-relaxed">
-                                    تصاميم اللكترونية وإعلانية بمقاسات مختلفة
-                                </p>
-                                <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-sky-600 text-[8px]"></i>
-                                        <span class="font-bold">بانرات للمواقع الإلكترونية والمتاجر</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-sky-600 text-[8px]"></i>
-                                        <span class="font-bold">لوحات إعلانية خارجية وتصاميم رول اب</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-sky-600 text-[8px]"></i>
-                                        <span class="font-bold">أحجام مخصصة عالية الدقة للطباعة والويب</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-sky-600 flex items-center gap-1.5">
-                                <i class="fas fa-ruler-combined text-[12px]"></i>
-                                <span>مقاسات مخصصة ودقة فائقة</span>
-                            </div>
-                        </div>
-
-                        <!-- Service 6 -->
-                        <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-indigo-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="250">
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-indigo-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300"></div>
-                            <div class="space-y-4">
-                                <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-700 flex items-center justify-center text-lg shadow-3xs group-hover:bg-indigo-700 group-hover:text-white transition-all duration-300">
-                                    <i class="fas fa-chalkboard-user"></i>
-                                </div>
-                                <h4 class="font-black text-base text-gray-900 group-hover:text-indigo-600 transition-colors">تصميم العروض</h4>
-                                <p class="text-gray-500 text-xs font-bold leading-relaxed">
-                                    تصميم عروض تقديمية احترافية للأنشطة والشركات
-                                </p>
-                                <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-indigo-600 text-[8px]"></i>
-                                        <span class="font-bold">عروض تقديمية (PowerPoint & Keynote)</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-indigo-600 text-[8px]"></i>
-                                        <span class="font-bold">تصميم شرائح انفوجرافيك لتبسيط البيانات</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-indigo-600 text-[8px]"></i>
-                                        <span class="font-bold">هيكلة مرئية احترافية ومقنعة للمشاهدين</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-indigo-600 flex items-center gap-1.5">
-                                <i class="fas fa-chart-line text-[12px]"></i>
-                                <span>لعرض الأفكار بأعلى احترافية</span>
-                            </div>
-                        </div>
-
-                        <!-- Service 7 -->
-                        <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-blue-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group md:col-span-2 lg:col-span-1 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-blue-500 to-sky-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300"></div>
-                            <div class="space-y-4">
-                                <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg shadow-3xs group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <h4 class="font-black text-base text-gray-900 group-hover:text-blue-600 transition-colors">تصميم المواد التسويقية</h4>
-                                <p class="text-gray-500 text-xs font-bold leading-relaxed">
-                                    تصميم مختلف المواد المستخدمة في التسويق والتواصل مع العملاء
-                                </p>
-                                <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-500 text-[8px]"></i>
-                                        <span class="font-bold">تصميم كروت عمل، أكياس، وعلب المنتجات</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-500 text-[8px]"></i>
-                                        <span class="font-bold">تصاميم الهدايا الدعائية والقرطاسية الكاملة</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-blue-500 text-[8px]"></i>
-                                        <span class="font-bold">توحيد المظهر العام في كل نقاط التواصل</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-blue-600 flex items-center gap-1.5">
-                                <i class="fas fa-wand-magic-sparkles text-[12px]"></i>
-                                <span>لبناء حضور موحد ومتكامل</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Call to action at bottom of unified section -->
-                <div class="text-center pt-12" data-aos="fade-up">
-                    <a href="../index.html#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-extrabold text-sm px-8 py-4 rounded-full shadow-md shadow-blue-500/20 hover:scale-105 transition-all">
-                        <span>ابدأ بناء هويتك المتكاملة الآن</span>
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ===== BRAND ECOSYSTEM INTEGRATION SECTION (Visual Orbit & Command Core) ===== -->
-        <section class="py-20 sm:py-28 bg-slate-50/70 relative overflow-hidden border-t border-b border-slate-200/60" id="brand-ecosystem">
-            <!-- Ambient Background Radial Glows -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-blue-100/40 via-sky-100/30 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-50/80 rounded-full blur-2xl pointer-events-none"></div>
-            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-50/80 rounded-full blur-2xl pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                
-                <!-- Section Header -->
-                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16" data-aos="fade-up">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs sm:text-sm font-extrabold border border-blue-200/80 shadow-xs">
-                        <i class="fas fa-network-wired text-blue-600 animate-pulse"></i>
-                        <span>الاتساق والانتشار البصري الشامل</span>
-                    </div>
-                    <h2 class="text-2xl sm:text-4xl font-black text-gray-900 leading-snug">
-                        نعمل على إنشاء نظام بصري متكامل يجعل العلامة التجارية واضحة ومتناسقة في كل نقطة تماس
-                    </h2>
-                    <p class="text-sm sm:text-base font-medium text-slate-600 max-w-2xl mx-auto">
-                        مركز المدار البصري: نربط أصول هوية علاماتك التجارية بكافة المنصات والقنوات لضمان بصمة بصرية لا تُنسى وثبات تام 100%.
-                    </p>
-                </div>
-
-                <!-- Dynamic Command Hub & Ecosystem Radial Grid -->
-                <div class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-xl shadow-slate-200/60 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    
-                    <!-- Top Status Bar of the Visual Engine -->
-                    <div class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-slate-100 text-xs font-extrabold text-slate-500">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                            <span class="text-slate-800 font-black">نظام المزامنة البصرية: شغال وتفاعلي 360°</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-slate-600">
-                            <span class="flex items-center gap-1.5"><i class="fas fa-palette text-blue-600"></i> ألوان موحدة</span>
-                            <span class="flex items-center gap-1.5"><i class="fas fa-vector-square text-sky-600"></i> قوالب هندسية</span>
-                            <span class="flex items-center gap-1.5"><i class="fas fa-check-double text-emerald-600"></i> اتساق 100%</span>
-                        </div>
-                    </div>
-
-                    <!-- Layout: Central Master Core + 8 Connected Nodes Grid -->
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
-                        
-                        <!-- Side Left: 4 Channels -->
-                        <div class="lg:col-span-4 space-y-4">
-                            
-                            <!-- 1. الموقع الإلكتروني والمنصات -->
-                            <div class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-blue-500 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-600 flex items-center justify-center text-lg font-bold group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-xs">
-                                        <i class="fas fa-desktop"></i>
+                                <div class="space-y-4">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg shadow-3xs group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                                        <i class="fas fa-photo-film"></i>
                                     </div>
-                                    <div>
-                                        <h4 class="text-sm font-black text-slate-900 group-hover:text-blue-600 transition-colors">الموقع الإلكتروني والمنصات</h4>
-                                        <p class="text-xs font-bold text-slate-500">واجهات UI/UX متناسقة</p>
-                                    </div>
+                                    <h4
+                                        class="font-black text-base text-gray-900 group-hover:text-blue-600 transition-colors">
+                                        تصميم منشورات التواصل الاجتماعي</h4>
+                                    <p class="text-gray-500 text-xs font-bold leading-relaxed">
+                                        تصاميم احترافية للحسابات ومنصات السوشيال ميديا
+                                    </p>
+                                    <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-500 text-[8px]"></i>
+                                            <span class="font-bold">بوستات انستقرام وفيس بوك مبتكرة</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-500 text-[8px]"></i>
+                                            <span class="font-bold">تنسيق الهوية البصرية للـ Grid</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-500 text-[8px]"></i>
+                                            <span class="font-bold">أبعاد مخصصة ومحسنة للموبايل</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <span class="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform"></span>
+                                <div
+                                    class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-blue-600 flex items-center gap-1.5">
+                                    <i class="fas fa-bullseye text-[12px]"></i>
+                                    <span>لزيادة التفاعل اليومي المباشر</span>
+                                </div>
                             </div>
 
-                            <!-- 2. حسابات التواصل الاجتماعي -->
-                            <div class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-sky-500 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-xl bg-sky-100/80 text-sky-600 flex items-center justify-center text-lg font-bold group-hover:bg-sky-600 group-hover:text-white transition-colors shadow-xs">
-                                        <i class="fas fa-hashtag"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-black text-slate-900 group-hover:text-sky-600 transition-colors">حسابات التواصل الاجتماعي</h4>
-                                        <p class="text-xs font-bold text-slate-500">قوالب وإطارات موحدة</p>
-                                    </div>
+                            <!-- Service 2 -->
+                            <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-sky-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="50">
+                                <div
+                                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-sky-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300">
                                 </div>
-                                <span class="w-2 h-2 rounded-full bg-sky-500 group-hover:scale-150 transition-transform"></span>
-                            </div>
-
-                            <!-- 3. الحملات الإعلانية الموحدة -->
-                            <div class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-indigo-500 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-xl bg-indigo-100/80 text-indigo-600 flex items-center justify-center text-lg font-bold group-hover:bg-indigo-600 group-hover:text-white transition-colors shadow-xs">
+                                <div class="space-y-4">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-lg shadow-3xs group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
                                         <i class="fas fa-rectangle-ad"></i>
                                     </div>
-                                    <div>
-                                        <h4 class="text-sm font-black text-slate-900 group-hover:text-indigo-600 transition-colors">الحملات الإعلانية المُموّلة</h4>
-                                        <p class="text-xs font-bold text-slate-500">تصاميم جالبة للتحويل</p>
-                                    </div>
+                                    <h4
+                                        class="font-black text-base text-gray-900 group-hover:text-sky-600 transition-colors">
+                                        تصميم الإعلانات</h4>
+                                    <p class="text-gray-500 text-xs font-bold leading-relaxed">
+                                        تصميم المواد الإعلانية للحملات
+                                    </p>
+                                    <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-sky-500 text-[8px]"></i>
+                                            <span class="font-bold">تصميم بنرات حملات جوجل الإعلانية</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-sky-500 text-[8px]"></i>
+                                            <span class="font-bold">محتوى بصري لإعلانات سناب وتيك توك</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-sky-500 text-[8px]"></i>
+                                            <span class="font-bold">تصاميم تركز على لفت الانتباه والتحويل</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <span class="w-2 h-2 rounded-full bg-indigo-500 group-hover:scale-150 transition-transform"></span>
-                            </div>
-
-                            <!-- 4. المطبوعات والتغليف -->
-                            <div class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-blue-600 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-700 flex items-center justify-center text-lg font-bold group-hover:bg-blue-700 group-hover:text-white transition-colors shadow-xs">
-                                        <i class="fas fa-print"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-black text-slate-900 group-hover:text-blue-700 transition-colors">المطبوعات والتغليف الفاخر</h4>
-                                        <p class="text-xs font-bold text-slate-500">معايير طباعية CMYK دقيقة</p>
-                                    </div>
-                                </div>
-                                <span class="w-2 h-2 rounded-full bg-blue-600 group-hover:scale-150 transition-transform"></span>
-                            </div>
-
-                        </div>
-
-                        <!-- Center: Master Pulse Hub (القلب المركزي الموحد) -->
-                        <div class="lg:col-span-4 flex flex-col items-center justify-center relative py-8 lg:py-0">
-                            
-                            <!-- Concentric Pulse Rings -->
-                            <div class="absolute w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-tr from-blue-500/10 to-sky-500/10 rounded-full animate-ping pointer-events-none"></div>
-                            <div class="absolute w-48 h-48 sm:w-60 sm:h-60 border-2 border-dashed border-blue-300/60 rounded-full animate-spin pointer-events-none" style="animation-duration: 25s;"></div>
-                            
-                            <!-- Master Card -->
-                            <div class="relative z-10 w-full max-w-xs bg-gradient-to-b from-blue-600 to-sky-700 rounded-3xl p-6 sm:p-8 text-white text-center shadow-2xl shadow-blue-600/30 border-4 border-white transform hover:scale-105 transition-all duration-500">
-                                <div class="w-16 h-16 mx-auto rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-3xl mb-4 border border-white/20 shadow-inner">
-                                    <i class="fas fa-layer-group text-white animate-bounce" style="animation-duration: 2s;"></i>
-                                </div>
-                                <h3 class="text-lg sm:text-xl font-black mb-1">القلب البصري الموحد</h3>
-                                <p class="text-xs font-bold text-blue-100 mb-4">Master Identity Core</p>
-                                
-                                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/15 text-xs font-bold space-y-1.5">
-                                    <div class="flex justify-between items-center text-blue-100">
-                                        <span>تزامن الهوية:</span>
-                                        <span class="text-emerald-300 font-black">100% نشط</span>
-                                    </div>
-                                    <div class="w-full bg-white/20 rounded-full h-1.5 overflow-hidden">
-                                        <div class="bg-emerald-400 h-full rounded-full w-full"></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="mt-4 pt-3 border-t border-white/15 flex items-center justify-center gap-1.5 text-[11px] font-black text-sky-100">
-                                    <i class="fas fa-wand-magic-sparkles"></i>
-                                    <span>انتشار سلس عبر كافة الوسائط</span>
+                                <div
+                                    class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-sky-600 flex items-center gap-1.5">
+                                    <i class="fas fa-fire text-[12px]"></i>
+                                    <span>لرفع معدلات التحويل المالي</span>
                                 </div>
                             </div>
 
-                        </div>
-
-                        <!-- Side Right: 4 Channels -->
-                        <div class="lg:col-span-4 space-y-4">
-                            
-                            <!-- 5. العروض العرضية والملفات -->
-                            <div class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-sky-500 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-xl bg-sky-100/80 text-sky-700 flex items-center justify-center text-lg font-bold group-hover:bg-sky-700 group-hover:text-white transition-colors shadow-xs">
-                                        <i class="fas fa-chart-pie"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-black text-slate-900 group-hover:text-sky-700 transition-colors">عروض العرض والشرائح (Decks)</h4>
-                                        <p class="text-xs font-bold text-slate-500">شرائح شركاء ومبيعات احترافية</p>
-                                    </div>
+                            <!-- Service 3 -->
+                            <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-indigo-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="100">
+                                <div
+                                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-indigo-500 to-sky-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300">
                                 </div>
-                                <span class="w-2 h-2 rounded-full bg-sky-600 group-hover:scale-150 transition-transform"></span>
-                            </div>
-
-                            <!-- 6. المحتوى المرئي والفيديو -->
-                            <div class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-indigo-600 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-xl bg-indigo-100/80 text-indigo-700 flex items-center justify-center text-lg font-bold group-hover:bg-indigo-700 group-hover:text-white transition-colors shadow-xs">
-                                        <i class="fas fa-circle-play"></i>
+                                <div class="space-y-4">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shadow-3xs group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                                        <i class="fas fa-file-pdf"></i>
                                     </div>
-                                    <div>
-                                        <h4 class="text-sm font-black text-slate-900 group-hover:text-indigo-700 transition-colors">المحتوى المرئي والفيديو</h4>
-                                        <p class="text-xs font-bold text-slate-500">هوية موشن وجرافيك متحرك</p>
-                                    </div>
+                                    <h4
+                                        class="font-black text-base text-gray-900 group-hover:text-indigo-600 transition-colors">
+                                        تصميم البروشورات</h4>
+                                    <p class="text-gray-500 text-xs font-bold leading-relaxed">
+                                        تصميم بروشورات تعريفية وتسويقية
+                                    </p>
+                                    <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-indigo-500 text-[8px]"></i>
+                                            <span class="font-bold">بروشورات مطوية ثنائية وثلاثية (Fold)</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-indigo-500 text-[8px]"></i>
+                                            <span class="font-bold">توزيع ذكي ومريح للنصوص والصور</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-indigo-500 text-[8px]"></i>
+                                            <span class="font-bold">ملفات جاهزة ومجهزة للطباعة مباشرة</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <span class="w-2 h-2 rounded-full bg-indigo-600 group-hover:scale-150 transition-transform"></span>
-                            </div>
-
-                            <!-- 7. المراسلات الرسمية -->
-                            <div class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-blue-600 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-600 flex items-center justify-center text-lg font-bold group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-xs">
-                                        <i class="fas fa-envelope-open-text"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-black text-slate-900 group-hover:text-blue-600 transition-colors">المراسلات والمستندات الرسمية</h4>
-                                        <p class="text-xs font-bold text-slate-500">ورق رسمي، توقيع، وفواتير</p>
-                                    </div>
-                                </div>
-                                <span class="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform"></span>
-                            </div>
-
-                            <!-- 8. المواد التسويقية والميدانية -->
-                            <div class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-sky-600 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-xl bg-sky-100/80 text-sky-600 flex items-center justify-center text-lg font-bold group-hover:bg-sky-600 group-hover:text-white transition-colors shadow-xs">
-                                        <i class="fas fa-paper-plane"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-black text-slate-900 group-hover:text-sky-600 transition-colors">المواد التسويقية والمعارض</h4>
-                                        <p class="text-xs font-bold text-slate-500">بنرات وستاندات المعارض</p>
-                                    </div>
+                                <div
+                                    class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-indigo-600 flex items-center gap-1.5">
+                                    <i class="fas fa-book-open text-[12px]"></i>
+                                    <span>لتبسيط شرح وتصفح خدماتك</span>
                                 </div>
                             </div>
 
-                        </div>
-
-                    </div>
-
-                    <!-- Bottom: Why Design Matters Ribbon Row (لماذا التصميم مهم؟) -->
-                    <div class="mt-10 pt-8 border-t border-slate-100">
-                        <div class="bg-gradient-to-r from-blue-50/80 via-slate-50 to-sky-50/80 rounded-2xl p-5 sm:p-6 border border-blue-100/80 shadow-xs">
-                            
-                            <!-- Header & Punchline -->
-                            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 pb-4 border-b border-blue-100/60">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-bold shadow-sm shadow-blue-500/30 shrink-0">
-                                        <i class="fas fa-lightbulb"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base sm:text-lg font-black text-slate-900">لماذا التصميم مهم؟</h4>
-                                        <p class="text-xs font-bold text-slate-600">لأن التصميم الاحترافي يمنح علامتك التجارية قوة التأثير والانتشار</p>
-                                    </div>
+                            <!-- Service 4 -->
+                            <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-blue-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="150">
+                                <div
+                                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-blue-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300">
                                 </div>
-                                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-blue-200 text-blue-700 text-xs sm:text-sm font-black shadow-2xs">
-                                    <i class="fas fa-wand-magic-sparkles text-amber-500 animate-bounce"></i>
-                                    <span>نبني لك هوية تُرى وتُتذكر بقوة</span>
-                                </div>
-                            </div>
-
-                            <!-- Horizontal Key Points Row with Icons -->
-                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-                                
-                                <!-- 1. الانطباع الأول -->
-                                <div class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-blue-400 transition-colors">
-                                    <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-sm font-bold shrink-0">
-                                        <i class="fas fa-eye"></i>
-                                    </div>
-                                    <span class="text-xs font-black text-slate-800 leading-tight">بناء الانطباع الأول</span>
-                                </div>
-
-                                <!-- 2. تذكر العلامة -->
-                                <div class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-sky-400 transition-colors">
-                                    <div class="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center text-sm font-bold shrink-0">
-                                        <i class="fas fa-brain"></i>
-                                    </div>
-                                    <span class="text-xs font-black text-slate-800 leading-tight">زيادة تذكر العلامة</span>
-                                </div>
-
-                                <!-- 3. توحيد الصورة والاحترافية -->
-                                <div class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-indigo-400 transition-colors">
-                                    <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold shrink-0">
+                                <div class="space-y-4">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center text-lg shadow-3xs group-hover:bg-blue-700 group-hover:text-white transition-all duration-300">
                                         <i class="fas fa-briefcase"></i>
                                     </div>
-                                    <span class="text-xs font-black text-slate-800 leading-tight">إظهار الاحترافية وتوحيد الصورة</span>
+                                    <h4
+                                        class="font-black text-base text-gray-900 group-hover:text-blue-700 transition-colors">
+                                        تصميم الملفات التعريفية</h4>
+                                    <p class="text-gray-500 text-xs font-bold leading-relaxed">
+                                        تصميم Company Profile والملفات التعرفيه التجارية
+                                    </p>
+                                    <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-600 text-[8px]"></i>
+                                            <span class="font-bold">ملفات تعريفية متناسقة مع ألوان الهوية</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-600 text-[8px]"></i>
+                                            <span class="font-bold">عرض رؤية الشركة، أهدافها، وخدماتها</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-600 text-[8px]"></i>
+                                            <span class="font-bold">تصميم احترافي لجذب الشركاء والعملاء</span>
+                                        </li>
+                                    </ul>
                                 </div>
+                                <div
+                                    class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-blue-700 flex items-center gap-1.5">
+                                    <i class="fas fa-briefcase text-[12px]"></i>
+                                    <span>لجذب المستثمرين والشركاء</span>
+                                </div>
+                            </div>
 
-                                <!-- 4. دعم الحملات التسويقية -->
-                                <div class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-blue-400 transition-colors">
-                                    <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center text-sm font-bold shrink-0">
-                                        <i class="fas fa-bullhorn"></i>
+                            <!-- Service 5 -->
+                            <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-sky-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="200">
+                                <div
+                                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-sky-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300">
+                                </div>
+                                <div class="space-y-4">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-700 flex items-center justify-center text-lg shadow-3xs group-hover:bg-sky-700 group-hover:text-white transition-all duration-300">
+                                        <i class="fas fa-image"></i>
                                     </div>
-                                    <span class="text-xs font-black text-slate-800 leading-tight">دعم الحملات التسويقية</span>
+                                    <h4
+                                        class="font-black text-base text-gray-900 group-hover:text-sky-700 transition-colors">
+                                        تصميم البانرات</h4>
+                                    <p class="text-gray-500 text-xs font-bold leading-relaxed">
+                                        تصاميم اللكترونية وإعلانية بمقاسات مختلفة
+                                    </p>
+                                    <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-sky-600 text-[8px]"></i>
+                                            <span class="font-bold">بانرات للمواقع الإلكترونية والمتاجر</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-sky-600 text-[8px]"></i>
+                                            <span class="font-bold">لوحات إعلانية خارجية وتصاميم رول اب</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-sky-600 text-[8px]"></i>
+                                            <span class="font-bold">أحجام مخصصة عالية الدقة للطباعة والويب</span>
+                                        </li>
+                                    </ul>
                                 </div>
+                                <div
+                                    class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-sky-600 flex items-center gap-1.5">
+                                    <i class="fas fa-ruler-combined text-[12px]"></i>
+                                    <span>مقاسات مخصصة ودقة فائقة</span>
+                                </div>
+                            </div>
 
-                                <!-- 5. بناء الثقة -->
-                                <div class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-emerald-400 transition-colors">
-                                    <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm font-bold shrink-0">
-                                        <i class="fas fa-shield-halved"></i>
+                            <!-- Service 6 -->
+                            <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-indigo-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="250">
+                                <div
+                                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-indigo-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300">
+                                </div>
+                                <div class="space-y-4">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-700 flex items-center justify-center text-lg shadow-3xs group-hover:bg-indigo-700 group-hover:text-white transition-all duration-300">
+                                        <i class="fas fa-chalkboard-user"></i>
                                     </div>
-                                    <span class="text-xs font-black text-slate-800 leading-tight">بناء الثقة لدى الجمهور</span>
+                                    <h4
+                                        class="font-black text-base text-gray-900 group-hover:text-indigo-600 transition-colors">
+                                        تصميم العروض</h4>
+                                    <p class="text-gray-500 text-xs font-bold leading-relaxed">
+                                        تصميم عروض تقديمية احترافية للأنشطة والشركات
+                                    </p>
+                                    <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-indigo-600 text-[8px]"></i>
+                                            <span class="font-bold">عروض تقديمية (PowerPoint & Keynote)</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-indigo-600 text-[8px]"></i>
+                                            <span class="font-bold">تصميم شرائح انفوجرافيك لتبسيط البيانات</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-indigo-600 text-[8px]"></i>
+                                            <span class="font-bold">هيكلة مرئية احترافية ومقنعة للمشاهدين</span>
+                                        </li>
+                                    </ul>
                                 </div>
+                                <div
+                                    class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-indigo-600 flex items-center gap-1.5">
+                                    <i class="fas fa-chart-line text-[12px]"></i>
+                                    <span>لعرض الأفكار بأعلى احترافية</span>
+                                </div>
+                            </div>
 
+                            <!-- Service 7 -->
+                            <div class="bg-white rounded-[28px] p-6 border border-slate-100/85 hover:border-blue-500/20 shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group md:col-span-2 lg:col-span-1 relative overflow-hidden"
+                                data-aos="fade-up" data-aos-delay="300">
+                                <div
+                                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-blue-500 to-sky-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-300">
+                                </div>
+                                <div class="space-y-4">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg shadow-3xs group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <h4
+                                        class="font-black text-base text-gray-900 group-hover:text-blue-600 transition-colors">
+                                        تصميم المواد التسويقية</h4>
+                                    <p class="text-gray-500 text-xs font-bold leading-relaxed">
+                                        تصميم مختلف المواد المستخدمة في التسويق والتواصل مع العملاء
+                                    </p>
+                                    <ul class="text-[10px] text-gray-400 space-y-2 pt-2">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-500 text-[8px]"></i>
+                                            <span class="font-bold">تصميم كروت عمل، أكياس، وعلب المنتجات</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-500 text-[8px]"></i>
+                                            <span class="font-bold">تصاميم الهدايا الدعائية والقرطاسية الكاملة</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check text-blue-500 text-[8px]"></i>
+                                            <span class="font-bold">توحيد المظهر العام في كل نقاط التواصل</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="pt-3 mt-4 border-t border-slate-100 text-[10px] font-black text-blue-600 flex items-center gap-1.5">
+                                    <i class="fas fa-wand-magic-sparkles text-[12px]"></i>
+                                    <span>لبناء حضور موحد ومتكامل</span>
+                                </div>
                             </div>
 
                         </div>
+                    </div>
+
+                    <!-- Call to action at bottom of unified section -->
+                    <div class="text-center pt-12" data-aos="fade-up">
+                        <a href="../index.html#contact"
+                            class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-extrabold text-sm px-8 py-4 rounded-full shadow-md shadow-blue-500/20 hover:scale-105 transition-all">
+                            <span>ابدأ بناء هويتك المتكاملة الآن</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
                     </div>
 
                 </div>
+            </section>
 
-            </div>
-        </section>
+            <!-- ===== BRAND ECOSYSTEM INTEGRATION SECTION (Visual Orbit & Command Core) ===== -->
+            <section
+                class="py-20 sm:py-28 bg-slate-50/70 relative overflow-hidden border-t border-b border-slate-200/60"
+                id="brand-ecosystem">
+                <!-- Ambient Background Radial Glows -->
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-blue-100/40 via-sky-100/30 to-transparent rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute -top-24 -right-24 w-96 h-96 bg-blue-50/80 rounded-full blur-2xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-50/80 rounded-full blur-2xl pointer-events-none">
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+                    <!-- Section Header -->
+                    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16" data-aos="fade-up">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs sm:text-sm font-extrabold border border-blue-200/80 shadow-xs">
+                            <i class="fas fa-network-wired text-blue-600 animate-pulse"></i>
+                            <span>الاتساق والانتشار البصري الشامل</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-4xl font-black text-gray-900 leading-snug">
+                            نعمل على إنشاء نظام بصري متكامل يجعل العلامة التجارية واضحة ومتناسقة في كل نقطة تماس
+                        </h2>
+                        <p class="text-sm sm:text-base font-medium text-slate-600 max-w-2xl mx-auto">
+                            مركز المدار البصري: نربط أصول هوية علاماتك التجارية بكافة المنصات والقنوات لضمان بصمة بصرية
+                            لا تُنسى وثبات تام 100%.
+                        </p>
+                    </div>
+
+                    <!-- Dynamic Command Hub & Ecosystem Radial Grid -->
+                    <div class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-xl shadow-slate-200/60 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="100">
+
+                        <!-- Top Status Bar of the Visual Engine -->
+                        <div
+                            class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-slate-100 text-xs font-extrabold text-slate-500">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                                <span class="text-slate-800 font-black">نظام المزامنة البصرية: شغال وتفاعلي 360°</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-slate-600">
+                                <span class="flex items-center gap-1.5"><i class="fas fa-palette text-blue-600"></i>
+                                    ألوان موحدة</span>
+                                <span class="flex items-center gap-1.5"><i
+                                        class="fas fa-vector-square text-sky-600"></i> قوالب هندسية</span>
+                                <span class="flex items-center gap-1.5"><i
+                                        class="fas fa-check-double text-emerald-600"></i> اتساق 100%</span>
+                            </div>
+                        </div>
+
+                        <!-- Layout: Central Master Core + 8 Connected Nodes Grid -->
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
+
+                            <!-- Side Left: 4 Channels -->
+                            <div class="lg:col-span-4 space-y-4">
+
+                                <!-- 1. الموقع الإلكتروني والمنصات -->
+                                <div
+                                    class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-blue-500 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-600 flex items-center justify-center text-lg font-bold group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-xs">
+                                            <i class="fas fa-desktop"></i>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="text-sm font-black text-slate-900 group-hover:text-blue-600 transition-colors">
+                                                الموقع الإلكتروني والمنصات</h4>
+                                            <p class="text-xs font-bold text-slate-500">واجهات UI/UX متناسقة</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform"></span>
+                                </div>
+
+                                <!-- 2. حسابات التواصل الاجتماعي -->
+                                <div
+                                    class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-sky-500 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-sky-100/80 text-sky-600 flex items-center justify-center text-lg font-bold group-hover:bg-sky-600 group-hover:text-white transition-colors shadow-xs">
+                                            <i class="fas fa-hashtag"></i>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="text-sm font-black text-slate-900 group-hover:text-sky-600 transition-colors">
+                                                حسابات التواصل الاجتماعي</h4>
+                                            <p class="text-xs font-bold text-slate-500">قوالب وإطارات موحدة</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="w-2 h-2 rounded-full bg-sky-500 group-hover:scale-150 transition-transform"></span>
+                                </div>
+
+                                <!-- 3. الحملات الإعلانية الموحدة -->
+                                <div
+                                    class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-indigo-500 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-indigo-100/80 text-indigo-600 flex items-center justify-center text-lg font-bold group-hover:bg-indigo-600 group-hover:text-white transition-colors shadow-xs">
+                                            <i class="fas fa-rectangle-ad"></i>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="text-sm font-black text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                                الحملات الإعلانية المُموّلة</h4>
+                                            <p class="text-xs font-bold text-slate-500">تصاميم جالبة للتحويل</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="w-2 h-2 rounded-full bg-indigo-500 group-hover:scale-150 transition-transform"></span>
+                                </div>
+
+                                <!-- 4. المطبوعات والتغليف -->
+                                <div
+                                    class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-blue-600 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-700 flex items-center justify-center text-lg font-bold group-hover:bg-blue-700 group-hover:text-white transition-colors shadow-xs">
+                                            <i class="fas fa-print"></i>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="text-sm font-black text-slate-900 group-hover:text-blue-700 transition-colors">
+                                                المطبوعات والتغليف الفاخر</h4>
+                                            <p class="text-xs font-bold text-slate-500">معايير طباعية CMYK دقيقة</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="w-2 h-2 rounded-full bg-blue-600 group-hover:scale-150 transition-transform"></span>
+                                </div>
+
+                            </div>
+
+                            <!-- Center: Master Pulse Hub (القلب المركزي الموحد) -->
+                            <div class="lg:col-span-4 flex flex-col items-center justify-center relative py-8 lg:py-0">
+
+                                <!-- Concentric Pulse Rings -->
+                                <div
+                                    class="absolute w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-tr from-blue-500/10 to-sky-500/10 rounded-full animate-ping pointer-events-none">
+                                </div>
+                                <div class="absolute w-48 h-48 sm:w-60 sm:h-60 border-2 border-dashed border-blue-300/60 rounded-full animate-spin pointer-events-none"
+                                    style="animation-duration: 25s;"></div>
+
+                                <!-- Master Card -->
+                                <div
+                                    class="relative z-10 w-full max-w-xs bg-gradient-to-b from-blue-600 to-sky-700 rounded-3xl p-6 sm:p-8 text-white text-center shadow-2xl shadow-blue-600/30 border-4 border-white transform hover:scale-105 transition-all duration-500">
+                                    <div
+                                        class="w-16 h-16 mx-auto rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-3xl mb-4 border border-white/20 shadow-inner">
+                                        <i class="fas fa-layer-group text-white animate-bounce"
+                                            style="animation-duration: 2s;"></i>
+                                    </div>
+                                    <h3 class="text-lg sm:text-xl font-black mb-1">القلب البصري الموحد</h3>
+                                    <p class="text-xs font-bold text-blue-100 mb-4">Master Identity Core</p>
+
+                                    <div
+                                        class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/15 text-xs font-bold space-y-1.5">
+                                        <div class="flex justify-between items-center text-blue-100">
+                                            <span>تزامن الهوية:</span>
+                                            <span class="text-emerald-300 font-black">100% نشط</span>
+                                        </div>
+                                        <div class="w-full bg-white/20 rounded-full h-1.5 overflow-hidden">
+                                            <div class="bg-emerald-400 h-full rounded-full w-full"></div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="mt-4 pt-3 border-t border-white/15 flex items-center justify-center gap-1.5 text-[11px] font-black text-sky-100">
+                                        <i class="fas fa-wand-magic-sparkles"></i>
+                                        <span>انتشار سلس عبر كافة الوسائط</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Side Right: 4 Channels -->
+                            <div class="lg:col-span-4 space-y-4">
+
+                                <!-- 5. العروض العرضية والملفات -->
+                                <div
+                                    class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-sky-500 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-sky-100/80 text-sky-700 flex items-center justify-center text-lg font-bold group-hover:bg-sky-700 group-hover:text-white transition-colors shadow-xs">
+                                            <i class="fas fa-chart-pie"></i>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="text-sm font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                                                عروض العرض والشرائح (Decks)</h4>
+                                            <p class="text-xs font-bold text-slate-500">شرائح شركاء ومبيعات احترافية</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="w-2 h-2 rounded-full bg-sky-600 group-hover:scale-150 transition-transform"></span>
+                                </div>
+
+                                <!-- 6. المحتوى المرئي والفيديو -->
+                                <div
+                                    class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-indigo-600 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-indigo-100/80 text-indigo-700 flex items-center justify-center text-lg font-bold group-hover:bg-indigo-700 group-hover:text-white transition-colors shadow-xs">
+                                            <i class="fas fa-circle-play"></i>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="text-sm font-black text-slate-900 group-hover:text-indigo-700 transition-colors">
+                                                المحتوى المرئي والفيديو</h4>
+                                            <p class="text-xs font-bold text-slate-500">هوية موشن وجرافيك متحرك</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="w-2 h-2 rounded-full bg-indigo-600 group-hover:scale-150 transition-transform"></span>
+                                </div>
+
+                                <!-- 7. المراسلات الرسمية -->
+                                <div
+                                    class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-blue-600 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-600 flex items-center justify-center text-lg font-bold group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-xs">
+                                            <i class="fas fa-envelope-open-text"></i>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="text-sm font-black text-slate-900 group-hover:text-blue-600 transition-colors">
+                                                المراسلات والمستندات الرسمية</h4>
+                                            <p class="text-xs font-bold text-slate-500">ورق رسمي، توقيع، وفواتير</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform"></span>
+                                </div>
+
+                                <!-- 8. المواد التسويقية والميدانية -->
+                                <div
+                                    class="group p-4 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-sky-600 hover:shadow-lg transition-all duration-300 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-sky-100/80 text-sky-600 flex items-center justify-center text-lg font-bold group-hover:bg-sky-600 group-hover:text-white transition-colors shadow-xs">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="text-sm font-black text-slate-900 group-hover:text-sky-600 transition-colors">
+                                                المواد التسويقية والمعارض</h4>
+                                            <p class="text-xs font-bold text-slate-500">بنرات وستاندات المعارض</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Bottom: Why Design Matters Ribbon Row (لماذا التصميم مهم؟) -->
+                        <div class="mt-10 pt-8 border-t border-slate-100">
+                            <div
+                                class="bg-gradient-to-r from-blue-50/80 via-slate-50 to-sky-50/80 rounded-2xl p-5 sm:p-6 border border-blue-100/80 shadow-xs">
+
+                                <!-- Header & Punchline -->
+                                <div
+                                    class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 pb-4 border-b border-blue-100/60">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-bold shadow-sm shadow-blue-500/30 shrink-0">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-base sm:text-lg font-black text-slate-900">لماذا التصميم
+                                                مهم؟</h4>
+                                            <p class="text-xs font-bold text-slate-600">لأن التصميم الاحترافي يمنح
+                                                علامتك التجارية قوة التأثير والانتشار</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-blue-200 text-blue-700 text-xs sm:text-sm font-black shadow-2xs">
+                                        <i class="fas fa-wand-magic-sparkles text-amber-500 animate-bounce"></i>
+                                        <span>نبني لك هوية تُرى وتُتذكر بقوة</span>
+                                    </div>
+                                </div>
+
+                                <!-- Horizontal Key Points Row with Icons -->
+                                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+
+                                    <!-- 1. الانطباع الأول -->
+                                    <div
+                                        class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-blue-400 transition-colors">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-sm font-bold shrink-0">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-slate-800 leading-tight">بناء الانطباع
+                                            الأول</span>
+                                    </div>
+
+                                    <!-- 2. تذكر العلامة -->
+                                    <div
+                                        class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-sky-400 transition-colors">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center text-sm font-bold shrink-0">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-slate-800 leading-tight">زيادة تذكر
+                                            العلامة</span>
+                                    </div>
+
+                                    <!-- 3. توحيد الصورة والاحترافية -->
+                                    <div
+                                        class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-indigo-400 transition-colors">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold shrink-0">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-slate-800 leading-tight">إظهار الاحترافية
+                                            وتوحيد الصورة</span>
+                                    </div>
+
+                                    <!-- 4. دعم الحملات التسويقية -->
+                                    <div
+                                        class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-blue-400 transition-colors">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center text-sm font-bold shrink-0">
+                                            <i class="fas fa-bullhorn"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-slate-800 leading-tight">دعم الحملات
+                                            التسويقية</span>
+                                    </div>
+
+                                    <!-- 5. بناء الثقة -->
+                                    <div
+                                        class="bg-white p-3 rounded-xl border border-slate-200/60 flex items-center gap-2.5 shadow-3xs hover:border-emerald-400 transition-colors">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm font-bold shrink-0">
+                                            <i class="fas fa-shield-halved"></i>
+                                        </div>
+                                        <span class="text-xs font-black text-slate-800 leading-tight">بناء الثقة لدى
+                                            الجمهور</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
 
     </main>
 
@@ -812,26 +1019,39 @@
                 <!-- Col 1: Brand Info -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="../img/logo.png" alt="شركة الفشني" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-sm">
+                        <img src="../img/logo.png" alt="شركة الفشني"
+                            class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-sm">
                         <div>
                             <span class="text-xl font-black text-white block">شركة الفشني</span>
                             <span class="text-xs font-bold text-blue-400">للتصميم والهوية البصرية</span>
                         </div>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        نبتكر لكم هويات بصرية استثنائية وأنظمة تصميم جرافيكي موحدة تفرض حضور علامتك التجارية بقوة وتضمن انتشارها عبر كافة المنصات.
+                        نبتكر لكم هويات بصرية استثنائية وأنظمة تصميم جرافيكي موحدة تفرض حضور علامتك التجارية بقوة وتضمن
+                        انتشارها عبر كافة المنصات.
                     </p>
                     <div class="flex items-center gap-3 pt-2">
-                        <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-blue-600 text-white flex items-center justify-center text-sm transition-all shadow-xs" aria-label="Facebook">
+                        <a href="https://facebook.com" target="_blank" rel="noopener"
+                            class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-blue-600 text-white flex items-center justify-center text-sm transition-all shadow-xs"
+                            aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-pink-600 text-white flex items-center justify-center text-sm transition-all shadow-xs" aria-label="Instagram">
+                        <a href="https://instagram.com" target="_blank" rel="noopener"
+                            class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-pink-600 text-white flex items-center justify-center text-sm transition-all shadow-xs"
+                            aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://x.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-sm transition-all shadow-xs" aria-label="X (Twitter)">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <a href="https://x.com" target="_blank" rel="noopener"
+                            class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-sm transition-all shadow-xs"
+                            aria-label="X (Twitter)">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-blue-700 text-white flex items-center justify-center text-sm transition-all shadow-xs" aria-label="LinkedIn">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener"
+                            class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-blue-700 text-white flex items-center justify-center text-sm transition-all shadow-xs"
+                            aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
@@ -844,24 +1064,49 @@
                         <span>روابط سريعة</span>
                     </h3>
                     <ul class="space-y-2.5 text-sm font-bold">
-                        <li><a href="../index.html" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i class="fas fa-angle-left text-xs text-slate-600"></i>الرئيسية</a></li>
-                        <li><a href="../about-us/index.html" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i class="fas fa-angle-left text-xs text-slate-600"></i>من نحن</a></li>
-                        <li><a href="../our-portfolio/index.html" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i class="fas fa-angle-left text-xs text-slate-600"></i>معرض أعمالنا</a></li>
-                        <li><a href="../contact-us/index.html" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i class="fas fa-angle-left text-xs text-slate-600"></i>تواصل معنا</a></li>
+                        <li><a href="../" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>الرئيسية</a></li>
+                        <li><a href="../about-us/"
+                                class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>من نحن</a></li>
+                        <li><a href="../our-portfolio/"
+                                class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>معرض أعمالنا</a></li>
+                        <li><a href="../contact-us/"
+                                class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>تواصل معنا</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 3: Design Services Links -->
+                <!-- Col 3: Services Links -->
                 <div>
                     <h3 class="text-white font-black text-base mb-4 flex items-center gap-2">
                         <i class="fas fa-palette text-blue-500 text-xs"></i>
-                        <span>خدمات التصميم الهوية</span>
+                        <span>خدماتنا</span>
                     </h3>
                     <ul class="space-y-2.5 text-sm font-bold">
-                        <li><a href="#brand-identity-design" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i class="fas fa-angle-left text-xs text-slate-600"></i>تصميم الهوية التجارية والشعار</a></li>
-                        <li><a href="#visual-content-design" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i class="fas fa-angle-left text-xs text-slate-600"></i>تصميم المحتوى الإعلاني</a></li>
-                        <li><a href="#company-profile-design" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i class="fas fa-angle-left text-xs text-slate-600"></i>تصميم بروفايل الشركات والمطبوعات</a></li>
-                        <li><a href="#brand-ecosystem" class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i class="fas fa-angle-left text-xs text-slate-600"></i>الاتساق والانتشار البصري 360°</a></li>
+                        <li><a href="../digital-marketing-and-ad-campaign-management/"
+                                class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>التسويق الرقمي وإدارة
+                                الحملات</a></li>
+                        <li><a href="../social-media-management-and-content-writing/"
+                                class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>إدارة الصفحات وكتابة
+                                المحتوى</a></li>
+                        <li><a href="./"
+                                class="hover:text-blue-400 font-bold text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>الهوية البصرية والتصميم
+                                الجرافيكي</a></li>
+                        <li><a href="../seo-and-search-engine-optimization/"
+                                class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>تحسين محركات البحث SEO</a></li>
+                        <li><a href="../web-development-and-design/"
+                                class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>البرمجة وتصميم المواقع</a></li>
+                        <li><a href="../video-editing-and-motion-graphics/"
+                                class="hover:text-blue-400 transition-colors flex items-center gap-1.5"><i
+                                    class="fas fa-angle-left text-xs text-slate-600"></i>المونتاج والموشن جرافيك</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -873,19 +1118,22 @@
                     </h3>
                     <ul class="space-y-3 text-sm font-bold">
                         <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
                                 <i class="fas fa-phone-alt text-xs"></i>
                             </div>
                             <span dir="ltr" class="text-white">01111263618</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
                                 <i class="fas fa-envelope text-xs"></i>
                             </div>
                             <span>info@fashne.net</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
                                 <i class="fas fa-globe text-xs"></i>
                             </div>
                             <span class="text-xs">مصر - السعودية - الإمارات - الكويت</span>
@@ -895,7 +1143,8 @@
             </div>
 
             <!-- Copyright Bar -->
-            <div class="mt-12 pt-8 border-t border-slate-800 text-center text-xs font-bold text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div
+                class="mt-12 pt-8 border-t border-slate-800 text-center text-xs font-bold text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p>جميع الحقوق محفوظة © شركة الفشني للدعاية والإعلان والتسويق الإلكتروني 2026</p>
                 <div class="flex items-center gap-4 text-gray-400">
                     <a href="../index.html#privacy" class="hover:text-blue-400 transition-colors">سياسة الخصوصية</a>
@@ -907,9 +1156,12 @@
     </footer>
 
     <!-- ===== SERVICES DRAWER (درج الخدمات الجانبي) ===== -->
-    <div id="services-drawer-overlay" class="fixed inset-0 z-50 bg-gray-900/40 backdrop-blur-xs transition-opacity duration-300 hidden opacity-0"></div>
-    
-    <div id="services-drawer" class="fixed top-0 bottom-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl border-l border-gray-200 flex flex-col transition-transform duration-300 transform translate-x-full">
+    <div id="services-drawer-overlay"
+        class="fixed inset-0 z-50 bg-gray-900/40 backdrop-blur-xs transition-opacity duration-300 hidden opacity-0">
+    </div>
+
+    <div id="services-drawer"
+        class="fixed top-0 bottom-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl border-l border-gray-200 flex flex-col transition-transform duration-300 transform translate-x-full">
         <div class="p-6 border-b border-gray-100 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
                 <i class="fas fa-layer-group text-blue-600 text-lg"></i>
@@ -918,44 +1170,103 @@
                     <p class="text-xs text-gray-500 font-bold">اختر القسم للتنقل الفوري</p>
                 </div>
             </div>
-            <button type="button" id="close-services-drawer" class="w-9 h-9 rounded-xl bg-white border border-gray-200 text-gray-500 flex items-center justify-center hover:bg-gray-100 transition-colors">
+            <button type="button" id="close-services-drawer"
+                class="w-9 h-9 rounded-xl bg-white border border-gray-200 text-gray-500 flex items-center justify-center hover:bg-gray-100 transition-colors">
                 <i class="fas fa-times text-base"></i>
             </button>
         </div>
-
         <div class="p-6 overflow-y-auto flex-1 space-y-3">
-            <a href="../digital-marketing-and-ad-campaign-management/index.html" class="drawer-link block p-4 rounded-2xl border border-gray-200/80 hover:border-blue-500 hover:bg-blue-50/50 transition-all group">
+            <!-- 1. التسويق الإلكتروني وإدارة الحملات الإعلانية -->
+            <a href="../digital-marketing-and-ad-campaign-management/"
+                class="drawer-link block p-4 rounded-2xl border border-gray-200/80 hover:border-blue-500 hover:bg-blue-50/50 transition-all group">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg font-bold group-hover:scale-110 transition-transform">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg font-bold group-hover:scale-110 transition-transform">
                         <i class="fas fa-bullhorn"></i>
                     </div>
                     <div>
-                        <h4 class="font-black text-gray-900 text-sm group-hover:text-blue-600 transition-colors">التسويق الإلكتروني وإدارة الحملات الإعلانية</h4>
+                        <h4 class="font-black text-gray-900 text-sm group-hover:text-blue-600 transition-colors">التسويق
+                            الرقمي وإدارة الحملات</h4>
                         <span class="text-xs text-gray-500 font-bold">إستراتيجيات، Google, Meta, TikTok, Snap</span>
                     </div>
                 </div>
             </a>
 
-            <a href="../social-media-management-and-content-writing/index.html" class="drawer-link block p-4 rounded-2xl border border-gray-200/80 hover:border-blue-500 hover:bg-blue-50/50 transition-all group">
+            <!-- 2. إدارة الصفحات وكتابة المحتوى -->
+            <a href="../social-media-management-and-content-writing/"
+                class="drawer-link block p-4 rounded-2xl border border-gray-200/80 hover:border-blue-500 hover:bg-blue-50/50 transition-all group">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg font-bold group-hover:scale-110 transition-transform">
-                        <i class="fas fa-pen-nib"></i>
+                    <div
+                        class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg font-bold group-hover:scale-110 transition-transform">
+                        <i class="fas fa-comments"></i>
                     </div>
                     <div>
-                        <h4 class="font-black text-gray-900 text-sm group-hover:text-blue-600 transition-colors">إدارة الصفحات وكتابة المحتوى</h4>
+                        <h4 class="font-black text-gray-900 text-sm group-hover:text-blue-600 transition-colors">إدارة
+                            الصفحات وكتابة المحتوى</h4>
                         <span class="text-xs text-gray-500 font-bold">إدارة حسابات، صناعة المحتوى والتفاعل</span>
                     </div>
                 </div>
             </a>
 
-            <a href="./index.html" class="drawer-link block p-4 rounded-2xl border-2 border-blue-500 bg-blue-50/60 shadow-xs group">
+            <!-- 3. الارشفة وتحسين المواقع SEO -->
+            <a href="../seo-and-search-engine-optimization/"
+                class="drawer-link block p-4 rounded-2xl border border-gray-200/80 hover:border-blue-500 hover:bg-blue-50/50 transition-all group">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-bold">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg font-bold group-hover:scale-110 transition-transform">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-sm group-hover:text-emerald-600 transition-colors">
+                            الارشفة وتحسين المواقع SEO</h4>
+                        <span class="text-xs text-gray-500 font-bold">تحسين المواقع لمحركات البحث ونتائج جوجل</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 4. البرمجة وتصميم المواقع الإلكترونية -->
+            <a href="../web-development-and-design/"
+                class="drawer-link block p-4 rounded-2xl border border-gray-200/80 hover:border-blue-500 hover:bg-blue-50/50 transition-all group">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-lg font-bold group-hover:scale-110 transition-transform">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-sm group-hover:text-indigo-600 transition-colors">
+                            البرمجة وتصميم المواقع الإلكترونية</h4>
+                        <span class="text-xs text-gray-500 font-bold">تصميم وبرمجة المواقع والمنصات الرقمية</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 5. فيديوهات المونتاج والموشن جرافيك -->
+            <a href="../video-editing-and-motion-graphics/"
+                class="drawer-link block p-4 rounded-2xl border border-gray-200/80 hover:border-blue-500 hover:bg-blue-50/50 transition-all group">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-lg font-bold group-hover:scale-110 transition-transform">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-sm group-hover:text-purple-600 transition-colors">
+                            فيديوهات المونتاج والموشن جرافيك</h4>
+                        <span class="text-xs text-gray-500 font-bold">مونتاج، ريلز، موشن جرافيك وإنتاج مرئي</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 6. الهوية البصرية والتصميم الجرافيكي -->
+            <a href="./"
+                class="drawer-link block p-4 rounded-2xl border-2 border-blue-500 bg-blue-50/60 shadow-xs group">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-bold">
                         <i class="fas fa-palette"></i>
                     </div>
                     <div>
-                        <h4 class="font-black text-blue-700 text-sm">التصميم الجرافيكي والهوية البصرية</h4>
-                        <span class="text-xs text-blue-600 font-bold">تصميم الهوية التجارية والشعارات والمطبوعات</span>
+                        <h4 class="font-black text-blue-700 text-sm">الهوية البصرية والتصميم الجرافيكي</h4>
+                        <span class="text-xs text-blue-600 font-bold">ابتكار الشعارات وتصميم الهوية والمطبوعات</span>
                     </div>
                 </div>
             </a>
@@ -964,14 +1275,14 @@
 
     <!-- Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
 
             if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', function() {
+                mobileMenuBtn.addEventListener('click', function () {
                     mobileMenu.classList.toggle('hidden');
                     if (menuIcon) {
                         menuIcon.classList.toggle('fa-bars');
@@ -1022,7 +1333,7 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
                 duration: 800,
                 easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
@@ -1032,4 +1343,5 @@
         });
     </script>
 </body>
+
 </html>

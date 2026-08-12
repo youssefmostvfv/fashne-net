@@ -24,3 +24,6 @@
   2. The name/label of the platform placed separately, directly below the icon container.
   3. Constrain the containers to prevent wide horizontal stretching (e.g., using `max-w-[100px] w-full mx-auto` or `lg:grid-cols-7`).
 - **Official X Icon (Twitter)**: For the platform X, always use an inline high-fidelity SVG icon for the "X" logo instead of relying on `fa-x-twitter` to guarantee reliable rendering.
+- **Translucent Dark Elements in Light Themes**: If a dark element (like a terminal or programming code console) is needed on a light-themed page, avoid solid dark backgrounds (`bg-slate-950`). Instead, use a medium translucent glassmorphic shade (e.g., `bg-slate-900/80 backdrop-blur-md`) with soft borders (`border-slate-800/60`) to maintain color balance.
+- **Verbatim Copy Invariance**: When the user provides explicit text copy for headings, titles, or descriptions, use it exactly as provided without summarization or editorial modification, while applying the requested visual layouts.
+- **FontAwesome Rendering Compatibility**: Avoid obscure FontAwesome 6 icon sub-classes (e.g., `fa-magnifying-glass-chart`, `fa-shield-halved`) that may fail to render. Always default to universally supported classes (e.g., `fa-search` instead of search-charts, and `fa-shield-alt` instead of shield-halved).
