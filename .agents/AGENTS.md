@@ -11,3 +11,16 @@
 ## SEO Content Guardrails for Service Areas
 - **Internal Linking**: Every content section (e.g., `<section>`) in a service area page MUST contain at least two internal HTML links (`<a>` tags) naturally embedded within its paragraph/body text pointing to other neighborhood pages, blog posts, or service details. No content section should have zero links.
 - **Structural Diversity**: Do NOT reuse identical section ordering, layouts, or heading structures across different neighborhood pages. To prevent search engines (like Google) from skipping indexing due to cookie-cutter template patterns, vary headers, layouts, section order, and wording styles while maintaining the same high standard of depth, quality, and word count.
+
+## UI/UX & Visual Design Standards for Fashne-net
+- **Light Theme Color Balance**: Maintain an ultra-clean light theme (`bg-slate-50`, `bg-white`) using royal blue and sky blue accents. Avoid aggressive multi-gradient text or neon glows on service cards. Use pure FontAwesome 6 icons.
+- **Card Placement Relative to Images**: Position platform ecosystem cards directly BELOW image frames rather than obscuring images with floating overlays.
+- **Dynamic Scroll Reveal & Fade-Out**: Interactive workflow items (such as "كيف نعمل") should use `IntersectionObserver` logic to smoothly animate (fade in and fade out) when scrolled into or out of view.
+- **Borderless & Fluid Sections**: CTA and goal sections should maintain an open, fluid layout without heavy outer borders or boxed frames.
+- **Favicon Links in Head**: Always include favicon link tags (`<link rel="icon" type="image/png" ...>`) inside the `<head>` of all HTML files.
+- **Tone Scale presentation (No Sliders)**: When presenting brand voice or tone scales, represent the dimensions as clean, structured vertical ribbon cards with distinct side border colors, small icons, and brief tags (e.g., "نبرة قريبة ومحببة") rather than rendering active range slider bars.
+- **Social Platform Grid Layout**: For platform grids (e.g., Facebook, Instagram, X), wrap each item in a vertical layout containing:
+  1. A colored square container (`w-12 h-12 rounded-2xl`) containing only the social network icon, using its official brand color by default.
+  2. The name/label of the platform placed separately, directly below the icon container.
+  3. Constrain the containers to prevent wide horizontal stretching (e.g., using `max-w-[100px] w-full mx-auto` or `lg:grid-cols-7`).
+- **Official X Icon (Twitter)**: For the platform X, always use an inline high-fidelity SVG icon for the "X" logo instead of relying on `fa-x-twitter` to guarantee reliable rendering.
