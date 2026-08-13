@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../assets/tailwind/tailwind.css">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
-    <!-- Google Font: Cairo -->
+    <!-- Default Site Fonts: Scheherazade New & Cairo -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
@@ -26,7 +27,7 @@
         }
 
         * {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Rubik', 'Cairo', sans-serif;
         }
 
         body {
@@ -96,6 +97,13 @@
 
         #main-header.island-active .nav-container {
             height: 64px !important;
+        }
+
+        /* Mobile specific spacing adjustment using pure CSS */
+        @media (max-width: 1023px) {
+            main.site-main-content {
+                padding-top: 40px !important;
+            }
         }
     </style>
 </head>
@@ -170,10 +178,11 @@
 
                 <!-- Desktop CTA Buttons -->
                 <div class="hidden lg:flex items-center gap-3">
-                    <a href="tel:+201111263618"
+                    <!-- English Lang Button -->
+                    <a href="../en/"
                         class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-blue-50">
-                        <i class="fas fa-phone-alt text-blue-500"></i>
-                        <span class="hidden xl:inline">اتصل بنا</span>
+                        <i class="fas fa-globe text-blue-500"></i>
+                        <span>English</span>
                     </a>
                     <a href="../contact-us/"
                         class="group bg-gradient-to-r from-blue-600 to-sky-600 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm font-semibold flex items-center gap-2">
@@ -184,10 +193,11 @@
 
                 <!-- Mobile Quick Call & Menu Toggle Button -->
                 <div class="flex items-center gap-2 lg:hidden">
-                    <a href="tel:+201111263618"
-                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
-                        <i class="fas fa-phone-alt text-blue-600 animate-pulse text-xs"></i>
-                        <span dir="ltr" class="font-bold tracking-tight">01111263618</span>
+                    <!-- Mobile English Button -->
+                    <a href="../en/"
+                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
+                        <i class="fas fa-globe text-blue-600 text-xs"></i>
+                        <span>EN</span>
                     </a>
                     <button id="menu-toggle" aria-label="القائمة"
                         class="flex items-center justify-center w-10 h-10 rounded-xl hover:bg-blue-50 transition-colors duration-300 focus:outline-none">
@@ -255,7 +265,7 @@
     </header>
 
     <!-- ===== MAIN CONTENT ===== -->
-    <main class="overflow-hidden bg-[#faf9f6]">
+    <main class="site-main-content overflow-hidden bg-[#faf9f6] lg:pt-0">
 
         <!-- ===== HERO SECTION (هيرو سكشن متطور واحترافي جداً) ===== -->
         <section
@@ -367,29 +377,13 @@
 
                             <!-- Main Image Container -->
                             <div class="rounded-[40px] overflow-hidden shadow-2xl border-4 border-white bg-white group">
-                                <img src="../assets/img/service_content.webp" alt="التسويق الإلكتروني وإدارة الحملات الإعلانية"
-                                    class="w-full h-[420px] sm:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent">
-                                </div>
+                                <img src="../assets/img/ad-campaign-management.webp" alt="التسويق الإلكتروني وإدارة الحملات الإعلانية"
+                                    class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700">
                             </div>
 
-                            <!-- Floating Top Badge Card -->
+                            <!-- Bottom Card (Isolated below image frame) -->
                             <div
-                                class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md p-3.5 px-4 rounded-2xl border border-white/80 shadow-xl flex items-center gap-3">
-                                <div
-                                    class="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-base font-bold">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-black text-gray-900 text-xs">High Conversion ROI</h4>
-                                    <p class="text-[10px] text-blue-600 font-bold">استهداف دقيق + مبيعات</p>
-                                </div>
-                            </div>
-
-                            <!-- Floating Bottom Overlay Card -->
-                            <div
-                                class="absolute bottom-6 right-6 left-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/60 shadow-xl flex items-center justify-between">
+                                class="mt-6 p-4 rounded-2xl bg-white border border-gray-100 shadow-lg flex items-center justify-between">
                                 <div class="flex items-center gap-3">
                                     <div
                                         class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-bold">
@@ -445,7 +439,7 @@
                     <div class="lg:col-span-6 order-2 lg:order-1 space-y-4" data-aos="fade-right">
                         <div
                             class="rounded-3xl overflow-hidden shadow-xl border border-gray-200/90 relative group bg-white">
-                            <img src="../assets/img/service_content.webp" alt="إدارة الحملات الإعلانية"
+                            <img src="../assets/img/digital-marketing-and-ad-campaign-management.webp" alt="إدارة الحملات الإعلانية"
                                 class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
 
@@ -613,7 +607,7 @@
                     <!-- Left Image Showcase Frame -->
                     <div class="lg:col-span-5" data-aos="fade-left">
                         <div class="rounded-3xl overflow-hidden shadow-xl border border-gray-200/90 relative group">
-                            <img src="../assets/img/service_content.webp" alt="إعلانات Google"
+                            <img src="../assets/img/google-ads.webp" alt="إعلانات Google"
                                 class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
                     </div>
@@ -631,7 +625,7 @@
                     <div class="lg:col-span-6 order-2 lg:order-1 space-y-4" data-aos="fade-right">
                         <div
                             class="rounded-3xl overflow-hidden shadow-xl border border-gray-200/90 relative group bg-white">
-                            <img src="../assets/img/service_content.webp" alt="إعلانات Meta"
+                            <img src="../assets/img/meta-ads.webp" alt="إعلانات Meta"
                                 class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
 
@@ -802,7 +796,7 @@
                     <div class="lg:col-span-5 space-y-4" data-aos="fade-left">
                         <div
                             class="rounded-3xl overflow-hidden shadow-xl border border-gray-200/90 relative group bg-white">
-                            <img src="../assets/img/service_content.webp" alt="إعلانات TikTok"
+                            <img src="../assets/img/tiktok-ads.webp" alt="إعلانات TikTok"
                                 class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
 
@@ -837,7 +831,7 @@
                     <div class="lg:col-span-6 order-2 lg:order-1 space-y-4" data-aos="fade-right">
                         <div
                             class="rounded-3xl overflow-hidden shadow-xl border border-gray-200/90 relative group bg-white">
-                            <img src="../assets/img/service_content.webp" alt="إعلانات Snapchat"
+                            <img src="../assets/img/snapchat-ads.webp" alt="إعلانات Snapchat"
                                 class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
 
@@ -1004,7 +998,7 @@
                     <div class="lg:col-span-5 space-y-4" data-aos="fade-left">
                         <div
                             class="rounded-3xl overflow-hidden shadow-xl border border-gray-200/90 relative group bg-white">
-                            <img src="../assets/img/service_content.webp" alt="إعلانات YouTube"
+                            <img src="../assets/img/youtube-ads.webp" alt="إعلانات YouTube"
                                 class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
 
@@ -1040,7 +1034,7 @@
                     <div class="lg:col-span-6 order-2 lg:order-1 space-y-4" data-aos="fade-right">
                         <div
                             class="rounded-3xl overflow-hidden shadow-xl border border-gray-200/90 relative group bg-white">
-                            <img src="../assets/img/service_content.webp" alt="تحليل المنافسين"
+                            <img src="../assets/img/competitor-analysis.webp" alt="تحليل المنافسين"
                                 class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
 
@@ -1207,7 +1201,7 @@
                     <div class="lg:col-span-5 space-y-4" data-aos="fade-left">
                         <div
                             class="rounded-3xl overflow-hidden shadow-xl border border-gray-200/90 relative group bg-white">
-                            <img src="../assets/img/service_content.webp" alt="تحديد الجمهور المستهدف"
+                            <img src="../assets/img/target-audience-identification.webp" alt="تحديد الجمهور المستهدف"
                                 class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
 

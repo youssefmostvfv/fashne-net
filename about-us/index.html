@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../assets/tailwind/tailwind.css">
     <!-- Font Awesome 6 (icons) -->
     <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
-    <!-- Google Font: Cairo (Arabic friendly) -->
+    <!-- Default Site Fonts: Scheherazade New & Cairo -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
         }
 
         * {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Rubik', 'Cairo', sans-serif;
         }
 
         body {
@@ -132,6 +133,13 @@
         #main-header.island-active .nav-container {
             height: 64px !important;
         }
+
+        /* Mobile specific spacing adjustment using pure CSS */
+        @media (max-width: 1023px) {
+            main.site-main-content {
+                padding-top: 40px !important;
+            }
+        }
     </style>
 </head>
 
@@ -206,11 +214,11 @@
 
                 <!-- Desktop CTA Buttons -->
                 <div class="hidden lg:flex items-center gap-3">
-                    <!-- Contact Button -->
-                    <a href="tel:+201111263618"
+                    <!-- English Lang Button -->
+                    <a href="../en/"
                         class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-blue-50">
-                        <i class="fas fa-phone-alt text-blue-500"></i>
-                        <span class="hidden xl:inline">اتصل بنا</span>
+                        <i class="fas fa-globe text-blue-500"></i>
+                        <span>English</span>
                     </a>
                     <!-- Consultation Button -->
                     <a href="../contact-us/"
@@ -222,11 +230,11 @@
 
                 <!-- Mobile Quick Call & Menu Toggle Button -->
                 <div class="flex items-center gap-2 lg:hidden">
-                    <!-- Mobile Phone Button -->
-                    <a href="tel:+201111263618"
-                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
-                        <i class="fas fa-phone-alt text-blue-600 animate-pulse text-xs"></i>
-                        <span dir="ltr" class="font-bold tracking-tight">01111263618</span>
+                    <!-- Mobile English Button -->
+                    <a href="../en/"
+                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
+                        <i class="fas fa-globe text-blue-600 text-xs"></i>
+                        <span>EN</span>
                     </a>
 
                     <!-- Mobile Menu Button -->
@@ -296,7 +304,7 @@
     </header>
 
     <!-- ===== MAIN CONTENT CONTAINER ===== -->
-    <main class="min-h-[60vh] overflow-hidden bg-[#faf9f6]">
+    <main class="site-main-content min-h-[60vh] overflow-hidden bg-[#faf9f6] lg:pt-0">
         <!-- ===== HERO SECTION (OpenBank Layout Structure - Brand Site Theme RTL) ===== -->
         <section class="relative py-12 sm:py-16 lg:py-24 overflow-hidden">
             <!-- Background Decorative Soft Gradients -->

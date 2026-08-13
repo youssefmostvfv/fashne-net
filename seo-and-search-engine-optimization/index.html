@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../assets/tailwind/tailwind.css">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
-    <!-- Google Font: Cairo -->
+    <!-- Default Site Fonts: Estedad & Cairo -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
@@ -26,7 +27,7 @@
         }
 
         * {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Rubik', 'Cairo', sans-serif;
         }
 
         body {
@@ -144,6 +145,13 @@
         #main-header.island-active .nav-container {
             height: 64px !important;
         }
+
+        /* Mobile specific spacing adjustment using pure CSS */
+        @media (max-width: 1023px) {
+            main.site-main-content {
+                padding-top: 40px !important;
+            }
+        }
     </style>
 </head>
 
@@ -217,10 +225,11 @@
 
                 <!-- Desktop CTA Buttons -->
                 <div class="hidden lg:flex items-center gap-3">
-                    <a href="tel:+201111263618"
+                    <!-- English Lang Button -->
+                    <a href="../en/"
                         class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-blue-50">
-                        <i class="fas fa-phone-alt text-blue-500"></i>
-                        <span class="hidden xl:inline">اتصل بنا</span>
+                        <i class="fas fa-globe text-blue-500"></i>
+                        <span>English</span>
                     </a>
                     <a href="../contact-us/"
                         class="group bg-gradient-to-r from-blue-600 to-sky-600 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm font-semibold flex items-center gap-2">
@@ -231,10 +240,11 @@
 
                 <!-- Mobile Quick Call & Menu Toggle Button -->
                 <div class="flex items-center gap-2 lg:hidden">
-                    <a href="tel:+201111263618"
-                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
-                        <i class="fas fa-phone-alt text-blue-600 animate-pulse text-xs"></i>
-                        <span dir="ltr" class="font-bold tracking-tight">01111263618</span>
+                    <!-- Mobile English Button -->
+                    <a href="../en/"
+                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
+                        <i class="fas fa-globe text-blue-600 text-xs"></i>
+                        <span>EN</span>
                     </a>
                     <button id="menu-toggle" aria-label="القائمة"
                         class="flex items-center justify-center w-10 h-10 rounded-xl hover:bg-blue-50 transition-colors duration-300 focus:outline-none">
@@ -302,7 +312,7 @@
     </header>
 
     <!-- ===== MAIN CONTENT ===== -->
-    <main class="overflow-hidden bg-[#faf9f6]">
+    <main class="site-main-content overflow-hidden bg-[#faf9f6] lg:pt-0">
 
         <!-- ===== HERO SECTION (هيرو سكشن متطور واحترافي جداً) ===== -->
         <section
@@ -367,55 +377,11 @@
                     </div>
 
                     <!-- Visual Area -->
-                    <div class="lg:col-span-5 relative flex justify-center" data-aos="fade-left">
-                        <div
-                            class="relative w-full max-w-[420px] aspect-square rounded-[40px] bg-gradient-to-br from-blue-600 to-sky-400 p-1 shadow-2xl shadow-blue-500/20 overflow-hidden group">
-                            <div
-                                class="w-full h-full bg-slate-900 rounded-[38px] p-6 flex flex-col justify-between relative overflow-hidden">
-                                <!-- Decorative Grid Pattern -->
-                                <div
-                                    class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]">
-                                </div>
-
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                                    </div>
-                                    <span class="text-xs text-slate-400 font-mono">google.com/search</span>
-                                </div>
-
-                                <div class="relative z-10 my-auto space-y-4">
-                                    <div class="bg-slate-800/80 border border-slate-700/50 p-4 rounded-2xl">
-                                        <div class="flex items-center gap-3">
-                                            <div
-                                                class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">
-                                                <i class="fas fa-search text-sm"></i>
-                                            </div>
-                                            <div class="h-4 bg-slate-700 rounded-md w-2/3"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-blue-600/10 border border-blue-500/30 p-4 rounded-2xl animate-pulse">
-                                        <div class="flex items-center justify-between">
-                                            <div class="space-y-2 w-3/4">
-                                                <div class="h-3.5 bg-blue-400 rounded-md w-full"></div>
-                                                <div class="h-2.5 bg-blue-400/60 rounded-md w-5/6"></div>
-                                            </div>
-                                            <span
-                                                class="text-[10px] bg-blue-500 text-white font-bold px-2 py-0.5 rounded-full">النتيجة
-                                                #1</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="relative z-10 flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-800">
-                                    <span>معدل الظهور: <strong class="text-emerald-400">99.8%</strong></span>
-                                    <span>الزيارات: <strong class="text-blue-400">+12.4K</strong></span>
-                                </div>
-                            </div>
+                    <div class="lg:col-span-5 relative flex justify-center animate-float-slow" data-aos="fade-left">
+                        <div class="relative w-full max-w-[600px] rounded-[40px] overflow-hidden group">
+                            <img src="../assets/img/be-found-by-your-customers-when-they-search-for-you.png" 
+                                 alt="Be found by your customers when they search for you" 
+                                 class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
                         </div>
                     </div>
 
@@ -904,11 +870,16 @@
                             </div>
                             <div class="w-full md:w-1/2 md:pr-12 text-right">
                                 <div
-                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">تحليل الموقع</h3>
-                                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                                        نبدأ بفحص الموقع وتحديد نقاط القوة والضعف.
-                                    </p>
+                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 text-right">
+                                    <div class="flex-1">
+                                        <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">تحليل الموقع</h3>
+                                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                            نبدأ بفحص الموقع وتحديد نقاط القوة والضعف.
+                                        </p>
+                                    </div>
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 text-lg">
+                                        <i class="fas fa-search"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -925,12 +896,16 @@
                             </div>
                             <div class="w-full md:w-1/2 md:pl-12 md:text-left text-right">
                                 <div
-                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">دراسة السوق والكلمات
-                                    </h3>
-                                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                                        نحدد الكلمات التي تستحق الاستهداف.
-                                    </p>
+                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 text-right">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-500 flex items-center justify-center flex-shrink-0 text-lg">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">دراسة السوق والكلمات</h3>
+                                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                            نحدد الكلمات التي تستحق الاستهداف.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -946,12 +921,16 @@
                             </div>
                             <div class="w-full md:w-1/2 md:pr-12 text-right">
                                 <div
-                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">وضع استراتيجية SEO
-                                    </h3>
-                                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                                        نحدد الأولويات وخطة العمل.
-                                    </p>
+                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 text-right">
+                                    <div class="flex-1">
+                                        <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">وضع استراتيجية SEO</h3>
+                                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                            نحدد الأولويات وخطة العمل.
+                                        </p>
+                                    </div>
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 text-lg">
+                                        <i class="fas fa-map"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -968,11 +947,16 @@
                             </div>
                             <div class="w-full md:w-1/2 md:pl-12 md:text-left text-right">
                                 <div
-                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">التحسين والتنفيذ</h3>
-                                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                                        نعمل على الجوانب التقنية والمحتوى والبنية.
-                                    </p>
+                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 text-right">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-500 flex items-center justify-center flex-shrink-0 text-lg">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">التحسين والتنفيذ</h3>
+                                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                            نعمل على الجوانب التقنية والمحتوى والبنية.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -988,11 +972,16 @@
                             </div>
                             <div class="w-full md:w-1/2 md:pr-12 text-right">
                                 <div
-                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">المتابعة</h3>
-                                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                                        نراقب النتائج ونحلل البيانات.
-                                    </p>
+                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 text-right">
+                                    <div class="flex-1">
+                                        <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">المتابعة</h3>
+                                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                            نراقب النتائج ونحلل البيانات.
+                                        </p>
+                                    </div>
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 text-lg">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1009,11 +998,16 @@
                             </div>
                             <div class="w-full md:w-1/2 md:pl-12 md:text-left text-right">
                                 <div
-                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">التطوير</h3>
-                                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                                        نحدث الاستراتيجية وفق النتائج وتغيرات محركات البحث.
-                                    </p>
+                                    class="bg-white p-4 sm:p-5 rounded-[20px] shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 text-right">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-500 flex items-center justify-center flex-shrink-0 text-lg">
+                                        <i class="fas fa-sync"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-base sm:text-lg font-black text-gray-900 mb-1">التطوير</h3>
+                                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                            نحدث الاستراتيجية وفق النتائج وتغيرات محركات البحث.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1055,41 +1049,11 @@
                     </div>
 
                     <!-- Visual Area -->
-                    <div class="lg:col-span-5 flex justify-center" data-aos="fade-left">
-                        <div
-                            class="w-full max-w-[400px] bg-slate-50 border border-gray-200/80 p-8 rounded-[32px] space-y-6 shadow-sm">
-                            <h3 class="font-black text-gray-900 text-lg text-center">دورة النمو والاستدامة</h3>
-
-                            <div class="space-y-4">
-                                <div class="flex items-center gap-3">
-                                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-                                    <span class="text-sm font-bold text-gray-800">بناء أساس قوي ومستدام</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-                                    <span class="text-sm font-bold text-gray-800">تطوير مستمر للأرشفة والمحتوى</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                    <span class="text-sm font-bold text-gray-800">التكيف السريع مع تحديثات جوجل</span>
-                                </div>
-                            </div>
-
-                            <!-- Creative Chart Block -->
-                            <div class="h-28 flex items-end gap-3 pt-4 border-b border-gray-200">
-                                <div class="bg-gray-200 w-full h-[30%] rounded-t-lg transition-all hover:h-[40%] cursor-pointer"
-                                    title="الشهر 1"></div>
-                                <div class="bg-blue-300 w-full h-[50%] rounded-t-lg transition-all hover:h-[60%] cursor-pointer"
-                                    title="الشهر 2"></div>
-                                <div class="bg-sky-400 w-full h-[70%] rounded-t-lg transition-all hover:h-[80%] cursor-pointer"
-                                    title="الشهر 3"></div>
-                                <div class="bg-blue-600 w-full h-[95%] rounded-t-lg transition-all hover:h-[100%] cursor-pointer animate-pulse"
-                                    title="النمو المستدام"></div>
-                            </div>
-                            <div class="flex justify-between text-xs text-gray-500">
-                                <span>بداية الحملة</span>
-                                <span>النتائج المستدامة</span>
-                            </div>
+                    <div class="lg:col-span-5 relative flex justify-center animate-float-slow" data-aos="fade-left">
+                        <div class="relative w-full max-w-[500px] rounded-[40px] overflow-hidden group">
+                            <img src="../assets/img/seo-for-companies.webp" 
+                                 alt="SEO for Companies" 
+                                 class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
                         </div>
                     </div>
 

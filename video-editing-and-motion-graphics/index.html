@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="../assets/tailwind/tailwind.css">
     <!-- Font Awesome 6 (icons) -->
     <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
-    <!-- Google Font: Cairo (Arabic friendly) -->
+    <!-- Default Site Fonts: Scheherazade New & Cairo -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
@@ -28,7 +29,7 @@
         }
 
         * {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Rubik', 'Cairo', sans-serif;
         }
 
         body {
@@ -74,21 +75,27 @@
             height: 64px !important;
         }
 
+        /* Mobile specific spacing adjustment using pure CSS */
+        @media (max-width: 1023px) {
+            main.site-main-content {
+                padding-top: 10px !important;
+            }
+        }
+
         /* Waveform Animation */
         @keyframes soundWave {
-
-            0%,
-            100% {
-                height: 8px;
+            0%, 100% {
+                transform: scaleY(0.12);
             }
-
             50% {
-                height: 38px;
+                transform: scaleY(1);
             }
         }
 
         .wave-bar {
+            transform-origin: bottom;
             animation: soundWave 1.2s ease-in-out infinite;
+            will-change: transform;
         }
     </style>
 </head>
@@ -162,10 +169,11 @@
 
                 <!-- Desktop CTA Buttons -->
                 <div class="hidden lg:flex items-center gap-3">
-                    <a href="tel:+201111263618"
+                    <!-- English Lang Button -->
+                    <a href="../en/"
                         class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-blue-50">
-                        <i class="fas fa-phone-alt text-blue-500"></i>
-                        <span class="hidden xl:inline">اتصل بنا</span>
+                        <i class="fas fa-globe text-blue-500"></i>
+                        <span>English</span>
                     </a>
                     <a href="../contact-us/"
                         class="group bg-gradient-to-r from-blue-600 to-sky-600 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm font-semibold flex items-center gap-2">
@@ -176,10 +184,11 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center gap-2 lg:hidden">
-                    <a href="tel:+201111263618"
-                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
-                        <i class="fas fa-phone-alt text-blue-600 animate-pulse text-xs"></i>
-                        <span dir="ltr">01111263618</span>
+                    <!-- Mobile English Button -->
+                    <a href="../en/"
+                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
+                        <i class="fas fa-globe text-blue-600 text-xs"></i>
+                        <span>EN</span>
                     </a>
                     <button id="menu-toggle" aria-label="القائمة"
                         class="flex items-center justify-center w-10 h-10 rounded-xl hover:bg-blue-50 transition-colors duration-300 focus:outline-none">
@@ -220,11 +229,11 @@
         </div>
     </header>
 
-    <main class="overflow-hidden">
+    <main class="site-main-content overflow-hidden lg:pt-0">
 
         <!-- ===== 1. HERO SECTION: The Film Editing Canvas ===== -->
         <section
-            class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-gradient-to-br from-white via-blue-50/20 to-slate-50 overflow-hidden">
+            class="relative pt-20 pb-20 sm:pt-40 sm:pb-28 bg-gradient-to-br from-white via-blue-50/20 to-slate-50 overflow-hidden">
             <div
                 class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] opacity-40 pointer-events-none">
             </div>
@@ -259,78 +268,15 @@
                         </div>
                     </div>
 
-                    <!-- Left Column: Video Editing Timeline Simulator -->
-                    <div class="lg:col-span-6 relative flex items-center justify-center min-h-[380px] sm:min-h-[420px]"
-                        data-aos="fade-right">
-                        <div
-                            class="absolute w-72 h-72 bg-blue-600/10 rounded-full blur-3xl -top-10 -right-10 animate-pulse">
+                    <!-- Left Column: Video Editing Image -->
+                    <div class="lg:col-span-6 flex justify-center items-center relative" data-aos="fade-right">
+                        <div class="relative w-full max-w-[500px] rounded-[32px] overflow-hidden group">
+                            <img src="../assets/img/video-editing.webp" alt="خدمات المونتاج وتعديل الفيديو"
+                                class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700">
                         </div>
-
-                        <!-- Timeline Editor Window -->
-                        <div
-                            class="relative w-full max-w-[460px] bg-slate-900 rounded-[32px] border-4 border-slate-800 shadow-2xl overflow-hidden p-4 flex flex-col justify-between h-[300px]">
-                            <!-- Header Bar -->
-                            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-2">
-                                <div class="flex gap-1.5">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-                                    <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                                </div>
-                                <span class="text-[9px] text-slate-500 font-mono">Fashne Video Editor v12.0</span>
-                            </div>
-
-                            <!-- Editing tracks -->
-                            <div class="flex-1 flex flex-col justify-center space-y-4">
-                                <!-- Track 1: Video elements -->
-                                <div class="space-y-1.5">
-                                    <span class="text-[8px] text-slate-500 font-bold text-right block">VIDEO TRACK
-                                        (V1)</span>
-                                    <div class="grid grid-cols-4 gap-2">
-                                        <div
-                                            class="h-8 bg-blue-600/80 rounded-lg border border-blue-500/30 flex items-center justify-center text-[7px] text-white font-black">
-                                            Reels Clip</div>
-                                        <div
-                                            class="h-8 bg-sky-500/80 rounded-lg border border-sky-400/30 flex items-center justify-center text-[7px] text-white font-black">
-                                            Motion Graphic</div>
-                                        <div
-                                            class="h-8 bg-indigo-600/80 rounded-lg border border-indigo-500/30 flex items-center justify-center text-[7px] text-white font-black">
-                                            Logo Intro</div>
-                                        <div class="h-8 bg-slate-800 rounded-lg"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Track 2: Audio/Voice Track -->
-                                <div class="space-y-1.5">
-                                    <span class="text-[8px] text-slate-500 font-bold text-right block">AUDIO TRACK
-                                        (A1)</span>
-                                    <div class="grid grid-cols-4 gap-2">
-                                        <div
-                                            class="h-6 bg-emerald-600/40 rounded-lg border border-emerald-500/20 flex items-center justify-center text-[7px] text-emerald-300 font-bold">
-                                            VoiceOver.mp3</div>
-                                        <div class="h-6 bg-slate-800 rounded-lg col-span-2"></div>
-                                        <div
-                                            class="h-6 bg-emerald-600/40 rounded-lg border border-emerald-500/20 flex items-center justify-center text-[7px] text-emerald-300 font-bold">
-                                            SFX_Click.wav</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Timeline Playhead & Ruler -->
-                            <div
-                                class="border-t border-slate-800 pt-3 flex items-center justify-between text-[8px] text-slate-500 font-mono">
-                                <span>00:00:15</span>
-                                <div class="w-full mx-4 h-1 bg-slate-800 rounded-full relative">
-                                    <div
-                                        class="absolute top-1/2 left-[40%] -translate-y-1/2 w-1.5 h-3 bg-red-500 rounded-sm">
-                                    </div>
-                                </div>
-                                <span>00:01:00</span>
-                            </div>
-                        </div>
-
                         <!-- Popping Glassmorphic Overlay: Render Status -->
                         <div
-                            class="absolute bottom-4 -right-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-blue-100/60 flex items-center gap-3 animate-bounce [animation-duration:5s]">
+                            class="absolute bottom-4 -right-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-blue-100/60 flex items-center gap-3 animate-bounce [animation-duration:5s] z-10">
                             <div
                                 class="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-sm flex-shrink-0">
                                 <i class="fas fa-arrows-spin animate-spin text-blue-500"></i>
@@ -340,7 +286,6 @@
                                 <p class="text-[9px] text-blue-600 font-extrabold">جاري الرندر بدقة 4K</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -377,31 +322,15 @@
 
                             <!-- Dynamic Aspect Screen Frame -->
                             <div id="video-screen-frame"
-                                class="bg-slate-900 rounded-2xl border-4 border-slate-800 shadow-xl overflow-hidden p-3 flex flex-col justify-between transition-all duration-500 w-[360px] h-[200px]">
-                                <!-- Upper metadata -->
-                                <div class="flex items-center justify-between border-b border-slate-850 pb-1.5 mb-1">
-                                    <span id="screen-badge"
-                                        class="text-[7px] text-blue-500 font-extrabold uppercase tracking-wider font-mono">16:9
-                                        widescreen</span>
-                                    <div class="flex gap-1">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
-                                        <span class="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
-                                    </div>
-                                </div>
-
+                                class="bg-slate-900 rounded-2xl border-4 border-slate-800 shadow-xl overflow-hidden transition-all duration-500 w-[360px] h-[200px] relative group">
+                                <img id="preview-image" src="../assets/img/video-editing-2.webp" alt="معاينة الخدمة"
+                                    class="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105">
                                 <!-- Center Viewport content -->
-                                <div class="flex-1 flex flex-col items-center justify-center text-center relative my-2">
+                                <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
                                     <div
-                                        class="w-9 h-9 rounded-full bg-white/10 backdrop-blur-xs flex items-center justify-center text-white text-xs border border-white/20 animate-pulse">
+                                        class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-xs flex items-center justify-center text-white text-xs border border-white/30 animate-pulse">
                                         <i class="fas fa-play"></i>
                                     </div>
-                                </div>
-
-                                <!-- Bottom time/controls -->
-                                <div
-                                    class="flex items-center justify-between text-[6px] text-slate-500 font-mono pt-1.5 border-t border-slate-850">
-                                    <span id="video-duration">00:00 / 00:30</span>
-                                    <span id="video-fps">FPS: 60</span>
                                 </div>
                             </div>
                         </div>
@@ -524,13 +453,16 @@
                         <h3 class="text-2xl sm:text-4xl font-black text-gray-900 leading-tight">
                             توفير التعليق الصوتي المناسب للفيديوهات الإعلانية والتعريفية Voice Over
                         </h3>
+                        <p class="text-sm sm:text-base font-bold text-gray-600 leading-relaxed">
+                            نقدم خدمات تعليق صوتي احترافية بأصوات نخبة من المعلقين المحترفين بمختلف اللهجات والأساليب الأدائية. سواء كنت بحاجة إلى نبرة حماسية لإعلان تجاري، أو نبرة هادئة ورصينة لفيديو تعريفي لشركتك، فإننا نضمن لك تسجيلاً عالي النقاء ومخارج حروف سليمة تضفي قوة واحترافية على عملك المرئي.
+                        </p>
 
                     </div>
 
                     <!-- Left Side: Translucent Waveform visualizer -->
                     <div class="lg:col-span-6" data-aos="fade-right">
                         <div
-                            class="bg-white rounded-[32px] border border-gray-200/80 p-8 shadow-xl flex flex-col justify-between h-[200px]">
+                            class="bg-white rounded-[32px] border border-gray-200/80 p-8 shadow-xl flex flex-col justify-between h-[260px]">
                             <div class="flex items-center justify-between border-b border-gray-100 pb-3">
                                 <span class="text-[10px] font-black text-slate-400">AUDIO VISUALIZER</span>
                                 <span
@@ -539,20 +471,17 @@
                             </div>
 
                             <!-- Animated Waves Grid -->
-                            <div class="flex items-end justify-center gap-1.5 h-20">
-                                <div class="wave-bar w-1.5 bg-blue-600 rounded-full" style="animation-delay: 0.1s">
-                                </div>
-                                <div class="wave-bar w-1.5 bg-sky-500 rounded-full" style="animation-delay: 0.3s"></div>
-                                <div class="wave-bar w-1.5 bg-[#1d6bf3] rounded-full" style="animation-delay: 0.5s">
-                                </div>
-                                <div class="wave-bar w-1.5 bg-indigo-500 rounded-full" style="animation-delay: 0.2s">
-                                </div>
-                                <div class="wave-bar w-1.5 bg-purple-500 rounded-full" style="animation-delay: 0.6s">
-                                </div>
-                                <div class="wave-bar w-1.5 bg-blue-500 rounded-full" style="animation-delay: 0.4s">
-                                </div>
-                                <div class="wave-bar w-1.5 bg-emerald-500 rounded-full" style="animation-delay: 0.1s">
-                                </div>
+                            <div class="flex items-end justify-center gap-2 h-36">
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-blue-600 to-sky-400" style="width: 10px; height: 120px; animation-delay: 0.1s; animation-duration: 1s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-sky-500 to-indigo-400" style="width: 10px; height: 120px; animation-delay: 0.3s; animation-duration: 1.4s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-blue-500 to-[#1d6bf3]" style="width: 10px; height: 120px; animation-delay: 0.5s; animation-duration: 1.1s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-indigo-500 to-purple-400" style="width: 10px; height: 120px; animation-delay: 0.2s; animation-duration: 1.5s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-purple-500 to-pink-400" style="width: 10px; height: 120px; animation-delay: 0.6s; animation-duration: 1.2s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-blue-500 to-emerald-400" style="width: 10px; height: 120px; animation-delay: 0.4s; animation-duration: 1.3s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-emerald-500 to-teal-400" style="width: 10px; height: 120px; animation-delay: 0.15s; animation-duration: 0.9s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-teal-500 to-sky-400" style="width: 10px; height: 120px; animation-delay: 0.35s; animation-duration: 1.6s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-sky-500 to-indigo-500" style="width: 10px; height: 120px; animation-delay: 0.55s; animation-duration: 1.25s;"></div>
+                                <div class="wave-bar rounded-full bg-gradient-to-t from-indigo-600 to-purple-500" style="width: 10px; height: 120px; animation-delay: 0.25s; animation-duration: 1.05s;"></div>
                             </div>
                         </div>
                     </div>
@@ -693,130 +622,139 @@
                 </div>
 
                 <!-- Polaroid Storyboard Wall Layout -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-6 max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-6 max-w-5xl mx-auto relative">
 
                     <!-- Polaroid Card 1 -->
-                    <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[-1.5deg] hover:rotate-0 text-right space-y-4"
-                        data-aos="fade-up">
-                        <!-- Simulated video frame placeholder inside Polaroid -->
-                        <div
-                            class="w-full h-24 sm:h-28 rounded-xl bg-blue-50/60 border border-blue-100 flex items-center justify-center text-blue-400">
-                            <i class="fas fa-lightbulb text-5xl"></i>
-                        </div>
-                        <!-- Polaroid text label -->
-                        <div class="space-y-1.5 px-1">
-                            <div
-                                class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
-                                <span>STEP 01</span>
-                                <span>الخطوة الأولى</span>
+                    <div class="relative group" data-aos="fade-up">
+                        <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[-1.5deg] hover:rotate-0 text-right space-y-4">
+                            <!-- Simulated video frame placeholder inside Polaroid -->
+                            <div class="w-full h-24 sm:h-28 rounded-xl bg-blue-50/60 border border-blue-100 flex items-center justify-center text-blue-400">
+                                <i class="fas fa-lightbulb text-5xl"></i>
                             </div>
-                            <h4 class="font-black text-lg text-gray-900">الفكرة</h4>
-                            <p class="text-sm font-semibold text-gray-500 leading-relaxed">نفهم الهدف والرسالة التي تريد
-                                إيصالها</p>
+                            <!-- Polaroid text label -->
+                            <div class="space-y-1.5 px-1">
+                                <div class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
+                                    <span>STEP 01</span>
+                                    <span>الخطوة الأولى</span>
+                                </div>
+                                <h4 class="font-black text-lg text-gray-900">الفكرة</h4>
+                                <p class="text-sm font-semibold text-gray-500 leading-relaxed">نفهم الهدف والرسالة التي تريد إيصالها</p>
+                            </div>
+                        </div>
+                        <!-- Arrow Left to Step 2 -->
+                        <div class="hidden lg:flex absolute top-1/2 -left-6 -translate-y-1/2 z-20 text-blue-400 text-xl pointer-events-none animate-pulse">
+                            <i class="fas fa-arrow-left"></i>
                         </div>
                     </div>
 
                     <!-- Polaroid Card 2 -->
-                    <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[1deg] hover:rotate-0 text-right space-y-4"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <!-- Simulated video frame placeholder inside Polaroid -->
-                        <div
-                            class="w-full h-24 sm:h-28 rounded-xl bg-sky-50/60 border border-sky-100 flex items-center justify-center text-sky-400">
-                            <i class="fas fa-file-signature text-5xl"></i>
-                        </div>
-                        <!-- Polaroid text label -->
-                        <div class="space-y-1.5 px-1">
-                            <div
-                                class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
-                                <span>STEP 02</span>
-                                <span>الخطوة الثانية</span>
+                    <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[1deg] hover:rotate-0 text-right space-y-4">
+                            <!-- Simulated video frame placeholder inside Polaroid -->
+                            <div class="w-full h-24 sm:h-28 rounded-xl bg-sky-50/60 border border-sky-100 flex items-center justify-center text-sky-400">
+                                <i class="fas fa-file-signature text-5xl"></i>
                             </div>
-                            <h4 class="font-black text-lg text-gray-900">السيناريو</h4>
-                            <p class="text-sm font-semibold text-gray-500 leading-relaxed">نرتب الفكرة في شكل قصة أو
-                                رسالة واضحة</p>
+                            <!-- Polaroid text label -->
+                            <div class="space-y-1.5 px-1">
+                                <div class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
+                                    <span>STEP 02</span>
+                                    <span>الخطوة الثانية</span>
+                                </div>
+                                <h4 class="font-black text-lg text-gray-900">السيناريو</h4>
+                                <p class="text-sm font-semibold text-gray-500 leading-relaxed">نرتب الفكرة في شكل قصة أو رسالة واضحة</p>
+                            </div>
+                        </div>
+                        <!-- Arrow Left to Step 3 -->
+                        <div class="hidden lg:flex absolute top-1/2 -left-6 -translate-y-1/2 z-20 text-sky-400 text-xl pointer-events-none animate-pulse">
+                            <i class="fas fa-arrow-left"></i>
                         </div>
                     </div>
 
                     <!-- Polaroid Card 3 -->
-                    <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[-2deg] hover:rotate-0 text-right space-y-4"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <!-- Simulated video frame placeholder inside Polaroid -->
-                        <div
-                            class="w-full h-24 sm:h-28 rounded-xl bg-purple-50/60 border border-purple-100 flex items-center justify-center text-purple-400">
-                            <i class="fas fa-film text-5xl"></i>
-                        </div>
-                        <!-- Polaroid text label -->
-                        <div class="space-y-1.5 px-1">
-                            <div
-                                class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
-                                <span>STEP 03</span>
-                                <span>الخطوة الثالثة</span>
+                    <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[-2deg] hover:rotate-0 text-right space-y-4">
+                            <!-- Simulated video frame placeholder inside Polaroid -->
+                            <div class="w-full h-24 sm:h-28 rounded-xl bg-purple-50/60 border border-purple-100 flex items-center justify-center text-purple-400">
+                                <i class="fas fa-film text-5xl"></i>
                             </div>
-                            <h4 class="font-black text-lg text-gray-900">التنفيذ</h4>
-                            <p class="text-sm font-semibold text-gray-500 leading-relaxed">مونتاج، موشن، مؤثرات، نصوص
-                                وعناصر بصرية</p>
-                        </div>
-                    </div>
-
-                    <!-- Polaroid Card 4 -->
-                    <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[1.5deg] hover:rotate-0 text-right space-y-4"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <!-- Simulated video frame placeholder inside Polaroid -->
-                        <div
-                            class="w-full h-24 sm:h-28 rounded-xl bg-emerald-50/60 border border-emerald-100 flex items-center justify-center text-emerald-400">
-                            <i class="fas fa-volume-high text-5xl"></i>
-                        </div>
-                        <!-- Polaroid text label -->
-                        <div class="space-y-1.5 px-1">
-                            <div
-                                class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
-                                <span>STEP 04</span>
-                                <span>الخطوة الرابعة</span>
+                            <!-- Polaroid text label -->
+                            <div class="space-y-1.5 px-1">
+                                <div class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
+                                    <span>STEP 03</span>
+                                    <span>الخطوة الثالثة</span>
+                                </div>
+                                <h4 class="font-black text-lg text-gray-900">التنفيذ</h4>
+                                <p class="text-sm font-semibold text-gray-500 leading-relaxed">مونتاج، موشن، مؤثرات، نصوص وعناصر بصرية</p>
                             </div>
-                            <h4 class="font-black text-lg text-gray-900">الصوت</h4>
-                            <p class="text-sm font-semibold text-gray-500 leading-relaxed">إضافة Voice Over أو المؤثرات
-                                الصوتية عند الحاجة</p>
                         </div>
-                    </div>
-
-                    <!-- Polaroid Card 5 -->
-                    <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[-1deg] hover:rotate-0 text-right space-y-4"
-                        data-aos="fade-up" data-aos-delay="400">
-                        <!-- Simulated video frame placeholder inside Polaroid -->
-                        <div
-                            class="w-full h-24 sm:h-28 rounded-xl bg-indigo-50/60 border border-indigo-100 flex items-center justify-center text-indigo-400">
-                            <i class="fas fa-eye text-5xl"></i>
-                        </div>
-                        <!-- Polaroid text label -->
-                        <div class="space-y-1.5 px-1">
-                            <div
-                                class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
-                                <span>STEP 05</span>
-                                <span>الخطوة الخامسة</span>
-                            </div>
-                            <h4 class="font-black text-lg text-gray-900">المراجعة</h4>
-                            <p class="text-sm font-semibold text-gray-500 leading-relaxed">مراجعة العمل قبل التسليم</p>
+                        <!-- Arrow Down to Step 4 -->
+                        <div class="hidden lg:flex absolute -bottom-8 left-1/2 -translate-x-1/2 z-20 text-purple-400 text-xl pointer-events-none animate-pulse">
+                            <i class="fas fa-arrow-down"></i>
                         </div>
                     </div>
 
                     <!-- Polaroid Card 6 -->
-                    <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[2deg] hover:rotate-0 text-right space-y-4"
-                        data-aos="fade-up" data-aos-delay="500">
-                        <!-- Simulated video frame placeholder inside Polaroid -->
-                        <div
-                            class="w-full h-24 sm:h-28 rounded-xl bg-amber-50/60 border border-amber-100 flex items-center justify-center text-amber-400">
-                            <i class="fas fa-cloud-arrow-up text-5xl"></i>
-                        </div>
-                        <!-- Polaroid text label -->
-                        <div class="space-y-1.5 px-1">
-                            <div
-                                class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
-                                <span>STEP 06</span>
-                                <span>الخطوة السادسة</span>
+                    <div class="relative group" data-aos="fade-up" data-aos-delay="500">
+                        <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[2deg] hover:rotate-0 text-right space-y-4">
+                            <!-- Simulated video frame placeholder inside Polaroid -->
+                            <div class="w-full h-24 sm:h-28 rounded-xl bg-amber-50/60 border border-amber-100 flex items-center justify-center text-amber-400">
+                                <i class="fas fa-cloud-arrow-up text-5xl"></i>
                             </div>
-                            <h4 class="font-black text-lg text-gray-900">التجهيز للنشر</h4>
-                            <p class="text-sm font-semibold text-gray-500 leading-relaxed">تصدير الفيديو بالمقاسات
-                                المناسبة للمنصة المطلوبة</p>
+                            <!-- Polaroid text label -->
+                            <div class="space-y-1.5 px-1">
+                                <div class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
+                                    <span>STEP 06</span>
+                                    <span>الخطوة السادسة</span>
+                                </div>
+                                <h4 class="font-black text-lg text-gray-900">التجهيز للنشر</h4>
+                                <p class="text-sm font-semibold text-gray-500 leading-relaxed">تصدير الفيديو بالمقاسات المناسبة للمنصة المطلوبة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Polaroid Card 5 -->
+                    <div class="relative group" data-aos="fade-up" data-aos-delay="400">
+                        <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[-1deg] hover:rotate-0 text-right space-y-4">
+                            <!-- Simulated video frame placeholder inside Polaroid -->
+                            <div class="w-full h-24 sm:h-28 rounded-xl bg-indigo-50/60 border border-indigo-100 flex items-center justify-center text-indigo-400">
+                                <i class="fas fa-eye text-5xl"></i>
+                            </div>
+                            <!-- Polaroid text label -->
+                            <div class="space-y-1.5 px-1">
+                                <div class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
+                                    <span>STEP 05</span>
+                                    <span>الخطوة الخامسة</span>
+                                </div>
+                                <h4 class="font-black text-lg text-gray-900">المراجعة</h4>
+                                <p class="text-sm font-semibold text-gray-500 leading-relaxed">مراجعة العمل قبل التسليم</p>
+                            </div>
+                        </div>
+                        <!-- Arrow Right to Step 6 -->
+                        <div class="hidden lg:flex absolute top-1/2 -right-6 -translate-y-1/2 z-20 text-indigo-400 text-xl pointer-events-none animate-pulse">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Polaroid Card 4 -->
+                    <div class="relative group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-white p-4 pb-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300 transform rotate-[1.5deg] hover:rotate-0 text-right space-y-4">
+                            <!-- Simulated video frame placeholder inside Polaroid -->
+                            <div class="w-full h-24 sm:h-28 rounded-xl bg-emerald-50/60 border border-emerald-100 flex items-center justify-center text-emerald-400">
+                                <i class="fas fa-volume-high text-5xl"></i>
+                            </div>
+                            <!-- Polaroid text label -->
+                            <div class="space-y-1.5 px-1">
+                                <div class="flex items-center justify-between text-[10px] text-gray-400 font-mono font-bold">
+                                    <span>STEP 04</span>
+                                    <span>الخطوة الرابعة</span>
+                                </div>
+                                <h4 class="font-black text-lg text-gray-900">الصوت</h4>
+                                <p class="text-sm font-semibold text-gray-500 leading-relaxed">إضافة Voice Over أو المؤثرات الصوتية عند الحاجة</p>
+                            </div>
+                        </div>
+                        <!-- Arrow Right to Step 5 -->
+                        <div class="hidden lg:flex absolute top-1/2 -right-6 -translate-y-1/2 z-20 text-emerald-400 text-xl pointer-events-none animate-pulse">
+                            <i class="fas fa-arrow-right"></i>
                         </div>
                     </div>
 
@@ -1251,8 +1189,7 @@
                         title: 'مونتاج الفيديو',
                         desc: 'تحرير وترتيب الفيديو وإضافة المؤثرات والعناصر البصرية المناسبة',
                         badge: '16:9 widescreen',
-                        duration: '00:00 / 00:30',
-                        fps: 'FPS: 60',
+                        image: 'video-editing-2.webp',
                         w: '360px',
                         h: '200px',
                         color: 'border-l-blue-600'
@@ -1261,8 +1198,7 @@
                         title: 'فيديوهات Reels',
                         desc: 'إنتاج وتحرير فيديوهات قصيرة مناسبة لمنصات التواصل الاجتماعي',
                         badge: '9:16 portrait',
-                        duration: '00:00 / 00:15',
-                        fps: 'FPS: 60',
+                        image: 'reels-videos.webp',
                         w: '160px',
                         h: '280px',
                         color: 'border-l-sky-500'
@@ -1271,8 +1207,7 @@
                         title: 'فيديوهات إعلانية',
                         desc: 'إنتاج محتوى مرئي يركز على المنتج أو الخدمة والرسالة التسويقية',
                         badge: '1:1 square',
-                        duration: '00:00 / 00:20',
-                        fps: 'FPS: 30',
+                        image: 'advertising-videos.webp',
                         w: '240px',
                         h: '240px',
                         color: 'border-l-indigo-500'
@@ -1281,8 +1216,7 @@
                         title: 'فيديوهات موشن جرافيك',
                         desc: 'تحويل الأفكار والمعلومات إلى رسوم متحركة ومحتوى بصري جذاب Motion Graphics (فيديوهات تشرح الخدمات أو المنتجات أو الأفكار بطريقة سهلة وواضحة)',
                         badge: '16:9 motion canvas',
-                        duration: '00:00 / 00:45',
-                        fps: 'FPS: 60',
+                        image: 'motion-graphics-videos.webp',
                         w: '360px',
                         h: '200px',
                         color: 'border-l-purple-500'
@@ -1291,8 +1225,7 @@
                         title: 'فيديوهات المنتجات',
                         desc: 'إظهار المنتجات بطريقة تساعد على تقديمها بشكل جذاب للجمهور',
                         badge: '4:5 vertical grid',
-                        duration: '00:00 / 00:15',
-                        fps: 'FPS: 60',
+                        image: 'reels-videos.webp',
                         w: '200px',
                         h: '250px',
                         color: 'border-l-emerald-500'
@@ -1301,8 +1234,7 @@
                         title: 'فيديوهات الشركات',
                         desc: 'محتوى تعريفي يوضح نشاط الشركة وخدماتها ومميزاتها',
                         badge: '16:9 cinematic',
-                        duration: '00:00 / 01:30',
-                        fps: 'FPS: 24',
+                        image: 'corporate-videos.webp',
                         w: '360px',
                         h: '200px',
                         color: 'border-l-amber-500'
@@ -1313,20 +1245,27 @@
                 if (!item) return;
 
                 // Update text elements
-                document.getElementById('preview-title').innerText = item.title;
-                document.getElementById('preview-desc').innerText = item.desc;
-                document.getElementById('screen-badge').innerText = item.badge;
-                document.getElementById('video-duration').innerText = item.duration;
-                document.getElementById('video-fps').innerText = item.fps;
+                if (document.getElementById('preview-title')) document.getElementById('preview-title').innerText = item.title;
+                if (document.getElementById('preview-desc')) document.getElementById('preview-desc').innerText = item.desc;
+                if (document.getElementById('screen-badge')) document.getElementById('screen-badge').innerText = item.badge;
+
+                // Update image src dynamically
+                const img = document.getElementById('preview-image');
+                if (img) {
+                    img.src = `../assets/img/${item.image}`;
+                }
 
                 // Update screen size smoothly
                 const frame = document.getElementById('video-screen-frame');
-                frame.style.width = item.w;
-                frame.style.height = item.h;
+                if (frame) {
+                    frame.style.width = item.w;
+                    frame.style.height = item.h;
+                }
 
                 // Update active state on buttons
                 specs.forEach(s => {
                     const btn = document.getElementById(`btn-spec-${s}`);
+                    if (!btn) return;
                     if (s === type) {
                         btn.className = `w-full text-right p-4 rounded-2xl border-l-4 ${item.color} border-y border-r border-gray-200 bg-slate-50/90 shadow-inner flex items-center gap-4 transition-all duration-300`;
                     } else {
