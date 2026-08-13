@@ -8,12 +8,12 @@
     <meta name="description"
         content="استعرض معرض سابقة أعمال شركة الفشني للدعاية والإعلان والتسويق الإلكتروني. نماذج بصرية ومشاريع متكاملة في التسويق، الهوية، الفيديوهات، والمواقع.">
     <!-- Favicon / Logo -->
-    <link rel="icon" type="image/png" href="../img/logo.png">
-    <link rel="apple-touch-icon" href="../img/logo.png">
-    <!-- Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="../assets/img/logo.webp">
+    <link rel="apple-touch-icon" href="../assets/img/logo.webp">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../assets/tailwind/tailwind.css">
     <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
     <!-- Google Font: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,96 +104,151 @@
 <body class="text-gray-800 antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- ===== NAVBAR ===== -->
+    <!-- ===== HEADER / NAV - Unified with Home Page style ===== -->
     <header id="main-header"
-        class="fixed top-0 left-0 right-0 z-50 bg-transparent border-b border-transparent transition-all duration-500">
+        class="w-full bg-transparent border-b border-transparent fixed top-0 left-0 z-50 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="nav-container h-20 flex items-center justify-between gap-4 transition-all duration-500">
+            <div class="nav-container flex items-center justify-between h-20 md:h-24 py-1 transition-all duration-500">
 
-                <!-- Logo Brand -->
-                <a href="../" class="flex items-center gap-3 group">
-                    <div
-                        class="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 p-0.5 shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300">
-                        <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5">
-                            <img src="../img/logo.png" alt="شركة الفشني" class="w-full h-full object-contain">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <a href="../" class="flex items-center gap-2 group">
+                        <!-- Logo Icon -->
+                        <div
+                            class="w-18 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 flex-shrink-0">
+                            <img src="../assets/img/logo.webp" alt="شركة الفشني للدعاية والإعلان"
+                                class="w-full h-full object-contain p-0.5">
                         </div>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-black text-xl text-gray-900 leading-none">شركة الفشني</span>
-                        <span class="text-[11px] font-bold text-blue-600 mt-1">تسويق وتنمية أعمال</span>
-                    </div>
-                </a>
+                        <!-- Logo Text -->
+                        <div class="flex flex-col">
+                            <span
+                                class="text-lg sm:text-base md:text-lg font-black text-gray-900 leading-tight whitespace-nowrap">
+                                شركة الفشني
+                            </span>
+                            <span
+                                class="text-[15px] sm:text-xs text-blue-600 font-bold leading-tight whitespace-nowrap mt-0.5">
+                                للدعاية والإعلان
+                            </span>
+                        </div>
+                    </a>
+                </div>
 
-                <!-- Desktop Nav Links -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a href="../" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8 text-gray-700 font-medium">
+                    <a href="../"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        الرئيسية
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
 
-                    <!-- Services Trigger (Opens Side Drawer) -->
-                    <button type="button" id="services-drawer-toggle"
-                        class="font-bold text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full hover:bg-blue-50">
+                    <!-- Services Dedicated Side Drawer Trigger -->
+                    <button id="services-drawer-toggle"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group flex items-center gap-1.5 focus:outline-none cursor-pointer">
                         <span>الخدمات</span>
-                        <i class="fas fa-chevron-down text-xs text-blue-500"></i>
+                        <i
+                            class="fas fa-chevron-down text-xs text-blue-600 group-hover:rotate-180 transition-transform duration-300"></i>
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                     </button>
 
                     <a href="./"
-                        class="font-bold text-blue-600 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100">سابقة
-                        أعمالنا</a>
-                    <a href="../about-us/" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">من
-                        نحن</a>
-                    <a href="../contact-us/" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">تواصل
-                        معنا</a>
+                        class="relative text-blue-600 font-bold transition-colors duration-300 group">
+                        سابقة أعمالنا
+                        <span
+                            class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
+                    </a>
+                    <a href="../about-us/"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        من نحن
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="../contact-us/"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        تواصل معنا
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
                 </nav>
 
-                <!-- CTA Call Button & Mobile Menu Toggle -->
-                <div class="flex items-center gap-3">
+                <!-- Desktop CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <!-- Contact Button -->
+                    <a href="tel:+201111263618"
+                        class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-blue-50">
+                        <i class="fas fa-phone-alt text-blue-500"></i>
+                        <span class="hidden xl:inline">اتصل بنا</span>
+                    </a>
+                    <!-- Consultation Button -->
                     <a href="../contact-us/"
-                        class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-extrabold text-sm px-5 py-2.5 rounded-full shadow-md shadow-blue-500/20 hover:shadow-lg transition-all duration-300 hover:scale-105">
-                        <i class="fas fa-paper-plane text-xs"></i>
-                        <span>ابدأ مشروعك مع الفشني</span>
+                        class="group bg-gradient-to-r from-blue-600 to-sky-600 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm font-semibold flex items-center gap-2">
+                        <i class="fas fa-calendar-check group-hover:animate-pulse"></i>
+                        احجز استشارة
+                    </a>
+                </div>
+
+                <!-- Mobile Quick Call & Menu Toggle Button -->
+                <div class="flex items-center gap-2 lg:hidden">
+                    <!-- Mobile Phone Button -->
+                    <a href="tel:+201111263618"
+                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
+                        <i class="fas fa-phone-alt text-blue-600 animate-pulse text-xs"></i>
+                        <span dir="ltr" class="font-bold tracking-tight">01111263618</span>
                     </a>
 
                     <!-- Mobile Menu Button -->
-                    <button type="button" id="mobile-menu-btn"
-                        class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-slate-200 transition-colors"
-                        aria-label="فتح القائمة">
-                        <i class="fas fa-bars text-lg" id="menu-icon"></i>
+                    <button id="menu-toggle"
+                        class="flex items-center justify-center w-10 h-10 rounded-xl hover:bg-blue-50 transition-colors duration-300 focus:outline-none">
+                        <svg id="menu-icon" class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 text-gray-700 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
 
-            <!-- Mobile Navigation Menu -->
+            <!-- Mobile Menu -->
             <div id="mobile-menu"
-                class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-gray-200/90 shadow-xl px-4 pt-3 pb-6 transition-all">
-                <div class="flex flex-col space-y-3 max-w-md mx-auto">
+                class="lg:hidden hidden bg-white/95 backdrop-blur-md border-t border-blue-100/40 py-4 px-4 shadow-lg rounded-b-2xl">
+                <div class="flex flex-col space-y-2.5">
                     <a href="../"
-                        class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-home text-blue-500 ml-2"></i>الرئيسية
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-home text-blue-500 w-5"></i>
+                        الرئيسية
                     </a>
-                    <button type="button" id="mobile-services-drawer-toggle"
-                        class="w-full text-right px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 flex items-center justify-between">
-                        <span class="flex items-center"><i
-                                class="fas fa-layer-group text-blue-500 ml-2"></i>الخدمات</span>
+                    <button id="mobile-services-drawer-toggle"
+                        class="flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold cursor-pointer">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-th-large text-blue-500 w-5"></i>
+                            الخدمات
+                        </span>
                         <i class="fas fa-chevron-left text-xs text-blue-400"></i>
                     </button>
-                    <a href="./" class="px-4 py-3 rounded-xl font-bold text-blue-600 bg-blue-50">
-                        <i class="fas fa-briefcase text-blue-500 ml-2"></i>سابقة أعمالنا
+                    <a href="./"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 transition-colors duration-300 text-blue-600 font-bold">
+                        <i class="fas fa-briefcase text-blue-600 w-5"></i>
+                        سابقة أعمالنا
                     </a>
                     <a href="../about-us/"
-                        class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-users text-blue-500 ml-2"></i>من نحن
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-info-circle text-blue-500 w-5"></i>
+                        من نحن
                     </a>
                     <a href="../contact-us/"
-                        class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-envelope text-blue-500 ml-2"></i>تواصل معنا
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-comments text-blue-500 w-5"></i>
+                        تواصل معنا
                     </a>
-                    <div class="border-t border-gray-100 pt-3 space-y-2">
-                        <a href="tel:+201111263618"
-                            class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-50 text-blue-700 font-bold">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>اتصل بنا: 01111263618</span>
-                        </a>
-                    </div>
                 </div>
             </div>
+        </div>
     </header>
 
     <!-- ===== MAIN CONTENT ===== -->
@@ -229,10 +284,7 @@
                         </h1>
 
                         <p class="text-base sm:text-lg lg:text-xl font-bold text-slate-700 leading-relaxed">
-                            أعمالنا هي أفضل ما يعبر عن خبرتنا على مدار سنوات عملنا، ونفذنا مجموعة متنوعة من المشاريع في
-                            مجالات الدعاية والإعلان والتسويق الإلكتروني. تعاملنا مع أنشطة وأسواق مختلفة في مصر والسعودية
-                            ودول الخليج، ونؤمن أن كل مشروع له طبيعة مختلفة، ولذلك نعرض جزءاً من أعمالنا التي تعكس تنوع
-                            الخدمات التي نقدمها.
+                            أعمالنا هي أفضل ما يعبر عن خبرتنا على مدار سنوات عملنا ونفذنا مجموعة متنوعة من المشاريع في مجالات الدعاية والإعلان والتسويق الإلكتروني وتعاملنا مع أنشطة وأسواق مختلفة في مصر والسعودية ودول الخليج ونؤمن أن كل مشروع له طبيعة مختلفة ولذلك نعرض جزءًا من أعمالنا التي تعكس تنوع الخدمات التي نقدمها
                         </p>
 
                         <div class="pt-2 flex flex-wrap gap-4">
@@ -469,8 +521,7 @@
                                 <i class="fas fa-pen-nib"></i>
                             </div>
                             <div>
-                                <h2 class="text-xl sm:text-2xl font-black text-slate-900">إدارة الحسابات وكتابة المحتوى
-                                </h2>
+                                <h2 class="text-xl sm:text-2xl font-black text-slate-900">إدارة الحسابات ووكتابة المحتوى</h2>
                                 <p class="text-xs font-bold text-sky-600">مشاريع إدارة صفحات وصناعة محتوى</p>
                             </div>
                         </div>
@@ -1043,7 +1094,7 @@
                                 <i class="fas fa-search"></i>
                             </div>
                             <div>
-                                <h2 class="text-xl sm:text-2xl font-black text-slate-900">الـ SEO وتحسين محرك البحث</h2>
+                                <h2 class="text-xl sm:text-2xl font-black text-slate-900">الSEO وتحسين محرك البحث</h2>
                                 <p class="text-xs font-bold text-emerald-600">مشاريع تحسين المواقع والأرشفة والظهور في
                                     محركات البحث</p>
                             </div>
@@ -1196,8 +1247,7 @@
                 </h2>
 
                 <p class="text-base sm:text-xl font-bold text-slate-700 leading-relaxed max-w-4xl mx-auto">
-                    نعمل مع شركات ومؤسسات بمجالات مختلفة، ولدينا خبرة في التعامل مع احتياجات أنشطة متنوعة ونطور الحلول
-                    وفق طبيعة كل نشاط والجمهور المستهدف والسوق.
+                    نعمل مع شركات وموسسات بمجالات مختلفة ولدينا خبرة في التعامل مع احتياجات أنشطة متنوعة ونطور الحلول وفق طبيعة كل نشاط والجمهور المستهدف والسوق
                 </p>
 
                 <div class="flex flex-wrap items-center justify-center gap-3 mt-8">
@@ -1232,7 +1282,7 @@
                 </div>
 
                 <h2 class="text-2xl sm:text-4xl font-black text-white leading-snug">
-                    شاهد جميع الأعمال هنا وتعرّف على طريقة عملنا
+                    شاهد أعمالنا وتعرّف على طريقة عملنا
                 </h2>
                 <p class="text-xs sm:text-sm font-bold text-slate-400 mt-2">
                     معرض الصور الحية لمشاريعنا وشعارات شركاء النجاح المتحركة تلقائياً
@@ -1422,15 +1472,15 @@
                 </div>
 
                 <p class="text-base sm:text-lg font-bold text-slate-700 max-w-3xl mx-auto leading-relaxed mb-4">
-                    إذا كنت تبحث عن جهة تساعدك في بناء أو تطوير حضور علامتك التجارية يسعدنا أن نبدأ معك.
+                    إذا كنت تبحث عن جهة تساعدك في بناء أو تطوير حضور علامتك التجارية يسعدنا أن نبدأ معك
                 </p>
 
                 <h3 class="text-xl sm:text-3xl font-black text-gray-900 mb-3">
-                    شركة الفشني للدعاية والإعلان والتسويق الإلكتروني ترحب بكم
+                    شركة الفشني للدعاية والاعلان والتسويق الالكتروني ترحب بكم
                 </h3>
 
                 <p class="text-lg sm:text-2xl font-black text-blue-600 leading-relaxed mb-8">
-                    " هدفنا هو وصولك إلى القمة.. ابدأ مشروعك مع الفشني "
+                    هدفنا هو وصولك الي القمة ابدأ مشروعك مع الفشني
                 </p>
 
                 <div class="flex flex-wrap items-center justify-center gap-4">
@@ -1459,7 +1509,7 @@
                 <!-- Col 1: Brand Info -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="../img/logo.png" alt="شركة الفشني"
+                        <img src="../assets/img/logo.webp" alt="شركة الفشني"
                             class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-sm">
                         <div>
                             <span class="text-xl font-black text-white block">شركة الفشني</span>
@@ -1753,16 +1803,17 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             // Mobile menu toggle
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
 
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', function () {
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
                     mobileMenu.classList.toggle('hidden');
-                    if (menuIcon) {
-                        menuIcon.classList.toggle('fa-bars');
-                        menuIcon.classList.toggle('fa-times');
+                    if (menuIcon && closeIcon) {
+                        menuIcon.classList.toggle('hidden');
+                        closeIcon.classList.toggle('hidden');
                     }
                 });
             }

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إدارة الصفحات وكتابة المحتوى | شركة الفشني للدعاية والإعلان</title>
     <!-- Favicon / Logo -->
-    <link rel="icon" type="image/png" href="../img/logo.png">
-    <link rel="apple-touch-icon" href="../img/logo.png">
-    <!-- Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="../assets/img/logo.webp">
+    <link rel="apple-touch-icon" href="../assets/img/logo.webp">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../assets/tailwind/tailwind.css">
     <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
     <!-- Google Font: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,96 +75,151 @@
 <body class="text-gray-800 antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- ===== NAVBAR (ثابت أعلى الصفحة) ===== -->
+    <!-- ===== HEADER / NAV - Unified with Home Page style ===== -->
     <header id="main-header"
-        class="fixed top-0 left-0 right-0 z-50 bg-transparent border-b border-transparent transition-all duration-500">
+        class="w-full bg-transparent border-b border-transparent fixed top-0 left-0 z-50 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="nav-container h-20 flex items-center justify-between gap-4 transition-all duration-500">
+            <div class="nav-container flex items-center justify-between h-20 md:h-24 py-1 transition-all duration-500">
 
-                <!-- Logo Brand -->
-                <a href="../" class="flex items-center gap-3 group">
-                    <div
-                        class="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 p-0.5 shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300">
-                        <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5">
-                            <img src="../img/logo.png" alt="شركة الفشني" class="w-full h-full object-contain">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <a href="../" class="flex items-center gap-2 group">
+                        <!-- Logo Icon -->
+                        <div
+                            class="w-18 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 flex-shrink-0">
+                            <img src="../assets/img/logo.webp" alt="شركة الفشني للدعاية والإعلان"
+                                class="w-full h-full object-contain p-0.5">
                         </div>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-black text-xl text-gray-900 leading-none">شركة الفشني</span>
-                        <span class="text-[11px] font-bold text-blue-600 mt-1">تسويق وتنمية أعمال</span>
-                    </div>
-                </a>
+                        <!-- Logo Text -->
+                        <div class="flex flex-col">
+                            <span
+                                class="text-lg sm:text-base md:text-lg font-black text-gray-900 leading-tight whitespace-nowrap">
+                                شركة الفشني
+                            </span>
+                            <span
+                                class="text-[15px] sm:text-xs text-blue-600 font-bold leading-tight whitespace-nowrap mt-0.5">
+                                للدعاية والإعلان
+                            </span>
+                        </div>
+                    </a>
+                </div>
 
-                <!-- Desktop Nav Links -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a href="../" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8 text-gray-700 font-medium">
+                    <a href="../"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        الرئيسية
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
 
-                    <!-- Services Trigger (Opens Side Drawer) -->
-                    <button type="button" id="services-drawer-toggle"
-                        class="font-bold text-blue-600 hover:text-blue-700 transition-colors inline-flex items-center gap-1.5 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100">
+                    <!-- Services Dedicated Side Drawer Trigger -->
+                    <button id="services-drawer-toggle"
+                        class="relative text-blue-600 font-bold group flex items-center gap-1.5 focus:outline-none cursor-pointer">
                         <span>الخدمات</span>
-                        <i class="fas fa-chevron-down text-xs text-blue-500"></i>
+                        <i
+                            class="fas fa-chevron-down text-xs text-blue-600 group-hover:rotate-180 transition-transform duration-300"></i>
+                        <span
+                            class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
                     </button>
 
                     <a href="../our-portfolio/"
-                        class="font-bold text-gray-700 hover:text-blue-600 transition-colors">سابقة أعمالنا</a>
-                    <a href="../about-us/" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">من
-                        نحن</a>
-                    <a href="../contact-us/" class="font-bold text-gray-700 hover:text-blue-600 transition-colors">تواصل
-                        معنا</a>
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        سابقة أعمالنا
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="../about-us/"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        من نحن
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="../contact-us/"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        تواصل معنا
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
                 </nav>
 
-                <!-- CTA Call Button & Mobile Menu Toggle -->
-                <div class="flex items-center gap-3">
+                <!-- Desktop CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <!-- Contact Button -->
+                    <a href="tel:+201111263618"
+                        class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-blue-50">
+                        <i class="fas fa-phone-alt text-blue-500"></i>
+                        <span class="hidden xl:inline">اتصل بنا</span>
+                    </a>
+                    <!-- Consultation Button -->
                     <a href="../contact-us/"
-                        class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-extrabold text-sm px-5 py-2.5 rounded-full shadow-md shadow-blue-500/20 hover:shadow-lg transition-all duration-300 hover:scale-105">
-                        <i class="fas fa-paper-plane text-xs"></i>
-                        <span>احجز استشارة</span>
+                        class="group bg-gradient-to-r from-blue-600 to-sky-600 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm font-semibold flex items-center gap-2">
+                        <i class="fas fa-calendar-check group-hover:animate-pulse"></i>
+                        احجز استشارة
+                    </a>
+                </div>
+
+                <!-- Mobile Quick Call & Menu Toggle Button -->
+                <div class="flex items-center gap-2 lg:hidden">
+                    <!-- Mobile Phone Button -->
+                    <a href="tel:+201111263618"
+                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
+                        <i class="fas fa-phone-alt text-blue-600 animate-pulse text-xs"></i>
+                        <span dir="ltr" class="font-bold tracking-tight">01111263618</span>
                     </a>
 
                     <!-- Mobile Menu Button -->
-                    <button type="button" id="mobile-menu-btn"
-                        class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-slate-200 transition-colors"
-                        aria-label="فتح القائمة">
-                        <i class="fas fa-bars text-lg" id="menu-icon"></i>
+                    <button id="menu-toggle"
+                        class="flex items-center justify-center w-10 h-10 rounded-xl hover:bg-blue-50 transition-colors duration-300 focus:outline-none">
+                        <svg id="menu-icon" class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 text-gray-700 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
 
-            <!-- Mobile Navigation Menu -->
+            <!-- Mobile Menu -->
             <div id="mobile-menu"
-                class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-gray-200/90 shadow-xl px-4 pt-3 pb-6 transition-all">
-                <div class="flex flex-col space-y-3 max-w-md mx-auto">
+                class="lg:hidden hidden bg-white/95 backdrop-blur-md border-t border-blue-100/40 py-4 px-4 shadow-lg rounded-b-2xl">
+                <div class="flex flex-col space-y-2.5">
                     <a href="../"
-                        class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-home text-blue-500 ml-2"></i>الرئيسية
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-home text-blue-500 w-5"></i>
+                        الرئيسية
                     </a>
-                    <button type="button" id="mobile-services-drawer-toggle"
-                        class="w-full text-right px-4 py-3 rounded-xl font-bold text-blue-600 bg-blue-50 flex items-center justify-between">
-                        <span class="flex items-center"><i
-                                class="fas fa-layer-group text-blue-500 ml-2"></i>الخدمات</span>
+                    <button id="mobile-services-drawer-toggle"
+                        class="flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold cursor-pointer">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-th-large text-blue-500 w-5"></i>
+                            الخدمات
+                        </span>
                         <i class="fas fa-chevron-left text-xs text-blue-400"></i>
                     </button>
                     <a href="../our-portfolio/"
-                        class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-briefcase text-blue-500 ml-2"></i>سابقة أعمالنا
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-briefcase text-blue-500 w-5"></i>
+                        سابقة أعمالنا
                     </a>
                     <a href="../about-us/"
-                        class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-users text-blue-500 ml-2"></i>من نحن
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-info-circle text-blue-500 w-5"></i>
+                        من نحن
                     </a>
                     <a href="../contact-us/"
-                        class="px-4 py-3 rounded-xl font-bold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-envelope text-blue-500 ml-2"></i>تواصل معنا
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-comments text-blue-500 w-5"></i>
+                        تواصل معنا
                     </a>
-                    <div class="border-t border-gray-100 pt-3 space-y-2">
-                        <a href="tel:+201111263618"
-                            class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-50 text-blue-700 font-bold">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>اتصل بنا: 01111263618</span>
-                        </a>
-                    </div>
                 </div>
             </div>
+        </div>
     </header>
 
     <!-- ===== MAIN CONTENT ===== -->
@@ -289,8 +344,8 @@
 
                             <!-- Main Clean Image Container -->
                             <div class="rounded-[36px] overflow-hidden shadow-xl border-4 border-white bg-white group">
-                                <img src="../img/service_content.png" alt="إدارة الصفحات وكتابة المحتوى"
-                                    class="w-full h-[400px] sm:h-[450px] object-cover group-hover:scale-105 transition-transform duration-700">
+                                <img src="../assets/img/social-media-management-and-content-writing.webp" alt="إدارة الصفحات وكتابة المحتوى"
+                                    class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                             </div>
 
                             <!-- Social Management Ecosystem Card Directly Below Image -->
@@ -338,13 +393,10 @@
                         <span>منظومة الحضور الرقمي المتكاملة</span>
                     </div>
                     <h2 class="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
-                        ثلاثية النجاح في <span class="text-blue-600">صناعة وإدارة المحتوى</span>
+                        خدمات إدارة الصفحات
                     </h2>
                     <p class="text-gray-600 text-base sm:text-lg font-bold leading-relaxed">
-                        نغطي دورة المحتوى الكاملة بداية من التخطيط الاستراتيجي وحتى صياغة المنشورات وتوجيه التفاعل،
-                        لمساعدة براندك على النمو والانتشار عبر <a href="../about-us/"
-                            class="text-blue-600 hover:text-blue-700 underline font-black">شركة الفشني للدعاية
-                            والإعلان</a>.
+                        في الفشني نقدم إدارة متكاملة لحسابات التواصل الاجتماعي ونبني استراتيجية محتوى تناسب نشاطك
                     </p>
                 </div>
 
@@ -405,7 +457,7 @@
                             </div>
                             <!-- Image Side -->
                             <div class="lg:col-span-5 relative min-h-[250px] lg:min-h-full">
-                                <img src="../img/service_branding.png" alt="إدارة حسابات التواصل الاجتماعي"
+                                <img src="../assets/img/service_branding.webp" alt="إدارة حسابات التواصل الاجتماعي"
                                     class="absolute inset-0 w-full h-full object-cover">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-r lg:bg-gradient-to-l from-blue-600/10 to-transparent">
@@ -421,7 +473,7 @@
                         <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
                             <!-- Image Side -->
                             <div class="lg:col-span-5 order-2 lg:order-1 relative min-h-[250px] lg:min-h-full">
-                                <img src="../img/hero_about_creative.png" alt="إعداد خطة المحتوى"
+                                <img src="../assets/img/hero_about_creative.webp" alt="إعداد خطة المحتوى"
                                     class="absolute inset-0 w-full h-full object-cover">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-l lg:bg-gradient-to-r from-blue-600/10 to-transparent">
@@ -533,7 +585,7 @@
                             </div>
                             <!-- Image Side -->
                             <div class="lg:col-span-5 relative min-h-[250px] lg:min-h-full">
-                                <img src="../img/service_content.png" alt="كتابة المحتوى وصياغة المنشورات"
+                                <img src="../assets/img/service_content.webp" alt="كتابة المحتوى وصياغة المنشورات"
                                     class="absolute inset-0 w-full h-full object-cover">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-r lg:bg-gradient-to-l from-blue-600/10 to-transparent">
@@ -736,7 +788,7 @@
                         <!-- Separate Image Frame -->
                         <div
                             class="rounded-3xl overflow-hidden aspect-video shadow-md border-4 border-white mb-6 group relative">
-                            <img src="../img/service_seo.png" alt="كتابة المحتوى الإعلاني الاحترافي"
+                            <img src="../assets/img/service_seo.webp" alt="كتابة المحتوى الإعلاني الاحترافي"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -798,7 +850,7 @@
                         <!-- Separate Image Frame -->
                         <div
                             class="rounded-3xl overflow-hidden aspect-video shadow-md border-4 border-white mb-6 group relative">
-                            <img src="../img/service_video.png" alt="إدارة التفاعل والرد على العملاء"
+                            <img src="../assets/img/service_video.webp" alt="إدارة التفاعل والرد على العملاء"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -860,7 +912,7 @@
                         <!-- Separate Image Frame -->
                         <div
                             class="rounded-3xl overflow-hidden aspect-video shadow-md border-4 border-white mb-6 group relative">
-                            <img src="../img/service_web.png" alt="محتوى الحملات التسويقية والعروض"
+                            <img src="../assets/img/service_web.webp" alt="محتوى الحملات التسويقية والعروض"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -958,14 +1010,14 @@
                         </div>
 
                         <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">
-                            تحديد نبرة صوت علامتك التجارية
+                            تطوير أسلوب التواصل
                         </h3>
 
                         <!-- Verbatim phrase block -->
                         <div
                             class="border-r-4 border-r-blue-600 pr-4 sm:pr-5 py-2 bg-gradient-to-r from-blue-50/40 to-transparent rounded-r-xl">
                             <p class="text-gray-900 font-extrabold text-sm sm:text-base leading-relaxed">
-                                تطوير أسلوب التواصل: تحديد أسلوب ونبرة العلامة التجارية في التواصل مع الجمهور
+                                تحديد أسلوب ونبرة العلامة التجارية في التواصل مع الجمهور
                             </p>
                         </div>
 
@@ -995,14 +1047,8 @@
                         </h3>
 
                         <!-- Paragraph with Internal Links -->
-                        <p class="text-gray-600 text-sm sm:text-base font-bold leading-relaxed">
-                            ندير تواجدك الرقمي وننشر المحتوى الإبداعي على المنصات الأكثر تأثيراً لزيادة شريحة عملائك.
-                            تواصل معنا وقم بـ <a href="../index.html#contact"
-                                class="text-blue-600 hover:text-blue-700 underline font-black">حجز استشارة تسويقية</a>
-                            مجانية للبدء فوراً، أو تفضل بالاطلاع على نماذج متميزة من إنجازاتنا السابقة عبر استكشاف معرض
-                            <a href="../index.html#work"
-                                class="text-blue-600 hover:text-blue-700 underline font-black">سابقة أعمالنا
-                                الإبداعية</a>.
+                        <p class="text-gray-600 text-sm sm:text-base font-bold leading-relaxed" dir="ltr">
+                            Facebook - Instagram - TikTok - Snapchat - X - LinkedIn - YouTube
                         </p>
 
                         <!-- Grid of 7 platforms with custom colored designs (Separate Icon Box & Label Below) -->
@@ -1301,7 +1347,7 @@
 
                         <!-- Image Side (RTL Left) -->
                         <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-full">
-                            <img src="../img/service_marketing.png" alt="تسويق وإدارة صفحات وحسابات السوشيال ميديا"
+                            <img src="../assets/img/service_marketing.webp" alt="تسويق وإدارة صفحات وحسابات السوشيال ميديا"
                                 class="absolute inset-0 w-full h-full object-cover">
                             <!-- Soft overlay to blend image with card color on the edge -->
                             <div
@@ -1327,7 +1373,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 <div class="space-y-4">
                     <div class="flex items-center gap-2">
-                        <img src="../img/logo.png" alt="شركة الفشني"
+                        <img src="../assets/img/logo.webp" alt="شركة الفشني"
                             class="w-12 h-12 object-contain bg-white rounded-xl p-1">
                         <span class="text-xl font-black text-white">شركة الفشني</span>
                     </div>
@@ -1509,16 +1555,17 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Mobile menu toggle
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
 
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', function () {
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
                     mobileMenu.classList.toggle('hidden');
-                    if (menuIcon) {
-                        menuIcon.classList.toggle('fa-bars');
-                        menuIcon.classList.toggle('fa-times');
+                    if (menuIcon && closeIcon) {
+                        menuIcon.classList.toggle('hidden');
+                        closeIcon.classList.toggle('hidden');
                     }
                 });
             }
