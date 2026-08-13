@@ -321,6 +321,14 @@
         }
 
         if (video) {
+          // Dynamic video source for mobile vs desktop
+          if (window.innerWidth < 1024) {
+            video.src = "./assets/img/logo-mobile.mp4";
+          } else {
+            video.src = "./assets/img/logo.mp4";
+          }
+          video.load();
+
           // Update progress bar as video plays
           video.addEventListener("timeupdate", function () {
             if (video.duration) {
