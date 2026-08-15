@@ -43,6 +43,34 @@
         background: #faf9f6;
         overflow-x: hidden;
       }
+      .animate-logo-scroll {
+        display: flex;
+        width: max-content;
+        animation: logoScroll 90s linear infinite;
+      }
+
+      .animate-logo-scroll:hover {
+        animation-play-state: paused;
+      }
+
+      .animate-logo-scroll .w-32 {
+        height: 110px !important;
+        border-radius: 25px 5px 25px 5px !important;
+        overflow: hidden !important;
+      }
+      /* Continuous Infinite Ticker Animation for Logos */
+      @keyframes logoScroll {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(50%);
+        }
+      }
+      .animate-logo-scroll .w-32 img {
+        border-radius: 17px 2px 17px 2px !important;
+      }
 
       /* Ultra Smooth Global Transitions */
       a,
@@ -250,7 +278,7 @@
 
   <body>
     <!--  -->
-    <div
+    <!-- <div
       id="site-preloader"
       class="fixed inset-0 z-[99999] bg-white flex items-center justify-center transition-all duration-700 ease-in-out overflow-hidden"
     >
@@ -291,9 +319,9 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
       (function () {
         const preloader = document.getElementById("site-preloader");
         if (preloader) {
@@ -355,7 +383,7 @@
           skipBtn.addEventListener("click", closePreloader);
         }
       })();
-    </script>
+    </script> -->
 
     <!-- ===== HEADER / NAV - Enhanced with Logo and Mobile Menu ===== -->
     <header
@@ -704,7 +732,6 @@
         section.hero-pattern {
           padding-top: 100px !important;
         }
-
       }
     </style>
 
@@ -788,62 +815,28 @@
           </p>
 
           <div
-            class="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 mt-8 justify-center lg:justify-start w-full sm:w-auto"
+            class="grid grid-cols-3 gap-3 mt-8 justify-items-stretch w-full max-w-md mx-auto lg:mx-0 sm:flex sm:flex-row sm:items-center sm:gap-4 sm:w-auto"
             data-aos="fade-up"
             data-aos-delay="300"
           >
             <a
-              href="#services"
-              class="w-full sm:w-auto justify-center group bg-blue-600 hover:bg-blue-700 text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 font-bold flex items-center gap-2 text-base"
+              href="https://www.behance.net/fashnemarketing"
+              class="col-span-2 justify-center group bg-blue-600 hover:bg-blue-700 text-white px-5 py-3.5 sm:px-8 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 font-bold flex items-center gap-2 text-base sm:w-auto"
             >
               <i class="fas fa-rocket group-hover:animate-bounce"></i>
-              استكشف خدماتنا
-            </a>
-            <a
-              href="#portfolio"
-              class="w-full sm:w-auto justify-center bg-white text-blue-600 border-2 border-blue-600 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full hover:bg-blue-50 transition-all hover:scale-105 flex items-center gap-2 font-semibold shadow-sm text-base"
-            >
-              <i class="fas fa-play-circle"></i>
               شاهد أعمالنا
             </a>
-          </div>
-
-          <div
-            class="flex flex-wrap items-center gap-3 sm:gap-6 mt-8 justify-center lg:justify-start"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
             <div
-              class="flex items-center gap-2 text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3.5 py-2 rounded-full shadow-sm hover:scale-105 transition-transform border border-blue-100/60"
+              class="col-span-1 flex items-center justify-center gap-1.5 text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-2 py-3.5 sm:px-3.5 sm:py-2 rounded-full shadow-sm hover:scale-105 transition-transform border border-blue-100/50"
             >
-              <i class="fas fa-check-circle text-blue-600"></i>
+              <i class="fas fa-star text-yellow-500 text-xs"></i>
               <span
-                class="font-bold text-blue-600 text-sm sm:text-base count-up"
-                data-target="100"
-                >0</span
-              >+ عميل راضٍ
-            </div>
-            <div
-              class="flex items-center gap-2 text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3.5 py-2 rounded-full shadow-sm hover:scale-105 transition-transform border border-blue-100/60"
-            >
-              <i class="fas fa-check-circle text-blue-600"></i>
-              <span
-                class="font-bold text-blue-600 text-base count-up"
-                data-target="250"
-                >0</span
-              >+ حملة ناجحة
-            </div>
-            <div
-              class="flex items-center gap-2 text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3.5 py-2 rounded-full shadow-sm hidden md:flex hover:scale-105 transition-transform border border-blue-100/50"
-            >
-              <i class="fas fa-star text-yellow-500"></i>
-              <span
-                class="font-bold text-blue-600 text-base count-up"
+                class="font-black text-blue-600 text-sm sm:text-base count-up"
                 data-target="4.9"
                 data-step="0.1"
                 >0</span
               >
-              تقييم
+              <span class="text-[10px] sm:text-xs font-bold">تقييم</span>
             </div>
           </div>
         </div>
@@ -1327,20 +1320,6 @@
                 التصميم والإنتاج المرئي والبرمجة وتحسين محركات البحث.
               </p>
             </div>
-
-            <!-- CTA Button -->
-            <div class="pt-4">
-              <a
-                href="#contact"
-                class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 font-bold text-lg"
-              >
-                <i class="fas fa-handshake"></i>
-                تعاون معنا اليوم
-                <i
-                  class="fas fa-arrow-left group-hover:translate-x-1 transition"
-                ></i>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -1355,7 +1334,6 @@
         >
           <i class="fas fa-bolt text-blue-600"></i>استراتيجية متكاملة
         </span>
-
       </div>
 
       <!-- Bento Grid Layout -->
@@ -1450,7 +1428,7 @@
           <div
             class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
           >
-            <div class="space-y-3 max-w-3xl">
+            <div class="space-y-3">
               <div class="flex items-center gap-3">
                 <div
                   class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl font-bold flex-shrink-0 shadow-md"
@@ -1466,17 +1444,6 @@
                 متكاملة من الخدمات تحت مظلة واحدة حتى لا تضطر للتعامل مع أكثر من
                 جهة لبناء علامتك التجارية وتسويقها
               </p>
-            </div>
-
-            <!-- Action Link / Highlight Pill -->
-            <div class="flex-shrink-0">
-              <a
-                href="#services"
-                class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-7 py-3.5 rounded-full font-bold text-base shadow-lg transition-all hover:scale-105"
-              >
-                <span>تصفّح منظومتنا الشاملة</span>
-                <i class="fas fa-arrow-left"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -1777,7 +1744,7 @@
               </div>
 
               <a
-                href="#contact"
+                href="/graphic-design-and-visual-identity/"
                 class="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-800 transition-colors text-sm group-hover:gap-2.5 transition-all"
               >
                 طلب الخدمة <i class="fas fa-arrow-left text-xs"></i>
@@ -1822,7 +1789,7 @@
               </div>
 
               <a
-                href="#contact"
+                href="/video-editing-and-motion-graphics/"
                 class="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-800 transition-colors text-sm group-hover:gap-2.5 transition-all"
               >
                 طلب الخدمة <i class="fas fa-arrow-left text-xs"></i>
@@ -1866,7 +1833,7 @@
               </div>
 
               <a
-                href="#contact"
+                href="/web-development-and-design/"
                 class="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-800 transition-colors text-sm group-hover:gap-2.5 transition-all"
               >
                 طلب الخدمة <i class="fas fa-arrow-left text-xs"></i>
@@ -1911,7 +1878,7 @@
               </div>
 
               <a
-                href="#contact"
+                href="/seo-and-search-engine-optimization/"
                 class="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-800 transition-colors text-sm group-hover:gap-2.5 transition-all"
               >
                 طلب الخدمة <i class="fas fa-arrow-left text-xs"></i>
@@ -1928,7 +1895,7 @@
         >
           <span class="text-gray-700 font-medium">هل تبحث عن خدمة معينة؟</span>
           <a
-            href="#contact"
+            href="/contact-us/"
             class="bg-gradient-to-r from-blue-600 to-sky-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all hover:scale-105"
           >
             <i class="fas fa-comment ml-2"></i>تحدث مع خبرائنا
@@ -2351,12 +2318,12 @@
                 >مصر</span
               >
               <div
-                class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10"
+                class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10"
               >
                 <img
-                  src="https://flagcdn.com/w40/eg.png"
+                  src="/ALL-LOGOS-2026/logo-egypt.webp"
                   alt="مصر"
-                  class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10"
+                  class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10"
                 />
               </div>
             </div>
@@ -2370,12 +2337,12 @@
                 >السعودية</span
               >
               <div
-                class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10"
+                class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10"
               >
                 <img
-                  src="https://flagcdn.com/w40/sa.png"
+                  src="/ALL-LOGOS-2026/logo-saudi.webp"
                   alt="السعودية"
-                  class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10"
+                  class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10"
                 />
               </div>
             </div>
@@ -2389,12 +2356,12 @@
                 >الكويت</span
               >
               <div
-                class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10"
+                class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10"
               >
                 <img
-                  src="https://flagcdn.com/w40/kw.png"
+                  src="/ALL-LOGOS-2026/logo-kuwait.webp"
                   alt="الكويت"
-                  class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10"
+                  class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10"
                 />
               </div>
             </div>
@@ -2408,12 +2375,12 @@
                 >البحرين</span
               >
               <div
-                class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10"
+                class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10"
               >
                 <img
-                  src="https://flagcdn.com/w40/bh.png"
+                  src="/ALL-LOGOS-2026/logo-bahrain.webp"
                   alt="البحرين"
-                  class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10"
+                  class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10"
                 />
               </div>
             </div>
@@ -2427,12 +2394,12 @@
                 >عُمان</span
               >
               <div
-                class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10"
+                class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10"
               >
                 <img
-                  src="https://flagcdn.com/w40/om.png"
+                  src="/ALL-LOGOS-2026/logo-oman.webp"
                   alt="عُمان"
-                  class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10"
+                  class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10"
                 />
               </div>
             </div>
@@ -2446,12 +2413,12 @@
                 >قطر</span
               >
               <div
-                class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10"
+                class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10"
               >
                 <img
-                  src="https://flagcdn.com/w40/qa.png"
+                  src="/ALL-LOGOS-2026/logo-qatar.webp"
                   alt="قطر"
-                  class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10"
+                  class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10"
                 />
               </div>
             </div>
@@ -2465,12 +2432,12 @@
                 >الإمارات</span
               >
               <div
-                class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10"
+                class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10"
               >
                 <img
-                  src="https://flagcdn.com/w40/ae.png"
+                  src="/ALL-LOGOS-2026/logo-emarat.webp"
                   alt="الإمارات"
-                  class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10"
+                  class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10"
                 />
               </div>
             </div>
@@ -2799,7 +2766,7 @@
           </div>
           <div class="flex-shrink-0">
             <a
-              href="#contact"
+              href="https://www.behance.net/fashnemarketing"
               class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-sky-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               <span>شاهد سابقة أعمالنا</span>
@@ -2809,206 +2776,1829 @@
         </div>
 
         <!-- 8-Card Grid Layout -->
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-        >
-          <!-- Project 1 -->
-          <div
-            onclick="openLightbox(0)"
-            class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100/50 hover:border-blue-300/70"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80"
-                alt="تصميم الهويات التجارية"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
-              >
-                <div class="text-white">
-                  <h4 class="font-bold text-lg">هوية بصرية متكاملة</h4>
-                  <p class="text-sm text-white/80">العلامات التجارية</p>
+        <!-- Track 2: Client Logos Ticker (شريط لوجوهات الشركات) -->
+        <div>
+          <div class="text-center mb-6" data-aos="fade-up">
+            <span
+              class="text-blue-600 font-bold bg-blue-50 border border-blue-100/80 px-6 py-2.5 rounded-full text-sm inline-flex items-center gap-2 shadow-sm"
+            >
+              <i class="fas fa-handshake"></i> أشرطة لوجوهات وشعارات الشركات
+            </span>
+          </div>
+          <div class="relative w-full overflow-hidden py-3 backdrop-blur-md">
+            <div
+              class="absolute top-0 right-0 bottom-0 w-24 z-20 pointer-events-none"
+            ></div>
+            <div
+              class="absolute top-0 left-0 bottom-0 w-24 z-20 pointer-events-none"
+            ></div>
+
+            <div class="animate-logo-scroll flex items-center gap-6">
+              <!-- Logo Set 1 -->
+              <div class="flex items-center gap-6 shrink-0">
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/0.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/3-capital.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-aseel.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-dakhakhni.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-faiz-real-estate.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-falah-academy.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-ghamdi.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-ghareeb.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-ghobari-dots.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-ghobari.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-hamd.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-khabiri.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-mohajer-international-shipping.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 tran sition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-nakheel-car-maintenance.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition- all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-omran.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-qabbani-shipping.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-qareen.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-rawdah-al-sharifah.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all d uration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-reem-travel.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration -300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-saidi-atelier.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-salehi.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-sharabi.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-shareef.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-wesam-dental.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-wothinani-engineering-consultancy.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 t ransition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/alpha.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/arab-child-school.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durat ion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/aramco.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/artboard-6.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/artlumixa.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/asalat-al-rabwah-restaurant.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition -all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/asas-al-wesam.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/automobile.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/bashayer-al-khair.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durat ion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/be-creative.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/best-innovation.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/bride-of-upper-egypt.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all du ration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/burning-factory.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/cabinet-touch.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/calm-feeling-massage.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all du ration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/carved-wood.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/creative-look.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/creative-vision.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/crown-of-glory.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration -300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/dar-al-moameneen-campaign.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-a ll duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/dawn-of-goodness.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/de-risk.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/decorist.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/details.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/diaf-contracting.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/diamond-bow.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/dishwasher.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/distinguished.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/doha-arabia-contracting-and-maintenance.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale- 0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/dream-for-tomorrow-cleaning.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition -all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/eagle-international-shipping.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transitio n-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/eid-palace.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/electrician.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/family-chef-restaurant.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/fast-carrier.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/finest-finance.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration -300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/finishing-masterpieces.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/firefighting-basics.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/fun-oasis-center.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/glow-of-al-haramain.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/glow-secret.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/GM.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/golden-building.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/gulf-meeting-point.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dura tion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/here-is-optimism.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/home-cloud.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/inner-link.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/innovation-and-design.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all d uration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/integrated-star.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/international-business.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/international-treatment.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/iron-cool.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/iron-heroes.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/istitab-cooling.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/iwan.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/izz-al-islam.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/KAVO.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/la-paz.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/lifetime-giving.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/lines.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/lumonail.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/manila-massage.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration -300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/massage-hour.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/medical-arabization-forum.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-a ll duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/milaf.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/monitoring-solutions-logo-01.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transitio n-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/mousa-origins.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/najd-destinations.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durat ion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/naqaa-clean.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/nasamat-investment.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dura tion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/new-spectrum.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/noor-al-huda-center.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/noor-al-mohandis.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/noureen-ac-and-cooling.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/nozha-travel-and-tourism.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-al l duration-300"
+                  />
                 </div>
               </div>
-            </div>
-          </div>
 
-          <!-- Project 2 -->
-          <div
-            onclick="openLightbox(1)"
-            class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100/50 hover:border-blue-300/70"
-            data-aos="fade-up"
-            data-aos-delay="150"
-          >
-            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
-                alt="تصميم المتاجر الإلكترونية"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
-              >
-                <div class="text-white">
-                  <h4 class="font-bold text-lg">منصات تجارة إلكترونية</h4>
-                  <p class="text-sm text-white/80">المتاجر الإلكترونية</p>
+              <!-- Logo Set 2 (Duplicate Loop) -->
+              <div class="flex items-center gap-6 shrink-0">
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/0.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div
-            onclick="openLightbox(2)"
-            class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100/50 hover:border-blue-300/70"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-                alt="تصميم مواقع الشركات"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
-              >
-                <div class="text-white">
-                  <h4 class="font-bold text-lg">مواقع شركات وحلول رقمية</h4>
-                  <p class="text-sm text-white/80">تطوير المواقع</p>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/3-capital.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div
-            onclick="openLightbox(3)"
-            class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100/50 hover:border-blue-300/70"
-            data-aos="fade-up"
-            data-aos-delay="250"
-          >
-            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80"
-                alt="حملات التسويق الرقمي"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
-              >
-                <div class="text-white">
-                  <h4 class="font-bold text-lg">حملات إعلانية ناجحة</h4>
-                  <p class="text-sm text-white/80">التسويق الرقمي</p>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-aseel.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div
-            onclick="openLightbox(4)"
-            class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100/50 hover:border-blue-300/70"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-                alt="تطبيقات الهواتف الذكية"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
-              >
-                <div class="text-white">
-                  <h4 class="font-bold text-lg">تطبيقات الهواتف الذكية</h4>
-                  <p class="text-sm text-white/80">تصميم وتطوير التطبيقات</p>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-dakhakhni.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div
-            onclick="openLightbox(5)"
-            class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100/50 hover:border-blue-300/70"
-            data-aos="fade-up"
-            data-aos-delay="350"
-          >
-            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80"
-                alt="فيديوهات الموشن جرافيك"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
-              >
-                <div class="text-white">
-                  <h4 class="font-bold text-lg">فيديوهات موشن جرافيك</h4>
-                  <p class="text-sm text-white/80">صناعة المحتوى البصري</p>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-faiz-real-estate.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 7 -->
-          <div
-            onclick="openLightbox(6)"
-            class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100/50 hover:border-blue-300/70"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80"
-                alt="إدارة السوشيال ميديا"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
-              >
-                <div class="text-white">
-                  <h4 class="font-bold text-lg">إدارة وتنشيط السوشيال ميديا</h4>
-                  <p class="text-sm text-white/80">إدارة الصفحات</p>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-falah-academy.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 8 -->
-          <div
-            onclick="openLightbox(7)"
-            class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100/50 hover:border-blue-300/70"
-            data-aos="fade-up"
-            data-aos-delay="450"
-          >
-            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
-                alt="تحسين محركات البحث"
-                class="w-full h-full object-cover group-hover:scale-115 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
-              >
-                <div class="text-white">
-                  <h4 class="font-bold text-lg">
-                    تقارير وتحسين نتائج محركات البحث
-                  </h4>
-                  <p class="text-sm text-white/80">أعمال الـ SEO</p>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-ghamdi.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-ghareeb.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-ghobari-dots.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-ghobari.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-hamd.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-khabiri.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-mohajer-international-shipping.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 tran sition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-nakheel-car-maintenance.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition- all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-omran.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-qabbani-shipping.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-qareen.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-rawdah-al-sharifah.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all d uration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-reem-travel.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration -300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-saidi-atelier.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-salehi.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-sharabi.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-shareef.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-wesam-dental.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/al-wothinani-engineering-consultancy.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 t ransition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/alpha.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/arab-child-school.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durat ion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/aramco.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/artboard-6.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/artlumixa.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/asalat-al-rabwah-restaurant.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition -all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/asas-al-wesam.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/automobile.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/bashayer-al-khair.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durat ion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/be-creative.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/best-innovation.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/bride-of-upper-egypt.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all du ration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/burning-factory.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/cabinet-touch.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/calm-feeling-massage.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all du ration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/carved-wood.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/creative-look.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/creative-vision.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/crown-of-glory.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration -300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/dar-al-moameneen-campaign.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-a ll duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/dawn-of-goodness.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/de-risk.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/decorist.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/details.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/diaf-contracting.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/diamond-bow.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/dishwasher.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/distinguished.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/doha-arabia-contracting-and-maintenance.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale- 0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/dream-for-tomorrow-cleaning.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition -all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/eagle-international-shipping.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transitio n-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/eid-palace.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/electrician.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/family-chef-restaurant.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/fast-carrier.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/finest-finance.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration -300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/finishing-masterpieces.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/firefighting-basics.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/fun-oasis-center.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/glow-of-al-haramain.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/glow-secret.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/GM.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/golden-building.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/gulf-meeting-point.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dura tion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/here-is-optimism.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/home-cloud.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/inner-link.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/innovation-and-design.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all d uration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/integrated-star.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/international-business.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/international-treatment.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/iron-cool.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/iron-heroes.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/istitab-cooling.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/iwan.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/izz-al-islam.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/KAVO.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/la-paz.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/lifetime-giving.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duratio n-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/lines.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/lumonail.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/manila-massage.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration -300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/massage-hour.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/medical-arabization-forum.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-a ll duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/milaf.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/monitoring-solutions-logo-01.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transitio n-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/mousa-origins.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration- 300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/najd-destinations.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durat ion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/naqaa-clean.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-30 0"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/nasamat-investment.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dura tion-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/new-spectrum.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-3 00"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/noor-al-huda-center.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all dur ation-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/noor-al-mohandis.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all durati on-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/noureen-ac-and-cooling.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div
+                  class="w-32 h-16 flex items-center justify-center bg-slate-900/40 border border-blue-500/30 rounded-tr-2xl rounded-bl-2xl hover:border-blue-500 transition-all duration-300 shrink-0"
+                >
+                  <img
+                    src="../ALL-LOGOS-2026/nozha-travel-and-tourism.webp"
+                    alt="Company Logo"
+                    class="max-w-full max-h-full object-cover filter grayscale hover:grayscale-0 transition-al l duration-300"
+                  />
                 </div>
               </div>
             </div>
@@ -3156,70 +4746,13 @@
       });
     </script>
 
-    <!-- ===== CONTACT / CTA ===== -->
-    <section
-      id="contact"
-      class="py-16 px-6 max-w-4xl mx-auto text-center"
-      data-aos="zoom-in"
-    >
-      <div
-        class="bg-white rounded-3xl shadow-2xl p-10 md:p-14 border border-blue-100/40"
-      >
-        <span
-          class="text-blue-600 bg-blue-100 px-4 py-1.5 rounded-full text-sm font-semibold"
-          ><i class="fas fa-handshake ml-2"></i>تواصل معنا</span
-        >
-        <h3 class="text-3xl font-bold text-gray-800 mt-5">
-          هيا نصنع <span class="text-gradient">الإبداع</span> معًا
-        </h3>
-        <p class="text-gray-500 mt-3 max-w-lg mx-auto">
-          احجز استشارة مجانية، أو أرسل لنا فكرة مشروعك وسنرد عليك خلال 24 ساعة.
-        </p>
-        <form
-          class="mt-8 flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto"
-          onsubmit="
-            event.preventDefault();
-            alert('شكراً! سنتواصل معك قريباً 💜');
-          "
-        >
-          <input
-            type="email"
-            placeholder="بريدك الإلكتروني"
-            required
-            class="flex-1 px-6 py-3.5 rounded-full border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 outline-none transition"
-          />
-          <button
-            type="submit"
-            class="bg-blue-600 text-white px-8 py-3.5 rounded-full shadow-lg hover:bg-blue-700 transition btn-glow font-bold flex items-center justify-center gap-2"
-          >
-            <i class="fas fa-paper-plane"></i>أرسل
-          </button>
-        </form>
-        <div
-          class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-gray-500"
-        >
-          <span
-            ><i class="fas fa-phone-alt text-blue-400 ml-2"></i
-            >+201111263618</span
-          >
-          <span
-            ><i class="fas fa-envelope text-blue-400 ml-2"></i
-            >fashne.net@gmail.com</span
-          >
-          <span
-            ><i class="fas fa-map-marker-alt text-blue-400 ml-2"></i>جدة،
-            المملكة العربية السعودية</span
-          >
-        </div>
-      </div>
-    </section>
     <!-- Floating Contact Buttons (Mobile Dark Backdrop / Desktop Transparent) -->
     <div
       class="fixed bottom-4 left-1/2 -translate-x-1/2 md:bottom-6 md:left-6 md:translate-x-0 z-50 flex flex-row md:flex-col items-center gap-2.5 bg-slate-900/80 backdrop-blur-md p-2 rounded-full border border-slate-700/50 shadow-xl md:bg-transparent md:backdrop-blur-none md:p-0 md:border-none md:shadow-none"
     >
       <!-- Email -->
       <a
-        href="mailto:fashne.net@gmail.com"
+        href="mailto:info@fashne.net"
         title="البريد الإلكتروني"
         class="w-11 h-11 md:w-12 md:h-12 bg-[#ea4335] hover:bg-red-600 rounded-full flex items-center justify-center text-white shadow-md transition-all duration-300 hover:scale-110"
       >
@@ -3278,23 +4811,11 @@
               <!-- <span class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-violet-300 to-blue-400">الفشني</span> -->
             </div>
             <p class="text-gray-400 leading-relaxed text-sm max-w-xs">
-              وكالة دعايا وتسويق إلكتروني مبتكرة، نصنع لك حضوراً رقمياً
-              استثنائياً ونساعد علامتك التجارية على التألق.
+              نعمل على بناء حضور الكتروني متكامل للعلامات التجارية من خلال الجمع
+              بين التسويق الإلكتروني والحملات الإعلانية و إدارة وكتابة المحتوى و
+              تصميم الجيرافيك والهوية البصرية و إنتاج الفيديو والموشن جرافيك و
+              البرمجة وتصميم المواقع وتحسين محركات البحث SEO
             </p>
-            <div class="flex items-center gap-3">
-              <span
-                class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1.5 rounded-full border border-blue-700/30 flex items-center gap-1.5"
-              >
-                <i class="fas fa-shield-alt text-blue-400"></i>
-                وكالة معتمدة
-              </span>
-              <span
-                class="text-xs bg-green-900/50 text-green-300 px-3 py-1.5 rounded-full border border-green-700/30 flex items-center gap-1.5"
-              >
-                <i class="fas fa-check-circle text-green-400"></i>
-                120+ عميل
-              </span>
-            </div>
           </div>
 
           <!-- Column 2: Quick Links -->
@@ -3442,7 +4963,12 @@
             <ul class="space-y-4">
               <li class="flex items-start gap-3 text-sm">
                 <i class="fas fa-map-marker-alt text-blue-400 mt-1 w-5"></i>
-                <span class="text-gray-400">جدة، المملكة العربية السعودية</span>
+                <a
+                  href="https://maps.app.goo.gl/MMX2AXWQAYBtz9WY7"
+                  target="_blank"
+                  class="text-gray-400"
+                  >مغاغة , محافظة المنيا , مصر</a
+                >
               </li>
               <li class="flex items-center gap-3 text-sm">
                 <i class="fas fa-phone-alt text-blue-400 w-5"></i>
@@ -3455,19 +4981,18 @@
               <li class="flex items-center gap-3 text-sm">
                 <i class="fas fa-envelope text-blue-400 w-5"></i>
                 <a
-                  href="mailto:fashne.net@gmail.com"
+                  href="mailto:info@fashne.net"
                   class="text-gray-400 hover:text-white transition"
-                  >fashne.net@gmail.com</a
+                  >info@fashne.net</a
                 >
               </li>
               <li class="flex items-center gap-3 text-sm">
                 <i class="fas fa-clock text-blue-400 w-5"></i>
                 <span class="text-gray-400"
-                  >الأحد - الخميس: 9:00 ص - 6:00 م</span
+                  >السبت - الخميس : 9:00 ص - 6:00 م</span
                 >
               </li>
             </ul>
-
             <!-- Social Media -->
             <div class="mt-6">
               <h5 class="text-white font-semibold text-sm mb-3">تابعنا على</h5>
@@ -3513,48 +5038,6 @@
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Newsletter Section -->
-        <div class="mt-12 pt-8 border-t border-gray-800/60">
-          <div
-            class="flex flex-col md:flex-row items-center justify-between gap-6"
-          >
-            <div class="flex items-center gap-4">
-              <div
-                class="w-12 h-12 rounded-full bg-blue-900/40 flex items-center justify-center border border-blue-700/30"
-              >
-                <i class="fas fa-envelope-open-text text-blue-400 text-xl"></i>
-              </div>
-              <div>
-                <h4 class="text-white font-bold">اشترك في نشرتنا البريدية</h4>
-                <p class="text-gray-400 text-sm">
-                  احصل على أحدث العروض والنصائح التسويقية
-                </p>
-              </div>
-            </div>
-            <form
-              class="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
-              onsubmit="
-                event.preventDefault();
-                alert('شكراً لك! سيتم إضافتك إلى القائمة البريدية 💜');
-              "
-            >
-              <input
-                type="email"
-                placeholder="بريدك الإلكتروني"
-                required
-                class="px-5 py-3 rounded-full bg-gray-800/50 border border-gray-700 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30 text-white placeholder-gray-500 w-full sm:w-64 transition"
-              />
-              <button
-                type="submit"
-                class="bg-gradient-to-r from-blue-600 to-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2 whitespace-nowrap"
-              >
-                <i class="fas fa-paper-plane"></i>
-                اشتراك
-              </button>
-            </form>
           </div>
         </div>
 
