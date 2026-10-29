@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# حظر الصفحات والمجلدات غير المخصصة للأرشفة
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.agents/
+Disallow: /404.html
+Disallow: /en/404.html
+
+# رابط خريطة الموقع
+Sitemap: https://fashne.net/sitemap.xml

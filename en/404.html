@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found · Fashne Net</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" href="../assets/img/logo.webp" />
+    <link rel="apple-touch-icon" href="../assets/img/logo.webp" />
+    <link rel="stylesheet" href="../assets/tailwind/tailwind.css" />
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html { scroll-behavior: smooth; }
+      * { font-family: "Rubik", "Cairo", sans-serif; }
+      body {
+        background: #faf9f6;
+        overflow-x: hidden;
+      }
+      .gradient-brand {
+        background: linear-gradient(135deg, #1d6bf3 0%, #2563eb 50%, #0ea5e9 100%);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #1d6bf3 0%, #2563eb 50%, #0ea5e9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .shadow-soft { box-shadow: 0 15px 40px -15px rgba(14, 165, 233, 0.25); }
+      .btn-glow { transition: all 0.2s; }
+      .btn-glow:hover { transform: scale(1.02); box-shadow: 0 10px 25px -8px rgba(29, 107, 243, 0.4); }
+      .floating { animation: float 3s ease-in-out infinite; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-14px); }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center px-6 py-16">
+    <div class="max-w-xl w-full text-center">
+      <div class="flex justify-center mb-8">
+        <img src="../assets/img/logo.webp" alt="Fashne Net" class="w-20 h-20 rounded-2xl shadow-soft floating" />
+      </div>
+
+      <h1 class="text-gradient font-extrabold leading-none select-none" style="font-size: clamp(5rem, 18vw, 9rem);">
+        404
+      </h1>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-2 mb-4">
+        Page Not Found
+      </h2>
+
+      <p class="text-gray-500 text-base md:text-lg mb-10 leading-relaxed">
+        The page you're looking for doesn't exist or may have been moved.
+        <br />
+        Head back home or reach out to us for help.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/en/"
+          class="gradient-brand btn-glow text-white font-semibold px-8 py-3.5 rounded-full shadow-soft inline-flex items-center gap-2"
+        >
+          <i class="fa-solid fa-house"></i>
+          Back to Home
+        </a>
+        <a
+          href="/en/contact-us/"
+          class="bg-white text-gray-700 border border-gray-200 font-semibold px-8 py-3.5 rounded-full inline-flex items-center gap-2 hover:border-[#1d6bf3] hover:text-[#1d6bf3] transition"
+        >
+          <i class="fa-solid fa-headset"></i>
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

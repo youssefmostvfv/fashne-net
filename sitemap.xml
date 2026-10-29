@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ========================================== -->
+  <!-- 1. الرئيسية (Homepages)                      -->
+  <!-- ========================================== -->
+  <url>
+    <loc>https://fashne.net/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fashne.net/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fashne.net/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- 2. صفحات التعريف والتواصل (Core Pages)     -->
+  <!-- ========================================== -->
+  <!-- About Us -->
+  <url>
+    <loc>https://fashne.net/about-us/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/about-us/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/about-us/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/about-us/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/about-us/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/about-us/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://fashne.net/contact-us/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/contact-us/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/contact-us/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/contact-us/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/contact-us/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/contact-us/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Portfolio -->
+  <url>
+    <loc>https://fashne.net/our-portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/our-portfolio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/our-portfolio/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/our-portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/our-portfolio/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/our-portfolio/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- 3. صفحات الخدمات (Services Pages)           -->
+  <!-- ========================================== -->
+  <!-- Digital Marketing -->
+  <url>
+    <loc>https://fashne.net/services/digital-marketing-and-ad-campaign-management/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/digital-marketing-and-ad-campaign-management/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/digital-marketing-and-ad-campaign-management/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/digital-marketing-and-ad-campaign-management/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/digital-marketing-and-ad-campaign-management/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/digital-marketing-and-ad-campaign-management/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Graphic Design -->
+  <url>
+    <loc>https://fashne.net/services/graphic-design-and-visual-identity/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/graphic-design-and-visual-identity/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/graphic-design-and-visual-identity/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/graphic-design-and-visual-identity/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/graphic-design-and-visual-identity/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/graphic-design-and-visual-identity/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- SEO -->
+  <url>
+    <loc>https://fashne.net/services/seo-and-search-engine-optimization/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/seo-and-search-engine-optimization/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/seo-and-search-engine-optimization/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/seo-and-search-engine-optimization/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/seo-and-search-engine-optimization/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/seo-and-search-engine-optimization/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Social Media Management -->
+  <url>
+    <loc>https://fashne.net/services/social-media-management-and-content-writing/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/social-media-management-and-content-writing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/social-media-management-and-content-writing/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/social-media-management-and-content-writing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/social-media-management-and-content-writing/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/social-media-management-and-content-writing/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Video Editing & Motion Graphics -->
+  <url>
+    <loc>https://fashne.net/services/video-editing-and-motion-graphics/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/video-editing-and-motion-graphics/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/video-editing-and-motion-graphics/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/video-editing-and-motion-graphics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/video-editing-and-motion-graphics/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/video-editing-and-motion-graphics/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Web Development & Design -->
+  <url>
+    <loc>https://fashne.net/services/web-development-and-design/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/web-development-and-design/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/web-development-and-design/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fashne.net/en/web-development-and-design/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fashne.net/en/web-development-and-design/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fashne.net/services/web-development-and-design/" />
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Media Presentation EN -->
+  <url>
+    <loc>https://fashne.net/mediaEN/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
