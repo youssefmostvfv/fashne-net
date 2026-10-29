@@ -702,12 +702,12 @@
         <h1 class="text-3xl md:text-4xl lg:text-4xl xl:text-3xl font-black leading-tight" data-aos="fade-up"
           data-aos-delay="100">
           <span class="text-gray-800">حضور إلكتروني متكامل لعلامتك التجارية
-نبني لك إعلانات ومحتوى وتصميم وفيديو وموقع وSEO في مكان واحد، بخطة تناسب نشاطك وسوقك</span>
+            نبني لك إعلانات ومحتوى وتصميم وفيديو وموقع وSEO في مكان واحد، بخطة تناسب نشاطك وسوقك</span>
         </h1>
 
         <p class="text-gray-600 text-lg md:text-xl mt-6 max-w-2xl leading-relaxed mx-auto lg:mx-0" data-aos="fade-up"
           data-aos-delay="200">
-          نعمل على بناء حضور إلكترونيمتكامل للعلامات التجارية من خلال الجمع
+          نعمل على بناء حضور إلكتروني متكامل للعلامات التجارية من خلال الجمع
           بين التسويق الإلكتروني والحملات الإعلانية و إدارة وكتابة المحتوى و
           تصميم الجيرافيك والهوية البصرية و إنتاج الفيديو والموشن جرافيك و
           البرمجة وتصميم المواقع وتحسين محركات البحث SEO
@@ -1878,84 +1878,276 @@
         <span>نقدم خدماتنا للشركات والعلامات التجارية في</span>
       </h4>
 
-      <!-- Countries List (Connected Path Concept) -->
-      <div class="relative py-10 overflow-x-auto no-scrollbar">
-        <!-- Connecting Line Background -->
-        <div class="absolute top-[78px] left-4 right-4 h-0.5 bg-blue-100 z-0 hidden md:block"></div>
+      <!-- Countries List (Infinite Seamless Marquee on Mobile / Connected Line on Desktop) -->
+      <style>
+        @keyframes countriesMarquee {
+          0% {
+            transform: translateX(0);
+          }
 
-        <!-- Nodes Container -->
-        <div
-          class="relative z-10 flex flex-wrap md:flex-nowrap items-center justify-between gap-6 md:gap-0 max-w-5xl mx-auto px-4">
+          100% {
+            transform: translateX(50%);
+          }
+        }
+
+        .countries-marquee-track {
+          display: flex;
+          width: max-content;
+          animation: countriesMarquee 25s linear infinite;
+        }
+
+        /* Mobile only */
+        .countries-mobile-only {
+          display: block;
+        }
+
+        /* Desktop only */
+        .countries-desktop-only {
+          display: none;
+        }
+
+        @media (min-width: 768px) {
+          .countries-mobile-only {
+            display: none !important;
+          }
+
+          .countries-desktop-only {
+            display: flex !important;
+          }
+        }
+      </style>
+
+      <div class="relative py-8 md:py-10 overflow-hidden">
+        <!-- Connecting Line Background for Desktop -->
+        <div class="countries-desktop-only absolute top-[78px] left-4 right-4 h-0.5 bg-blue-100 z-0"></div>
+
+        <!-- Desktop View (Static Connected Path - Only on Screens >= 768px) -->
+        <div class="countries-desktop-only relative z-10 items-center justify-between max-w-5xl mx-auto px-4">
+
           <!-- Node 1: مصر -->
-          <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+          <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
             <span
               class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">مصر</span>
-            <div class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10">
+            <div class="relative flex items-center justify-center h-10 w-16 z-10">
               <img src="/ALL-LOGOS-2026/logo-egypt.webp" alt="مصر"
                 class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
             </div>
           </div>
 
           <!-- Node 2: السعودية -->
-          <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+          <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
             <span
               class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">السعودية</span>
-            <div class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10">
+            <div class="relative flex items-center justify-center h-10 w-16 z-10">
               <img src="/ALL-LOGOS-2026/logo-saudi.webp" alt="السعودية"
                 class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
             </div>
           </div>
 
           <!-- Node 3: الكويت -->
-          <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+          <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
             <span
               class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">الكويت</span>
-            <div class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10">
+            <div class="relative flex items-center justify-center h-10 w-16 z-10">
               <img src="/ALL-LOGOS-2026/logo-kuwait.webp" alt="الكويت"
                 class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
             </div>
           </div>
 
           <!-- Node 4: البحرين -->
-          <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+          <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
             <span
               class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">البحرين</span>
-            <div class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10">
+            <div class="relative flex items-center justify-center h-10 w-16 z-10">
               <img src="/ALL-LOGOS-2026/logo-bahrain.webp" alt="البحرين"
                 class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
             </div>
           </div>
 
           <!-- Node 5: عُمان -->
-          <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+          <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
             <span
               class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">عُمان</span>
-            <div class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10">
+            <div class="relative flex items-center justify-center h-10 w-16 z-10">
               <img src="/ALL-LOGOS-2026/logo-oman.webp" alt="عُمان"
                 class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
             </div>
           </div>
 
           <!-- Node 6: قطر -->
-          <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+          <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
             <span
               class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">قطر</span>
-            <div class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10">
+            <div class="relative flex items-center justify-center h-10 w-16 z-10">
               <img src="/ALL-LOGOS-2026/logo-qatar.webp" alt="قطر"
                 class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
             </div>
           </div>
 
           <!-- Node 7: الإمارات -->
-          <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+          <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
             <span
               class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">الإمارات</span>
-            <div class="relative flex items-center justify-center h-10 w-16 hidden md:flex z-10">
+            <div class="relative flex items-center justify-center h-10 w-16 z-10">
               <img src="/ALL-LOGOS-2026/logo-emarat.webp" alt="الإمارات"
                 class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
             </div>
           </div>
         </div>
+
+        <!-- Mobile View (Infinite Smooth Continuous Marquee - Only on Mobile < 768px) -->
+        <div
+          class="countries-mobile-only relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div class="countries-marquee-track flex items-center gap-6 py-2">
+            <!-- First Set -->
+            <div class="flex items-center gap-6 flex-shrink-0">
+
+              <!-- Node 1: مصر -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">مصر</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-egypt.webp" alt="مصر"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 2: السعودية -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">السعودية</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-saudi.webp" alt="السعودية"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 3: الكويت -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">الكويت</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-kuwait.webp" alt="الكويت"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 4: البحرين -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">البحرين</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-bahrain.webp" alt="البحرين"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 5: عُمان -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">عُمان</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-oman.webp" alt="عُمان"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 6: قطر -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">قطر</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-qatar.webp" alt="قطر"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 7: الإمارات -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">الإمارات</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-emarat.webp" alt="الإمارات"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+            </div>
+            <!-- Duplicate Set for Seamless Infinite Loop -->
+            <div class="flex items-center gap-6 flex-shrink-0" aria-hidden="true">
+
+              <!-- Node 1: مصر -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">مصر</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-egypt.webp" alt="مصر"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 2: السعودية -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">السعودية</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-saudi.webp" alt="السعودية"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 3: الكويت -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">الكويت</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-kuwait.webp" alt="الكويت"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 4: البحرين -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">البحرين</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-bahrain.webp" alt="البحرين"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 5: عُمان -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">عُمان</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-oman.webp" alt="عُمان"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 6: قطر -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">قطر</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-qatar.webp" alt="قطر"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+
+              <!-- Node 7: الإمارات -->
+              <div class="flex flex-col items-center gap-3.5 flex-shrink-0 group">
+                <span
+                  class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">الإمارات</span>
+                <div class="relative flex items-center justify-center h-10 w-16 z-10">
+                  <img src="/ALL-LOGOS-2026/logo-emarat.webp" alt="الإمارات"
+                    class="relative h-8 w-14 object-cover transition-transform border-2 border-blue-200 duration-300 group-hover:scale-115 z-10" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Description Statement (Exact Text) -->
@@ -3420,7 +3612,7 @@
             <!-- <span class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-violet-300 to-blue-400">الفشني</span> -->
           </div>
           <p class="text-gray-400 leading-relaxed text-sm max-w-xs">
-            نعمل على بناء حضور إلكترونيمتكامل للعلامات التجارية من خلال الجمع
+            نعمل على بناء حضور إلكتروني متكامل للعلامات التجارية من خلال الجمع
             بين التسويق الإلكتروني والحملات الإعلانية و إدارة وكتابة المحتوى و
             تصميم الجيرافيك والهوية البصرية و إنتاج الفيديو والموشن جرافيك و
             البرمجة وتصميم المواقع وتحسين محركات البحث SEO
