@@ -106,7 +106,12 @@
 
         /* Dynamic Island Header Styles */
         #main-header {
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            will-change: top, width, border-radius;
+            transition-property: top, width, max-width, border-radius, background-color, border-color, box-shadow, backdrop-filter, -webkit-backdrop-filter;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         #main-header.island-active {
@@ -182,7 +187,12 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-
+
+                    <a href="./" class="relative text-blue-600 font-bold group">
+                        من نحن
+                        <span
+                            class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300"></span>
+                    </a>
                     <!-- Services Dedicated Side Drawer Trigger -->
                     <button id="services-drawer-toggle"
                         class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group flex items-center gap-1.5 focus:outline-none cursor-pointer">
@@ -199,11 +209,6 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="./" class="relative text-blue-600 font-bold group">
-                        من نحن
-                        <span
-                            class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300"></span>
-                    </a>
                     <a href="../contact-us/"
                         class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
                         تواصل معنا
@@ -215,7 +220,7 @@
                 <!-- Desktop CTA Buttons -->
                 <div class="hidden lg:flex items-center gap-3">
                     <!-- English Lang Button -->
-                    <a href="../en/"
+                    <a href="/en/about-us/"
                         class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-blue-50">
                         <i class="fas fa-globe text-blue-500"></i>
                         <span>English</span>
@@ -231,7 +236,7 @@
                 <!-- Mobile Quick Call & Menu Toggle Button -->
                 <div class="flex items-center gap-2 lg:hidden">
                     <!-- Mobile English Button -->
-                    <a href="../en/"
+                    <a href="/en/about-us/"
                         class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
                         <i class="fas fa-globe text-blue-600 text-xs"></i>
                         <span>EN</span>
@@ -262,6 +267,11 @@
                         class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
                         <i class="fas fa-home text-blue-500 w-5"></i>
                         الرئيسية
+                    </a>
+                    <a href="./"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 text-blue-600 font-bold">
+                        <i class="fas fa-info-circle text-blue-500 w-5"></i>
+                        من نحن
                     </a>
                     <button id="mobile-services-drawer-toggle"
                         class="flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold cursor-pointer">
@@ -275,11 +285,6 @@
                         class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
                         <i class="fas fa-briefcase text-blue-500 w-5"></i>
                         سابقة أعمالنا
-                    </a>
-                    <a href="./"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 text-blue-600 font-bold">
-                        <i class="fas fa-info-circle text-blue-500 w-5"></i>
-                        من نحن
                     </a>
                     <a href="../contact-us/"
                         class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
@@ -634,7 +639,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                            <a href="../services/digital-marketing-and-ad-campaign-management/" class="block px-5 sm:px-6 pb-5 pt-2">
                                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <span class="text-xs font-bold text-blue-600 group-hover:text-blue-700">استكشف خدمات
                                         القسم</span>
@@ -644,7 +649,7 @@
                                             class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <!-- Card 2: إدارة الصفحات ووكتابة المحتوى -->
@@ -688,7 +693,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                            <a href="../services/social-media-management-and-content-writing/" class="block px-5 sm:px-6 pb-5 pt-2">
                                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <span class="text-xs font-bold text-sky-600 group-hover:text-sky-700">استكشف خدمات
                                         القسم</span>
@@ -698,7 +703,7 @@
                                             class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <!-- Card 3: انشاء التصميم والهوية البصرية -->
@@ -742,7 +747,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                            <a href="../services/graphic-design-and-visual-identity/" class="block px-5 sm:px-6 pb-5 pt-2">
                                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <span class="text-xs font-bold text-blue-600 group-hover:text-blue-700">استكشف خدمات
                                         القسم</span>
@@ -752,7 +757,7 @@
                                             class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <!-- Card 4: انشاء الفيديوهات المونتاج والموشن جرافيك -->
@@ -796,7 +801,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                            <a href="../services/video-editing-and-motion-graphics/" class="block px-5 sm:px-6 pb-5 pt-2">
                                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <span class="text-xs font-bold text-sky-600 group-hover:text-sky-700">استكشف خدمات
                                         القسم</span>
@@ -806,7 +811,7 @@
                                             class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <!-- Card 5: البرمجة والمواقع والإلكترونيه -->
@@ -850,7 +855,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                            <a href="../services/web-development-and-design/" class="block px-5 sm:px-6 pb-5 pt-2">
                                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <span class="text-xs font-bold text-blue-600 group-hover:text-blue-700">استكشف خدمات
                                         القسم</span>
@@ -860,7 +865,7 @@
                                             class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <!-- Card 6: الارشفة وتحسين المواقع الإلكترونيه في محرك البحث SEO -->
@@ -905,7 +910,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                            <a href="../services/seo-and-search-engine-optimization/" class="block px-5 sm:px-6 pb-5 pt-2">
                                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <span class="text-xs font-bold text-emerald-600 group-hover:text-emerald-700">استكشف
                                         خدمات القسم</span>
@@ -915,7 +920,7 @@
                                             class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                     </div>
@@ -1925,15 +1930,15 @@
                     <div class="mt-6">
                         <h5 class="text-white font-semibold text-sm mb-3">تابعنا على</h5>
                         <div class="flex gap-3">
-                            <a href="https://www.facebook.com/fashne.net"
+                            <a href="https://www.facebook.com/fashne.net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-facebook"></i>
                             </a>
-                            <a href="https://www.instagram.com/fashne_net"
+                            <a href="https://www.instagram.com/fashne_net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://x.com/fashne_net"
+                            <a href="https://x.com/fashne_net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                                     <path
@@ -1941,11 +1946,11 @@
                                     </path>
                                 </svg>
                             </a>
-                            <a href="https://www.youtube.com/@fashne_net"
+                            <a href="https://www.youtube.com/@fashne_net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-youtube"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@fashne.net"
+                            <a href="https://www.tiktok.com/@fashne.net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-tiktok"></i>
                             </a>

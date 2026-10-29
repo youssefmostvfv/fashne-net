@@ -84,7 +84,12 @@
 
     /* Dynamic Island Header Styles */
     #main-header {
-      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      will-change: top, width, border-radius;
+      transition-property: top, width, max-width, border-radius, background-color, border-color, box-shadow, backdrop-filter, -webkit-backdrop-filter;
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     #main-header.island-active {
@@ -158,7 +163,13 @@
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-
+
+          <a href="../about-us/"
+            class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+            من نحن
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
           <!-- Services Dedicated Side Drawer Trigger -->
           <button id="services-drawer-toggle"
             class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group flex items-center gap-1.5 focus:outline-none cursor-pointer">
@@ -172,12 +183,6 @@
           <a href="./" class="relative text-blue-600 font-bold transition-colors duration-300 group">
             سابقة أعمالنا
             <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
-          </a>
-          <a href="../about-us/"
-            class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
-            من نحن
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="../contact-us/"
             class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
@@ -235,6 +240,11 @@
             class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
             <i class="fas fa-home text-blue-500 w-5"></i>
             الرئيسية
+          </a>
+          <a href="../about-us/"
+            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+            <i class="fas fa-info-circle text-blue-500 w-5"></i>
+            من نحن
           </a>
           <button id="mobile-services-drawer-toggle"
             class="flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold cursor-pointer">
@@ -248,11 +258,6 @@
             class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 transition-colors duration-300 text-blue-600 font-bold">
             <i class="fas fa-briefcase text-blue-600 w-5"></i>
             سابقة أعمالنا
-          </a>
-          <a href="../about-us/"
-            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
-            <i class="fas fa-info-circle text-blue-500 w-5"></i>
-            من نحن
           </a>
           <a href="../contact-us/"
             class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
@@ -401,8 +406,8 @@
               <div class="border-r-4 border-blue-500 pr-4 py-2 bg-blue-50/50 rounded-l-xl">
                 <span class="text-xs font-black text-blue-700 block">إستراتيجية قمع المبيعات 360°</span>
                 <p class="text-[11px] font-bold text-slate-600 mt-1">
-                  نربط منصات البحث والشبكات الاجتماعية في تدفق متناسق لزيادة
-                  التحويلات والمبيعات.
+                  ربط الإعلانات بالمحتوى التسويقي واستهداف الجمهور المناسب، مع متابعة النتائج وتحسين الحملات لتحقيق أفضل
+                  استفادة من الميزانية الإعلانية.
                 </p>
               </div>
             </div>
@@ -595,9 +600,8 @@
             <!-- Cascading Floating Cards Right -->
             <div class="lg:col-span-7 space-y-4">
               <p class="text-sm sm:text-base font-bold text-slate-700 leading-relaxed mb-4">
-                إدارة شاملة لمنصات التواصل الاجتماعي، بناء خطط محتوى مبتكرة،
-                تصميم منشورات تفاعلية، وكتابة إعلانية تجذب الجمهور وتزيد
-                التفاعل.
+                إدارة متكاملة لحسابات التواصل الاجتماعي، تشمل إعداد خطط المحتوى، وكتابة المنشورات الإبداعية، وتصميم
+                منشورات تفاعلية وإعلانية تساعد على جذب الجمهور وتعزيز التفاعل مع العلامة التجارية.
               </p>
 
               <div class="space-y-3">
@@ -728,10 +732,8 @@
 
           <!-- Layout: Description Top + Artistic Moodboard Wall Bottom -->
           <p class="text-sm sm:text-base font-bold text-slate-700 leading-relaxed mb-10 max-w-4xl">
-            ابتكار الشعارات الاستثنائية، تحديد لوحة الألوان والخطوط، وتطوير
-            دليل الهوية البصرية الموحد (Brand Guidelines) لضمان ترسيخ علامتك
-            وتناسق مطبوعاتك وحزم المنتجات الخاصة بك.
-          </p>
+            نقدم خدمات تصميم الشعارات والهويات البصرية، من اختيار الألوان والخطوط إلى إعداد دليل الهوية البصرية (Brand
+            Guidelines)، لضمان اتساق علامتك التجارية عبر المطبوعات والتغليف والمواد التسويقية. </p>
 
           <!-- Scattered Moodboard Grid (لوحة الهوية المبعثرة بشكل فني) -->
           <div
@@ -1110,7 +1112,7 @@
               </div>
               <div>
                 <h2 class="text-xl sm:text-2xl font-black text-slate-900">
-                  الSEO وتحسين محرك البحث
+                  تحسين محركات البحث SEO.
                 </h2>
                 <p class="text-xs font-bold text-emerald-600">
                   مشاريع تحسين المواقع والأرشفة والظهور في محركات البحث
@@ -1124,10 +1126,9 @@
 
           <!-- Layout: Description Top + Central Analytics Dashboard Card bottom -->
           <p class="text-sm sm:text-base font-bold text-slate-700 leading-relaxed mb-8 max-w-4xl">
-            مشاريع تحسين المواقع، الأرشفة الاحترافية، والتصدر في نتائج محركات
-            البحث لجلب زوار طبيعيين ومستهدفين مجاناً دون الحاجة لإعلانات
-            مموّلة مستمرة.
-          </p>
+            نقدم في الفشني خدمات تحسين محركات البحث SEO وأرشفة المواقع، من خلال تحسين الصفحات والمحتوى، وتحليل الكلمات
+            المفتاحية، ومعالجة المشكلات التقنية، بهدف تعزيز ظهور موقعك في نتائج البحث ومساعدة العملاء المحتملين على
+            الوصول إلى خدماتك. </p>
 
           <!-- Central Analytics Dashboard Mockup (لوحة القيادة الدائرية لمؤشرات الأداء) -->
           <div class="bg-white rounded-2xl border border-slate-200 p-4 md:p-6 shadow-sm">
@@ -1290,8 +1291,8 @@
       <!-- Track 1: Work Samples Images Ticker (شريط صور نماذج الأعمال والمشاريع) -->
       <div class="mb-8">
         <div class="text-center mb-3">
-          <span class="text-xs font-black text-blue-400 uppercase tracking-widest">[ معرض صور أحدث النماذج والمشاريع
-            ]</span>
+          <span class="text-xs font-black text-blue-400 uppercase tracking-widest"> معرض صور أحدث النماذج والمشاريع
+          </span>
         </div>
         <div class="relative w-full overflow-hidden py-3 border-y border-slate-800/80 bg-slate-950/60 backdrop-blur-md">
           <div
@@ -1408,7 +1409,7 @@
         <div class="text-center mb-6" data-aos="fade-up">
           <span
             class="text-blue-600 font-bold bg-blue-50 border border-blue-100/80 px-6 py-2.5 rounded-full text-sm inline-flex items-center gap-2 shadow-sm">
-            <i class="fas fa-handshake"></i> [ أشرطة لوجوهات وشعارات الشركات ]
+            <i class="fas fa-handshake"></i> لوجوهات وشعارات الشركات
           </span>
         </div>
         <div class="relative w-full overflow-hidden py-3 border-y border-slate-800/80 bg-slate-950/40 backdrop-blur-md">
@@ -2657,15 +2658,15 @@
           <div class="mt-6">
             <h5 class="text-white font-semibold text-sm mb-3">تابعنا على</h5>
             <div class="flex gap-3">
-              <a href="https://www.facebook.com/fashne.net"
+              <a href="https://www.facebook.com/fashne.net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <i class="fab fa-facebook"></i>
               </a>
-              <a href="https://www.instagram.com/fashne_net"
+              <a href="https://www.instagram.com/fashne_net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="https://x.com/fashne_net"
+              <a href="https://x.com/fashne_net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path
@@ -2673,11 +2674,11 @@
                   </path>
                 </svg>
               </a>
-              <a href="https://www.youtube.com/@fashne_net"
+              <a href="https://www.youtube.com/@fashne_net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <i class="fab fa-youtube"></i>
               </a>
-              <a href="https://www.tiktok.com/@fashne.net"
+              <a href="https://www.tiktok.com/@fashne.net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <i class="fab fa-tiktok"></i>
               </a>

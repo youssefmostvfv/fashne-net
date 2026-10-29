@@ -413,7 +413,12 @@
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-
+
+          <a href="./about-us/" class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+            من نحن
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
           <!-- Services Dedicated Side Drawer Trigger -->
           <button id="services-drawer-toggle"
             class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group flex items-center gap-1.5 focus:outline-none cursor-pointer">
@@ -427,11 +432,6 @@
           <a href="./our-portfolio/"
             class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
             سابقة أعمالنا
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="./about-us/" class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
-            من نحن
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
@@ -491,6 +491,11 @@
             class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
             <i class="fas fa-home text-blue-500 w-5"></i>
             الرئيسية
+          </a>
+          <a href="./about-us/"
+            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+            <i class="fas fa-info-circle text-blue-500 w-5"></i>
+            من نحن
           </a>
           <button id="mobile-services-drawer-toggle"
             class="flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold cursor-pointer">
@@ -504,11 +509,6 @@
             class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
             <i class="fas fa-briefcase text-blue-500 w-5"></i>
             سابقة أعمالنا
-          </a>
-          <a href="./about-us/"
-            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
-            <i class="fas fa-info-circle text-blue-500 w-5"></i>
-            من نحن
           </a>
           <a href="./contact-us/"
             class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
@@ -652,18 +652,6 @@
     }
   </style>
 
-  <!-- Scroll shadow effect script -->
-  <script>
-    // Add shadow on scroll
-    window.addEventListener("scroll", function () {
-      const header = document.querySelector("header");
-      if (window.scrollY > 20) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
-    });
-  </script>
 
   <!-- ===== HERO - Enhanced with LottieFiles ===== -->
   <section class="hero-pattern relative overflow-hidden pt-28 lg:pt-20 mt-8 pb-20 px-4 min-h-[90vh] flex items-center">
@@ -716,7 +704,7 @@
         <div
           class="grid grid-cols-3 gap-3 mt-8 justify-items-stretch w-full max-w-md mx-auto lg:mx-0 sm:flex sm:flex-row sm:items-center sm:gap-4 sm:w-auto"
           data-aos="fade-up" data-aos-delay="300">
-          <a href="https://www.behance.net/fashnemarketing"
+          <a href="https://www.behance.net/fashnemarketing" target="_blank" rel="noopener noreferrer"
             class="col-span-2 justify-center group bg-blue-600 hover:bg-blue-700 text-white px-5 py-3.5 sm:px-8 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 font-bold flex items-center gap-2 text-base sm:w-auto">
             <i class="fas fa-rocket group-hover:animate-bounce"></i>
             شاهد أعمالنا
@@ -1437,7 +1425,8 @@
 
               <h4 class="text-xl font-bold text-gray-800 mb-3 flex items-center gap-2">
                 <span class="w-1.5 h-6 rounded-full bg-blue-600"></span>
-                تصميم الجرافيكي والهوية البصرية
+                تصميم الهوية البصرية وتصاميم الجرافيك
+
               </h4>
 
               <p class="text-gray-500 text-sm leading-relaxed mb-6">
@@ -1471,10 +1460,8 @@
               </h4>
 
               <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                نحول أفكارك وخدماتك ومنتجاتك إلى محتوى بصري جذاب من خلال إنتاج
-                الفيديوهات المونتاج وفيديوهات الريلز وفيديوهات الموشن جرافيك
-                والفويس أوفر
-              </p>
+                نحول أفكارك وخدماتك إلى فيديوهات مونتاج وموشن جرافيك إبداعية، تجمع بين الرسوم المتحركة والنصوص والمؤثرات
+                البصرية لتبسيط رسالتك التسويقية، وجذب انتباه الجمهور، وتعزيز حضور علامتك التجارية. </p>
             </div>
 
             <a href="/services/video-editing-and-motion-graphics/"
@@ -1687,8 +1674,7 @@
           لأننا لا نقدم خدمة منفصلة بل نبني منظومة متكاملة وهدفنا وصولك للقمة
         </h2>
         <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
-          نجاح التسويق لا يعتمد على الإعلان وحده ولاعلى التصميم وحده ولا على
-          الموقع وحده
+          نجاح التسويق لا يعتمد على الإعلان وحده أو التصميم فقط، بل على تكامل الاستراتيجيات والمحتوى والحملات التسويقية
         </p>
         <p class="text-blue-600 font-extrabold text-lg md:text-xl">
           لذلك نربط بين مختلف عناصر التسويق لنصنع صورة متكاملة لعلامتك
@@ -2414,7 +2400,7 @@
           </p>
         </div>
         <div class="flex-shrink-0">
-          <a href="https://www.behance.net/fashnemarketing"
+          <a href="https://www.behance.net/fashnemarketing" target="_blank" rel="noopener noreferrer"
             class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-sky-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
             <span>شاهد سابقة أعمالنا</span>
             <i class="fas fa-arrow-left"></i>
@@ -3734,15 +3720,15 @@
           <div class="mt-6">
             <h5 class="text-white font-semibold text-sm mb-3">تابعنا على</h5>
             <div class="flex gap-3">
-              <a href="https://www.facebook.com/fashne.net"
+              <a href="https://www.facebook.com/fashne.net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <i class="fab fa-facebook"></i>
               </a>
-              <a href="https://www.instagram.com/fashne_net"
+              <a href="https://www.instagram.com/fashne_net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="https://x.com/fashne_net"
+              <a href="https://x.com/fashne_net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path
@@ -3751,11 +3737,11 @@
                 </svg>
               </a>
 
-              <a href="https://www.youtube.com/@fashne_net"
+              <a href="https://www.youtube.com/@fashne_net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <i class="fab fa-youtube"></i>
               </a>
-              <a href="https://www.tiktok.com/@fashne.net"
+              <a href="https://www.tiktok.com/@fashne.net" target="_blank" rel="noopener noreferrer"
                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                 <i class="fab fa-tiktok"></i>
               </a>
@@ -3853,7 +3839,12 @@
 
     /* Dynamic Island Header Styles */
     #main-header {
-      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      will-change: top, width, border-radius;
+      transition-property: top, width, max-width, border-radius, background-color, border-color, box-shadow, backdrop-filter, -webkit-backdrop-filter;
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     #main-header.island-active {

@@ -1,11 +1,2279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Fashne Net</title>
+    <title>About Us | Fashne Advertising & Digital Marketing</title>
+    <!-- Favicon / Logo -->
+    <link rel="icon" type="image/png" href="../../assets/img/logo.webp">
+    <link rel="apple-touch-icon" href="../../assets/img/logo.webp">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../../assets/tailwind/tailwind.css">
+    <!-- Font Awesome 6 (icons) -->
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+    <!-- Default Site Fonts: Scheherazade New & Cairo -->
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        * {
+            font-family: 'Rubik', 'Inter', 'Cairo', sans-serif;
+        }
+
+        body {
+            background: #faf9f6;
+            overflow-x: hidden;
+        }
+
+        /* Ultra Smooth Global Transitions */
+        a,
+        button,
+        img,
+        svg {
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Logo Brand Palette: Blue (#1d6bf3) and Sky Blue */
+        .gradient-brand {
+            background: linear-gradient(135deg, #1d6bf3 0%, #2563eb 50%, #0ea5e9 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #1d6bf3 0%, #2563eb 50%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Mobile menu animation */
+        #mobile-menu {
+            animation: slideDown 0.3s ease-out;
+            transform-origin: top center;
+        }
+
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px) scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Pulse animation for icons */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        /* Smooth hover transitions */
+        footer .grid a {
+            transition: all 0.3s ease;
+        }
+
+        /* Back to top button */
+        #back-to-top {
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(29, 107, 243, 0.3);
+        }
+
+        #back-to-top:hover {
+            box-shadow: 0 12px 35px rgba(29, 107, 243, 0.5);
+        }
+
+        /* Dynamic Island Header Styles */
+        #main-header {
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            will-change: top, width, border-radius;
+            transition-property: top, width, max-width, border-radius, background-color, border-color, box-shadow, backdrop-filter, -webkit-backdrop-filter;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #main-header.island-active {
+            top: 16px !important;
+            width: 92% !important;
+            max-width: 1280px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            border-radius: 24px !important;
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+            border: 1px solid rgba(59, 130, 246, 0.15) !important;
+            box-shadow: 0 20px 40px -15px rgba(29, 107, 243, 0.2), 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        @media (min-width: 768px) {
+            #main-header.island-active {
+                border-radius: 9999px !important;
+                width: 88% !important;
+            }
+        }
+
+        #main-header.island-active .nav-container {
+            height: 64px !important;
+        }
+
+        /* Mobile specific spacing adjustment using pure CSS */
+        @media (max-width: 1023px) {
+            main.site-main-content {
+                padding-top: 40px !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
+    <!-- ===== HEADER / NAV ===== -->
+    <header id="main-header"
+        class="w-full bg-transparent border-b border-transparent fixed top-0 left-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="nav-container flex items-center justify-between h-20 md:h-24 py-1 transition-all duration-500">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <a href="../" class="flex items-center gap-2 group">
+                        <!-- Logo Icon -->
+                        <div
+                            class="w-18 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 flex-shrink-0">
+                            <img src="../../assets/img/logo.webp" alt="Fashne Advertising & Digital Marketing Agency"
+                                class="w-full h-full object-contain p-0.5">
+                        </div>
+                        <!-- Logo Text -->
+                        <div class="flex flex-col">
+                            <span
+                                class="text-lg sm:text-base md:text-lg font-black text-gray-900 leading-tight whitespace-nowrap">
+                                Fashne
+                            </span>
+                            <span
+                                class="text-[15px] sm:text-xs text-blue-600 font-bold leading-tight whitespace-nowrap mt-0.5">
+                                Advertising Agency
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8 text-gray-700 font-medium">
+                    <a href="../"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <a href="./" class="relative text-blue-600 font-bold group">
+                        About Us
+                        <span
+                            class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300"></span>
+                    </a>
+                    <!-- Services Dedicated Side Drawer Trigger -->
+                    <button id="services-drawer-toggle"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group flex items-center gap-1.5 focus:outline-none cursor-pointer">
+                        <span>Services</span>
+                        <i
+                            class="fas fa-chevron-down text-xs text-blue-600 group-hover:rotate-180 transition-transform duration-300"></i>
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </button>
+
+                    <a href="../our-portfolio/"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        Our Portfolio
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="../contact-us/"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        Contact Us
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+
+                <!-- Desktop CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <!-- Arabic Lang Button -->
+                    <a href="../../about-us/"
+                        class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-blue-50">
+                        <i class="fas fa-globe text-blue-500"></i>
+                        <span>العربية</span>
+                    </a>
+                    <!-- Consultation Button -->
+                    <a href="../contact-us/"
+                        class="group bg-gradient-to-r from-blue-600 to-sky-600 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm font-semibold flex items-center gap-2">
+                        <i class="fas fa-calendar-check group-hover:animate-pulse"></i>
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Quick Call & Menu Toggle Button -->
+                <div class="flex items-center gap-2 lg:hidden">
+                    <!-- Mobile Arabic Button -->
+                    <a href="../../about-us/"
+                        class="flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 border border-blue-200/60 shadow-sm">
+                        <i class="fas fa-globe text-blue-600 text-xs"></i>
+                        <span>العربية</span>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-toggle" aria-label="Menu"
+                        class="flex items-center justify-center w-10 h-10 rounded-xl hover:bg-blue-50 transition-colors duration-300 focus:outline-none">
+                        <svg id="menu-icon" class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 text-gray-700 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="lg:hidden hidden bg-white/95 backdrop-blur-md border-t border-blue-100/40 py-4 px-4 shadow-lg rounded-b-2xl">
+                <div class="flex flex-col space-y-2.5 text-left">
+                    <a href="../"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-home text-blue-500 w-5"></i>
+                        Home
+                    </a>
+                    <a href="./"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 text-blue-600 font-bold">
+                        <i class="fas fa-info-circle text-blue-500 w-5"></i>
+                        About Us
+                    </a>
+                    <button id="mobile-services-drawer-toggle"
+                        class="flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold cursor-pointer">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-th-large text-blue-500 w-5"></i>
+                            Services
+                        </span>
+                        <i class="fas fa-chevron-right text-xs text-blue-600"></i>
+                    </button>
+                    <a href="../our-portfolio/"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-briefcase text-blue-500 w-5"></i>
+                        Our Portfolio
+                    </a>
+                    <a href="../contact-us/"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-envelope text-blue-500 w-5"></i>
+                        Contact Us
+                    </a>
+                    <div class="border-t border-blue-100/60 pt-3 mt-1 space-y-2">
+                        <a href="tel:+201111263618"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 text-blue-700 font-bold transition-colors duration-300">
+                            <i class="fas fa-phone-alt text-blue-500"></i>
+                            <span>Call Us: 01111263618</span>
+                        </a>
+                        <a href="../contact-us/"
+                            class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white font-bold shadow-md hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-calendar-check"></i>
+                            Book a Free Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT CONTAINER ===== -->
+    <main class="site-main-content min-h-[60vh] overflow-hidden bg-[#faf9f6] lg:pt-0">
+        <!-- ===== HERO SECTION (OpenBank Layout Structure - Brand Site Theme RTL) ===== -->
+        <section class="relative py-12 sm:py-16 lg:py-24 overflow-hidden">
+            <!-- Background Decorative Soft Gradients -->
+            <div class="absolute top-10 right-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 bg-sky-400/15 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+
+                    <!-- Right Column in RTL: Typography & Information (6 Cols) -->
+                    <div class="lg:col-span-6 space-y-6 sm:space-y-7" data-aos="fade-up" data-aos-duration="800">
+
+                        <!-- Eyebrow Subtitle with dash line -->
+                        <div
+                            class="flex items-center gap-2.5 text-blue-600 font-bold text-xs sm:text-sm tracking-wide uppercase">
+                            <span class="w-6 h-0.5 bg-blue-600 rounded-full"></span>
+                            <span>About Us</span>
+                        </div>
+
+                        <!-- Main Headline (Cairo Font with Brand Text Gradient Accent) -->
+                        <h1
+                            class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight tracking-tight">
+                            Fashne <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-500 to-blue-700 font-black">Marketing
+                                Expertise</span> Combining Creativity and Strategy
+                        </h1>
+
+                        <!-- Body Paragraph Text -->
+                        <p class="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
+                            Fashne Advertising & Digital Marketing Agency is a specialized agency providing fully
+                            integrated advertising and digital marketing solutions. We empower companies and brands to
+                            build a powerful digital presence, connect with their ideal target audience, and enhance
+                            their competitive edge and long-term business growth.
+                        </p>
+
+                        <!-- Additional Experience Highlight -->
+                        <div class="p-4 rounded-2xl bg-white border border-blue-100/80 shadow-sm space-y-2 max-w-xl">
+                            <div
+                                class="flex items-center gap-2 text-xs font-bold text-blue-700 uppercase tracking-wide">
+                                <i class="fas fa-check-circle text-blue-600"></i>
+                                <span>Solid Experience & Regional Expansion</span>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Over 5 years of continuous growth and development, we have successfully delivered
+                                marketing projects and solutions for clients across several Arab markets, including
+                                Egypt, Saudi Arabia, Kuwait, Bahrain, Oman, Qatar, and the UAE.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed pt-2 border-t border-gray-100">
+                                Our journey has never been about delivering isolated services, but about constructing an
+                                end-to-end marketing ecosystem that seamlessly bridges strategy, digital marketing,
+                                content writing, graphic design, video production, web development, and search engine
+                                optimization.
+                            </p>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Left Column in RTL: 2x2 Asymmetric Bento Box Composition (6 Cols) -->
+                    <div class="lg:col-span-6 relative" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="grid grid-cols-2 gap-4 sm:gap-5 items-stretch">
+
+                            <!-- Box 1 (Top-Right in RTL): Rounded Image Squircle -->
+                            <div
+                                class="h-56 sm:h-64 rounded-[36px] overflow-hidden shadow-md border border-gray-200/80 relative group">
+                                <img src="../../assets/img/ad-campaign-management.webp"
+                                    alt="Digital Marketing & Ad Campaign Management"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-gray-900 shadow flex items-center gap-1.5">
+                                    <i class="fas fa-rocket text-blue-600"></i>
+                                    <span>Digital Marketing & Ad Campaigns</span>
+                                </div>
+                            </div>
+
+                            <!-- Box 2 (Top-Left in RTL): Marketing Service Image -->
+                            <div
+                                class="h-56 sm:h-64 rounded-[36px] overflow-hidden shadow-md border border-gray-200/80 relative group">
+                                <img src="../../assets/img/account-management.webp"
+                                    alt="Page Management & Content Writing"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-gray-900 shadow flex items-center gap-1.5">
+                                    <i class="fas fa-bullhorn text-blue-600"></i>
+                                    <span>Page Management & Content Writing</span>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Box 4 (Middle-Left in RTL): Large Rounded Squircle Image -->
+                            <div
+                                class="h-60 sm:h-72 rounded-[42px] overflow-hidden shadow-lg border border-gray-200/80 relative group">
+                                <img src="../../assets/img/be-found-by-your-customers-when-they-search-for-you.webp"
+                                    alt="SEO & Search Engine Optimization"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-gray-900/50 via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-gray-900 shadow flex items-center gap-1.5">
+                                    <i class="fas fa-chart-line text-blue-600"></i>
+                                    <span>SEO & Search Optimization</span>
+                                </div>
+                            </div>
+
+                            <!-- Box 5 (Bottom-Right in RTL): Branding Service Image -->
+                            <div
+                                class="h-56 sm:h-64 rounded-[36px] overflow-hidden shadow-md border border-gray-200/80 relative group">
+                                <img src="../../assets/img/video-editing.webp" alt="Video Editing & Motion Graphics"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-gray-900 shadow flex items-center gap-1.5">
+                                    <i class="fas fa-palette text-blue-600"></i>
+                                    <span>Video Editing & Motion Graphics</span>
+                                </div>
+                            </div>
+
+                            <!-- Box 6 (Bottom-Left in RTL): Video Service Image -->
+                            <div
+                                class="h-56 sm:h-64 rounded-[36px] overflow-hidden shadow-md border border-gray-200/80 relative group">
+                                <img src="../../assets/img/design-and-brand-identity.webp"
+                                    alt="Graphic Design & Visual Identity"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-gray-900 shadow flex items-center gap-1.5">
+                                    <i class="fas fa-video text-blue-600"></i>
+                                    <span>Visual Identity & Graphic Design</span>
+                                </div>
+                            </div>
+                            <!-- Box 3 (Middle-Right in RTL): Brand Gradient Dark Blue Oval Pill -->
+                            <div
+                                class="h-60 sm:h-72 rounded-[42px] bg-gradient-to-br from-blue-700 via-blue-800 to-sky-900 text-white p-6 flex flex-col items-center justify-between text-center shadow-xl shadow-blue-900/20 relative overflow-hidden group">
+                                <!-- Top Circle Badge -->
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white text-base shadow">
+                                    <i class="fas fa-award"></i>
+                                </div>
+
+                                <!-- Middle Large Stat -->
+                                <div class="my-auto space-y-1">
+                                    <div class="text-3xl sm:text-4xl font-black tracking-tight text-white">5+ Years
+                                    </div>
+                                    <div class="text-xs text-sky-200 font-semibold">Proven Experience & Growth</div>
+                                </div>
+
+                                <!-- Bottom Team Avatar -->
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80"
+                                        alt="Fashne Team Leader"
+                                        class="w-10 h-10 rounded-full border-2 border-white/40 object-cover shadow">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <!-- ===== UNIFIED MASTER SECTION: OUR STORY & WHAT WE OFFER ===== -->
+        <section
+            class="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-blue-50/20 to-slate-50/50 border-t border-gray-100 overflow-hidden">
+            <!-- Ambient Background Glows -->
+            <div class="absolute top-1/4 right-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 bg-sky-400/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16 lg:space-y-20">
+
+                <!-- Part 1: Story Canvas (Our Story) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+                    <!-- Right Column: Narrative Text -->
+                    <div class="lg:col-span-7 space-y-5" data-aos="fade-right">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs sm:text-sm font-bold shadow-sm">
+                            <i class="fas fa-history text-blue-600"></i>
+                            <span>Our Journey & Vision</span>
+                        </div>
+
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+                            Our Story
+                        </h2>
+
+                        <!-- Paragraph 1: Highlight Quote Card -->
+                        <div
+                            class="relative pl-6 border-l-4 border-blue-600 bg-white p-5 sm:p-6 rounded-r-3xl shadow-sm border border-gray-100/80 text-left">
+                            <p class="text-gray-900 text-lg sm:text-xl font-bold leading-relaxed">
+                                Fashne was founded to provide advertising, branding, and digital marketing services that
+                                combine professionalism, creativity, and a deep understanding of each client's business
+                                needs.
+                            </p>
+                        </div>
+
+                        <!-- Paragraph 2: Full Narrative -->
+                        <p class="text-gray-600 text-base sm:text-lg leading-relaxed pt-1">
+                            As the digital market evolved, our solutions expanded to encompass every pillar brands need
+                            to establish a comprehensive presence. Today, we deliver unified 360° marketing solutions
+                            starting from market research and strategy development, through campaign execution, content
+                            & social management, visual identity, video production, web development, and search engine
+                            optimization (SEO).
+                        </p>
+                    </div>
+
+                    <!-- Left Column: Visual Pillar Badges Frame -->
+                    <div class="lg:col-span-5" data-aos="fade-left">
+                        <div
+                            class="bg-white p-7 sm:p-8 rounded-3xl border border-gray-200/80 shadow-xl space-y-5 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl"></div>
+
+                            <div class="flex items-center gap-3 border-b border-gray-100 pb-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg shadow-md">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-extrabold text-gray-900 text-base">Integrated 360° Ecosystem</h3>
+                                    <p class="text-xs text-gray-500">From strategic planning to sustainable growth</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-3">
+                                <div
+                                    class="p-3.5 rounded-2xl bg-blue-50/70 border border-blue-100/80 flex items-center gap-3 text-xs sm:text-sm font-bold text-blue-900">
+                                    <i class="fas fa-check-circle text-blue-600 text-base"></i>
+                                    <span>Professionalism, creativity, and deep market understanding</span>
+                                </div>
+                                <div
+                                    class="p-3.5 rounded-2xl bg-sky-50/70 border border-sky-100/80 flex items-center gap-3 text-xs sm:text-sm font-bold text-sky-900">
+                                    <i class="fas fa-chart-line text-sky-600 text-base"></i>
+                                    <span>Continuous adaptation to digital trends & full brand presence</span>
+                                </div>
+                                <div
+                                    class="p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100/80 flex items-center gap-3 text-xs sm:text-sm font-bold text-emerald-900">
+                                    <i class="fas fa-rocket text-emerald-600 text-base"></i>
+                                    <span>From strategy & execution to top-tier SEO performance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Part 2: What We Offer - Specialized Departments Interactive Carousel Showcase -->
+                <div class="pt-8 border-t border-gray-200/60" data-aos="fade-up">
+
+                    <!-- Section Sub-Header & Carousel Nav Buttons -->
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
+                        <div class="space-y-3">
+                            <div
+                                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-100 text-sky-700 text-xs sm:text-sm font-bold shadow-sm">
+                                <i class="fas fa-th-large text-sky-600"></i>
+                                <span>Our Core Specializations</span>
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
+                                What We Offer
+                            </h2>
+                            <p class="text-gray-600 text-base sm:text-lg font-medium">
+                                We operate through dedicated, highly specialized departments
+                            </p>
+                        </div>
+
+                        <!-- Carousel Controls (RTL Friendly: Right arrow for Prev, Left arrow for Next) -->
+                        <div class="flex items-center gap-3">
+                            <button id="carousel-prev" aria-label="Previous"
+                                class="w-12 h-12 rounded-full border border-gray-200 bg-white hover:bg-blue-600 hover:text-white text-gray-700 transition-all duration-300 shadow-md flex items-center justify-center cursor-pointer active:scale-95">
+                                <i class="fas fa-arrow-left text-base"></i>
+                            </button>
+                            <button id="carousel-next" aria-label="Next"
+                                class="w-12 h-12 rounded-full border border-gray-200 bg-white hover:bg-blue-600 hover:text-white text-gray-700 transition-all duration-300 shadow-md flex items-center justify-center cursor-pointer active:scale-95">
+                                <i class="fas fa-arrow-right text-base"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Carousel Scroll Track -->
+                    <div id="services-carousel-track"
+                        class="flex gap-6 sm:gap-8 overflow-x-auto scroll-smooth scrollbar-none pb-8 pt-3 px-1 snap-x snap-mandatory">
+
+                        <!-- Card 1: Digital Marketing -->
+                        <div
+                            class="w-[310px] sm:w-[370px] lg:w-[410px] flex-shrink-0 snap-start bg-white hover:bg-gradient-to-b hover:from-white hover:to-blue-50/20 rounded-[36px] border border-gray-200/90 shadow-md hover:shadow-2xl hover:border-blue-300 transition-all duration-500 group overflow-hidden flex flex-col justify-between p-3.5">
+                            <div>
+                                <!-- Image Banner with Floating Glass Badges -->
+                                <div
+                                    class="relative h-64 w-full rounded-[28px] overflow-hidden bg-slate-900 shadow-inner">
+                                    <img src="../../assets/img/ad-campaign-management.webp"
+                                        alt="Digital Marketing & Ad Campaigns"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent">
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 w-12 h-12 bg-white/95 backdrop-blur-md rounded-2xl flex items-center justify-center text-blue-600 shadow-xl border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-bullhorn text-xl"></i>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 right-4 px-4 py-1.5 bg-gray-950/70 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/20 shadow-md flex items-center gap-1.5">
+                                        <i class="fas fa-chart-line text-blue-400"></i>
+                                        <span>Strategies & Ads</span>
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-5 sm:p-6 space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-100 flex items-center gap-1.5">
+                                            <i class="fas fa-layer-group text-blue-600"></i> Specialized Department
+                                        </span>
+                                        <span class="text-xs font-black text-gray-400">01 / 06</span>
+                                    </div>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">
+                                        Digital Marketing & Ad Campaigns
+                                    </h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Data-driven marketing strategies and paid ad campaigns that connect brands with
+                                        their ideal audiences and maximize ROI.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-blue-600 group-hover:text-blue-700">Explore
+                                        Department</span>
+                                    <div
+                                        class="w-9 h-9 rounded-full bg-blue-50 group-hover:bg-blue-600 text-blue-600 group-hover:text-white flex items-center justify-center text-xs transition-all duration-300 shadow-sm">
+                                        <i
+                                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Social Media & Content -->
+                        <div
+                            class="w-[310px] sm:w-[370px] lg:w-[410px] flex-shrink-0 snap-start bg-white hover:bg-gradient-to-b hover:from-white hover:to-sky-50/20 rounded-[36px] border border-gray-200/90 shadow-md hover:shadow-2xl hover:border-sky-300 transition-all duration-500 group overflow-hidden flex flex-col justify-between p-3.5">
+                            <div>
+                                <!-- Image Banner with Floating Glass Badges -->
+                                <div
+                                    class="relative h-64 w-full rounded-[28px] overflow-hidden bg-slate-900 shadow-inner">
+                                    <img src="../../assets/img/account-management.webp"
+                                        alt="Social Media Management & Content Writing"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent">
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 w-12 h-12 bg-white/95 backdrop-blur-md rounded-2xl flex items-center justify-center text-sky-600 shadow-xl border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-comments text-xl"></i>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 right-4 px-4 py-1.5 bg-gray-950/70 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/20 shadow-md flex items-center gap-1.5">
+                                        <i class="fas fa-pen-nib text-sky-400"></i>
+                                        <span>Social & Content</span>
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-5 sm:p-6 space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-sky-50 text-sky-700 text-xs font-bold border border-sky-100 flex items-center gap-1.5">
+                                            <i class="fas fa-layer-group text-sky-600"></i> Specialized Department
+                                        </span>
+                                        <span class="text-xs font-black text-gray-400">02 / 06</span>
+                                    </div>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-sky-600 transition-colors leading-snug">
+                                        Social Media & Content Writing
+                                    </h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Professional social media management, brand voice development, and engaging
+                                        content tailored to your target audience.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-sky-600 group-hover:text-sky-700">Explore
+                                        Department</span>
+                                    <div
+                                        class="w-9 h-9 rounded-full bg-sky-50 group-hover:bg-sky-600 text-sky-600 group-hover:text-white flex items-center justify-center text-xs transition-all duration-300 shadow-sm">
+                                        <i
+                                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Graphic Design & Identity -->
+                        <div
+                            class="w-[310px] sm:w-[370px] lg:w-[410px] flex-shrink-0 snap-start bg-white hover:bg-gradient-to-b hover:from-white hover:to-blue-50/20 rounded-[36px] border border-gray-200/90 shadow-md hover:shadow-2xl hover:border-blue-300 transition-all duration-500 group overflow-hidden flex flex-col justify-between p-3.5">
+                            <div>
+                                <!-- Image Banner with Floating Glass Badges -->
+                                <div
+                                    class="relative h-64 w-full rounded-[28px] overflow-hidden bg-slate-900 shadow-inner">
+                                    <img src="../../assets/img/design-and-brand-identity.webp"
+                                        alt="Graphic Design & Brand Identity"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent">
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 w-12 h-12 bg-white/95 backdrop-blur-md rounded-2xl flex items-center justify-center text-blue-600 shadow-xl border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-palette text-xl"></i>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 right-4 px-4 py-1.5 bg-gray-950/70 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/20 shadow-md flex items-center gap-1.5">
+                                        <i class="fas fa-magic text-blue-400"></i>
+                                        <span>Visual Identity & Branding</span>
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-5 sm:p-6 space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-100 flex items-center gap-1.5">
+                                            <i class="fas fa-layer-group text-blue-600"></i> Specialized Department
+                                        </span>
+                                        <span class="text-xs font-black text-gray-400">03 / 06</span>
+                                    </div>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">
+                                        Graphic Design & Brand Identity
+                                    </h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Crafting complete visual identities, logo guidelines, digital graphics, and
+                                        creative marketing collateral.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-blue-600 group-hover:text-blue-700">Explore
+                                        Department</span>
+                                    <div
+                                        class="w-9 h-9 rounded-full bg-blue-50 group-hover:bg-blue-600 text-blue-600 group-hover:text-white flex items-center justify-center text-xs transition-all duration-300 shadow-sm">
+                                        <i
+                                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Video Editing & Motion Graphics -->
+                        <div
+                            class="w-[310px] sm:w-[370px] lg:w-[410px] flex-shrink-0 snap-start bg-white hover:bg-gradient-to-b hover:from-white hover:to-sky-50/20 rounded-[36px] border border-gray-200/90 shadow-md hover:shadow-2xl hover:border-sky-300 transition-all duration-500 group overflow-hidden flex flex-col justify-between p-3.5">
+                            <div>
+                                <!-- Image Banner with Floating Glass Badges -->
+                                <div
+                                    class="relative h-64 w-full rounded-[28px] overflow-hidden bg-slate-900 shadow-inner">
+                                    <img src="../../assets/img/video-editing.webp" alt="Video Editing & Motion Graphics"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent">
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 w-12 h-12 bg-white/95 backdrop-blur-md rounded-2xl flex items-center justify-center text-sky-600 shadow-xl border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-video text-xl"></i>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 right-4 px-4 py-1.5 bg-gray-950/70 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/20 shadow-md flex items-center gap-1.5">
+                                        <i class="fas fa-film text-sky-400"></i>
+                                        <span>Video & Motion Production</span>
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-5 sm:p-6 space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-sky-50 text-sky-700 text-xs font-bold border border-sky-100 flex items-center gap-1.5">
+                                            <i class="fas fa-layer-group text-sky-600"></i> Specialized Department
+                                        </span>
+                                        <span class="text-xs font-black text-gray-400">04 / 06</span>
+                                    </div>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-sky-600 transition-colors leading-snug">
+                                        Video Editing & Motion Graphics
+                                    </h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        High-impact video editing, 2D/3D motion graphics, promotional reels, and
+                                        engaging visual storytelling.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-sky-600 group-hover:text-sky-700">Explore
+                                        Department</span>
+                                    <div
+                                        class="w-9 h-9 rounded-full bg-sky-50 group-hover:bg-sky-600 text-sky-600 group-hover:text-white flex items-center justify-center text-xs transition-all duration-300 shadow-sm">
+                                        <i
+                                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Web Development -->
+                        <div
+                            class="w-[310px] sm:w-[370px] lg:w-[410px] flex-shrink-0 snap-start bg-white hover:bg-gradient-to-b hover:from-white hover:to-blue-50/20 rounded-[36px] border border-gray-200/90 shadow-md hover:shadow-2xl hover:border-blue-300 transition-all duration-500 group overflow-hidden flex flex-col justify-between p-3.5">
+                            <div>
+                                <!-- Image Banner with Floating Glass Badges -->
+                                <div
+                                    class="relative h-64 w-full rounded-[28px] overflow-hidden bg-slate-900 shadow-inner">
+                                    <img src="../../assets/img/your-website-is-your-brand-interface.webp"
+                                        alt="Web Development & Design"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent">
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 w-12 h-12 bg-white/95 backdrop-blur-md rounded-2xl flex items-center justify-center text-blue-600 shadow-xl border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-code text-xl"></i>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 right-4 px-4 py-1.5 bg-gray-950/70 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/20 shadow-md flex items-center gap-1.5">
+                                        <i class="fas fa-laptop-code text-blue-400"></i>
+                                        <span>Web Development & Code</span>
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-5 sm:p-6 space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-100 flex items-center gap-1.5">
+                                            <i class="fas fa-layer-group text-blue-600"></i> Specialized Department
+                                        </span>
+                                        <span class="text-xs font-black text-gray-400">05 / 06</span>
+                                    </div>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">
+                                        Web Development & Design
+                                    </h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Building fast, modern, responsive websites and web applications optimized for
+                                        speed, UX, and conversions.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-blue-600 group-hover:text-blue-700">Explore
+                                        Department</span>
+                                    <div
+                                        class="w-9 h-9 rounded-full bg-blue-50 group-hover:bg-blue-600 text-blue-600 group-hover:text-white flex items-center justify-center text-xs transition-all duration-300 shadow-sm">
+                                        <i
+                                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: SEO & Optimization -->
+                        <div
+                            class="w-[310px] sm:w-[370px] lg:w-[410px] flex-shrink-0 snap-start bg-white hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/20 rounded-[36px] border border-gray-200/90 shadow-md hover:shadow-2xl hover:border-emerald-300 transition-all duration-500 group overflow-hidden flex flex-col justify-between p-3.5">
+                            <div>
+                                <!-- Image Banner with Floating Glass Badges -->
+                                <div
+                                    class="relative h-64 w-full rounded-[28px] overflow-hidden bg-slate-900 shadow-inner">
+                                    <img src="../../assets/img/be-found-by-your-customers-when-they-search-for-you.webp"
+                                        alt="Search Engine Optimization (SEO)"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent">
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 w-12 h-12 bg-white/95 backdrop-blur-md rounded-2xl flex items-center justify-center text-emerald-600 shadow-xl border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-search text-xl"></i>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 right-4 px-4 py-1.5 bg-gray-950/70 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/20 shadow-md flex items-center gap-1.5">
+                                        <i class="fas fa-search-plus text-emerald-400"></i>
+                                        <span>SEO & Google Ranking</span>
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-5 sm:p-6 space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-100 flex items-center gap-1.5">
+                                            <i class="fas fa-layer-group text-emerald-600"></i> Specialized Department
+                                        </span>
+                                        <span class="text-xs font-black text-gray-400">06 / 06</span>
+                                    </div>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-emerald-600 transition-colors leading-snug">
+                                        Search Engine Optimization (SEO)
+                                    </h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Technical and on-page SEO optimization that elevates search engine ranking,
+                                        drives organic traffic, and attracts qualified leads.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 sm:px-6 pb-5 pt-2">
+                                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                    <span
+                                        class="text-xs font-bold text-emerald-600 group-hover:text-emerald-700">Explore
+                                        Department</span>
+                                    <div
+                                        class="w-9 h-9 rounded-full bg-emerald-50 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white flex items-center justify-center text-xs transition-all duration-300 shadow-sm">
+                                        <i
+                                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Carousel Controls JavaScript -->
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const track = document.getElementById('services-carousel-track');
+                            const prevBtn = document.getElementById('carousel-prev');
+                            const nextBtn = document.getElementById('carousel-next');
+
+                            if (track && prevBtn && nextBtn) {
+                                prevBtn.addEventListener('click', () => {
+                                    track.scrollBy({ left: -380, behavior: 'smooth' });
+                                });
+
+                                nextBtn.addEventListener('click', () => {
+                                    track.scrollBy({ left: 380, behavior: 'smooth' });
+                                });
+                            }
+                        });
+                    </script>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: Vision & Mission - Interconnected Strategic Track -->
+        <section
+            class="py-20 sm:py-28 bg-gradient-to-b from-slate-50/80 via-white to-blue-50/40 relative overflow-hidden border-t border-gray-200/60"
+            data-aos="fade-up">
+
+            <!-- Decorative Ambient Glow & Path Circles -->
+            <div
+                class="absolute top-1/2 right-10 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute top-1/2 left-10 -translate-y-1/2 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-14 sm:space-y-20">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs sm:text-sm font-bold shadow-sm">
+                        <i class="fas fa-compass text-blue-600"></i>
+                        <span>Strategic Direction & Growth</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+                        Vision & Mission
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg font-medium">
+                        An integrated roadmap combining strategic thinking and actionable execution
+                    </p>
+                </div>
+
+                <!-- Interconnected Strategic Track Layout -->
+                <div class="relative">
+
+                    <!-- Center Connecting Gradient Path Line (Desktop Horizontal, Mobile Vertical) -->
+                    <div
+                        class="hidden lg:block absolute top-1/2 left-12 right-12 -translate-y-1/2 h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-indigo-600 rounded-full z-0 opacity-40">
+                    </div>
+                    <div
+                        class="lg:hidden absolute top-12 bottom-12 right-1/2 translate-x-1/2 w-1 bg-gradient-to-b from-blue-600 via-sky-400 to-indigo-600 rounded-full z-0 opacity-40">
+                    </div>
+
+                    <!-- Strategic Grid Track (Vision -> Compass Node -> Mission) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center relative z-10">
+
+                        <!-- Milestone 1: Vision (5 Cols) -->
+                        <div
+                            class="lg:col-span-5 bg-white/95 backdrop-blur-xl border border-gray-200/90 rounded-[36px] p-8 sm:p-9 shadow-xl hover:shadow-2xl hover:border-blue-400 transition-all duration-500 group relative flex flex-col justify-between space-y-6">
+
+                            <!-- Header with Icon + Title Side by Side -->
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl font-black shadow-lg shadow-blue-500/25 group-hover:scale-110 transition-transform flex-shrink-0">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <h3
+                                        class="text-2xl sm:text-3xl font-black text-gray-900 group-hover:text-blue-600 transition-colors">
+                                        Our Vision
+                                    </h3>
+                                </div>
+                                <p class="text-gray-700 text-base leading-relaxed font-medium">
+                                    To be the most trusted marketing and digital growth partner for brands across the
+                                    region, delivering integrated solutions that merge creativity, cutting-edge
+                                    technology, and data-driven strategy for sustainable business expansion.
+                                </p>
+                            </div>
+
+                            <!-- Bottom Micro Pills -->
+                            <div class="pt-5 border-t border-gray-100 flex flex-wrap items-center gap-2">
+                                <span class="px-3 py-1 rounded-lg bg-blue-50 text-blue-700 text-xs font-bold">
+                                    <i class="fas fa-check text-blue-600 mr-1.5"></i> Creativity & Technology
+                                </span>
+                                <span class="px-3 py-1 rounded-lg bg-sky-50 text-sky-700 text-xs font-bold">
+                                    <i class="fas fa-check text-sky-600 mr-1.5"></i> Sustainable Growth
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Center Interconnecting Compass Node (2 Cols) -->
+                        <div class="lg:col-span-2 flex flex-col items-center justify-center my-4 lg:my-0">
+                            <div
+                                class="w-20 h-20 rounded-full bg-white border-4 border-sky-400 shadow-2xl flex flex-col items-center justify-center text-blue-600 relative group cursor-pointer hover:scale-110 transition-transform">
+                                <div class="absolute inset-0 rounded-full bg-blue-500/20 animate-ping opacity-75"></div>
+                                <i class="fas fa-compass text-2xl text-blue-600 relative z-10"></i>
+                                <span class="text-[10px] font-black text-gray-900 mt-0.5 relative z-10">Synergy</span>
+                            </div>
+                            <span
+                                class="text-xs font-extrabold text-gray-500 mt-3 hidden lg:block bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+                                Connecting Strategy & Execution
+                            </span>
+                        </div>
+
+                        <!-- Milestone 2: Mission (5 Cols) -->
+                        <div
+                            class="lg:col-span-5 bg-white/95 backdrop-blur-xl border border-gray-200/90 rounded-[36px] p-8 sm:p-9 shadow-xl hover:shadow-2xl hover:border-sky-400 transition-all duration-500 group relative flex flex-col justify-between space-y-6">
+
+                            <!-- Header with Icon + Title Side by Side -->
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 rounded-2xl bg-sky-600 text-white flex items-center justify-center text-2xl font-black shadow-lg shadow-sky-500/25 group-hover:scale-110 transition-transform flex-shrink-0">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <h3
+                                        class="text-2xl sm:text-3xl font-black text-gray-900 group-hover:text-sky-600 transition-colors">
+                                        Our Mission
+                                    </h3>
+                                </div>
+                                <p class="text-gray-700 text-base leading-relaxed font-medium">
+                                    Empowering businesses with holistic marketing and creative capabilities that
+                                    strengthen brand identity, maximize audience reach, and deliver concrete business
+                                    results through meticulous planning and flawless execution.
+                                </p>
+                            </div>
+
+                            <!-- Bottom Micro Pills -->
+                            <div class="pt-5 border-t border-gray-100 flex flex-wrap items-center gap-2">
+                                <span class="px-3 py-1 rounded-lg bg-sky-50 text-sky-700 text-xs font-bold">
+                                    <i class="fas fa-check text-sky-600 mr-1.5"></i> Stronger Brands
+                                </span>
+                                <span class="px-3 py-1 rounded-lg bg-indigo-50 text-indigo-700 text-xs font-bold">
+                                    <i class="fas fa-check text-indigo-600 mr-1.5"></i> Flawless Execution
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: Company Values - Light Theme Orbit Hub -->
+        <section
+            class="py-20 sm:py-28 bg-gradient-to-b from-slate-50/90 via-white to-blue-50/40 text-gray-900 relative overflow-hidden border-t border-gray-200/60"
+            data-aos="fade-up" id="values-section">
+
+            <!-- Decorative Light Ambient Glows -->
+            <div
+                class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[550px] h-[550px] bg-blue-500/10 rounded-full blur-[140px] pointer-events-none">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[550px] h-[550px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 sm:space-y-16">
+
+                <!-- Custom Orbit Drawing Layout: Large Central Circle surrounded by 6 Orbit Pills (Left) + Header & Long Detail Panel (Right) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center max-w-6xl mx-auto">
+
+                    <!-- Left Side: Large Central Orbit Circle + 6 Perimeter Radial Orbit Buttons -->
+                    <div
+                        class="lg:col-span-6 flex items-center justify-center relative min-h-[440px] sm:min-h-[500px] w-full py-4">
+
+                        <!-- Circular Outer Orbit Ring Path Line -->
+                        <div
+                            class="absolute w-[290px] h-[290px] sm:w-[370px] sm:h-[370px] rounded-full border-2 border-dashed border-blue-300 pointer-events-none animate-spin-slow opacity-80">
+                        </div>
+
+                        <!-- Large Central Changing Circle Emblem -->
+                        <div class="w-36 h-36 sm:w-48 sm:h-48 rounded-full bg-white border-4 border-blue-600 shadow-[0_15px_40px_rgba(29,107,243,0.25)] flex flex-col items-center justify-center relative z-20 transition-all duration-500 text-center p-3 group cursor-pointer"
+                            id="central-hub-circle">
+                            <!-- Glowing Pulse Effect -->
+                            <div
+                                class="absolute inset-0 rounded-full bg-blue-500/10 animate-ping opacity-75 pointer-events-none">
+                            </div>
+
+                            <!-- Dynamic Icon inside Central Circle -->
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl sm:text-3xl shadow-lg shadow-blue-500/30 transition-all duration-500"
+                                id="central-icon-box">
+                                <i class="fas fa-award" id="central-icon"></i>
+                            </div>
+
+                            <!-- Dynamic Title -->
+                            <span
+                                class="text-sm sm:text-base font-black text-gray-900 mt-2 transition-colors duration-300"
+                                id="central-title-label">
+                                Professionalism
+                            </span>
+                        </div>
+
+                        <!-- 6 Radial Orbit Selector Buttons Positioned Around the 360° Ring -->
+
+                        <!-- 0° - Top -->
+                        <button onclick="selectValue(0)"
+                            class="value-btn active absolute top-2 sm:top-4 left-1/2 -translate-x-1/2 z-30 px-3.5 py-2 rounded-xl bg-blue-600 text-white border border-blue-600 shadow-lg text-xs sm:text-sm font-black flex items-center gap-2 transition-all duration-300"
+                            data-index="0">
+                            <span>Professionalism</span>
+                            <i class="fas fa-award text-xs"></i>
+                        </button>
+
+                        <!-- 60° - Top Right -->
+                        <button onclick="selectValue(1)"
+                            class="value-btn absolute top-[20%] right-0 sm:right-2 z-30 px-3.5 py-2 rounded-xl bg-white border border-gray-200 text-gray-700 shadow-md text-xs sm:text-sm font-bold flex items-center gap-2 hover:border-blue-400 hover:text-blue-600 transition-all duration-300"
+                            data-index="1">
+                            <span>Creativity</span>
+                            <i class="fas fa-lightbulb text-amber-500 text-xs"></i>
+                        </button>
+
+                        <!-- 120° - Bottom Right -->
+                        <button onclick="selectValue(2)"
+                            class="value-btn absolute bottom-[20%] right-0 sm:right-2 z-30 px-3.5 py-2 rounded-xl bg-white border border-gray-200 text-gray-700 shadow-md text-xs sm:text-sm font-bold flex items-center gap-2 hover:border-blue-400 hover:text-blue-600 transition-all duration-300"
+                            data-index="2">
+                            <span>Transparency</span>
+                            <i class="fas fa-shield-alt text-emerald-500 text-xs"></i>
+                        </button>
+
+                        <!-- 180° - Bottom -->
+                        <button onclick="selectValue(3)"
+                            class="value-btn absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-30 px-3.5 py-2 rounded-xl bg-white border border-gray-200 text-gray-700 shadow-md text-xs sm:text-sm font-bold flex items-center gap-2 hover:border-blue-400 hover:text-blue-600 transition-all duration-300"
+                            data-index="3">
+                            <span>Commitment</span>
+                            <i class="fas fa-handshake text-indigo-500 text-xs"></i>
+                        </button>
+
+                        <!-- 240° - Bottom Left -->
+                        <button onclick="selectValue(4)"
+                            class="value-btn absolute bottom-[20%] left-0 sm:left-2 z-30 px-3.5 py-2 rounded-xl bg-white border border-gray-200 text-gray-700 shadow-md text-xs sm:text-sm font-bold flex items-center gap-2 hover:border-blue-400 hover:text-blue-600 transition-all duration-300"
+                            data-index="4">
+                            <span>Innovation</span>
+                            <i class="fas fa-rocket text-sky-500 text-xs"></i>
+                        </button>
+
+                        <!-- 300° - Top Left -->
+                        <button onclick="selectValue(5)"
+                            class="value-btn absolute top-[20%] left-0 sm:left-2 z-30 px-3.5 py-2 rounded-xl bg-white border border-gray-200 text-gray-700 shadow-md text-xs sm:text-sm font-bold flex items-center gap-2 hover:border-blue-400 hover:text-blue-600 transition-all duration-300"
+                            data-index="5">
+                            <span>Partnership</span>
+                            <i class="fas fa-user-friends text-purple-500 text-xs"></i>
+                        </button>
+
+                    </div>
+
+                    <!-- Right Side: Section Header + Extended Compact Detail Card in Light Theme -->
+                    <div class="lg:col-span-6 flex flex-col justify-center space-y-4">
+
+                        <!-- Header Positioned Directly Above Detail Card -->
+                        <div class="space-y-2 text-left">
+                            <div
+                                class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold shadow-sm">
+                                <i class="fas fa-sync-alt text-blue-600 animate-spin-slow"></i>
+                                <span>Work Culture & Guiding Principles</span>
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
+                                Our Values
+                            </h2>
+                            <p class="text-gray-600 text-sm sm:text-base font-medium">
+                                The core principles and professional standards that shape our partnerships and elevate
+                                every project
+                            </p>
+                        </div>
+
+                        <!-- Card below header -->
+                        <div class="bg-white/95 backdrop-blur-xl border-2 border-blue-500/30 rounded-3xl p-6 sm:p-7 shadow-lg relative overflow-hidden transition-all duration-500 flex flex-col justify-between space-y-4 group"
+                            id="value-detail-card">
+
+                            <!-- Top Header Row inside Card -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100 text-xs font-black"
+                                        id="detail-category-badge">
+                                        Excellence Standards
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Content Area inside Compact Card -->
+                            <div class="space-y-2.5 py-1 transition-all duration-300" id="detail-content-area">
+                                <h3 class="text-xl sm:text-2xl font-black text-gray-900 flex items-center gap-2.5"
+                                    id="detail-title">
+                                    <i class="fas fa-award text-blue-600 text-2xl" id="detail-title-icon"></i>
+                                    <span>Professionalism</span>
+                                </h3>
+                                <p class="text-gray-700 text-base sm:text-lg leading-relaxed font-bold"
+                                    id="detail-description">
+                                    We deliver all work strictly aligned with verified professional benchmarks
+                                </p>
+                            </div>
+
+                            <!-- Bottom Controls / Indicator Row inside Compact Card -->
+                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-ping"></div>
+                                    <span class="text-xs font-extrabold text-gray-700">Strategic marketing solutions for
+                                        sustainable growth</span>
+                                </div>
+
+                                <!-- Manual Switch Prev / Next Controls -->
+                                <div class="flex items-center gap-2">
+                                    <button onclick="prevValue()"
+                                        class="w-8 h-8 rounded-lg bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-700 flex items-center justify-center transition-colors shadow-sm">
+                                        <i class="fas fa-chevron-right text-xs"></i>
+                                    </button>
+                                    <button onclick="nextValue()"
+                                        class="w-8 h-8 rounded-lg bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-700 flex items-center justify-center transition-colors shadow-sm">
+                                        <i class="fas fa-chevron-left text-xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+        </section>
+
+        <!-- Dynamic 2-Second Rotating JS Script (Light Theme Version) -->
+        <script>
+            (function () {
+                const valuesData = [
+                    {
+                        title: "Professionalism",
+                        desc: "We deliver every project strictly in accordance with verified professional benchmarks.",
+                        icon: "fas fa-award",
+                        badge: "Excellence Standards"
+                    },
+                    {
+                        title: "Creativity",
+                        desc: "We continuously craft fresh concepts that give brands a distinctive market edge.",
+                        icon: "fas fa-lightbulb",
+                        badge: "Fresh Perspectives"
+                    },
+                    {
+                        title: "Transparency",
+                        desc: "We believe clarity in objectives, deliverables, and metrics is the cornerstone of success.",
+                        icon: "fas fa-shield-alt",
+                        badge: "Mutual Trust & Clarity"
+                    },
+                    {
+                        title: "Commitment",
+                        desc: "We hold steadfast to agreed milestones, timelines, and rigorous quality controls.",
+                        icon: "fas fa-handshake",
+                        badge: "Punctual Delivery"
+                    },
+                    {
+                        title: "Innovation",
+                        desc: "We rapidly adapt to shifts in market dynamics, digital platforms, and modern tech.",
+                        icon: "fas fa-rocket",
+                        badge: "Continuous Evolution"
+                    },
+                    {
+                        title: "Partnership",
+                        desc: "We treat our clients as long-term success partners, not just transactional service requesters.",
+                        icon: "fas fa-user-friends",
+                        badge: "True Growth Allies"
+                    }
+                ];
+
+                let currentIndex = 0;
+                let autoTimer = null;
+
+                function updateValuesUI(index) {
+                    currentIndex = index;
+                    const item = valuesData[index];
+
+                    // 1. Update Central Large Circle Emblem
+                    const centralIcon = document.getElementById("central-icon");
+                    const centralTitleLabel = document.getElementById("central-title-label");
+
+                    if (centralIcon) centralIcon.className = item.icon;
+                    if (centralTitleLabel) centralTitleLabel.innerText = item.title;
+
+                    // 2. Update Surrounding Orbit Buttons active state while preserving position classes
+                    const buttons = document.querySelectorAll(".value-btn");
+                    buttons.forEach((btn, idx) => {
+                        if (idx === index) {
+                            btn.classList.add("bg-blue-600", "text-white", "border-blue-600", "shadow-lg", "scale-110", "font-black", "z-40");
+                            btn.classList.remove("bg-white", "text-gray-700", "border-gray-200", "shadow-md");
+                        } else {
+                            btn.classList.add("bg-white", "text-gray-700", "border-gray-200", "shadow-md");
+                            btn.classList.remove("bg-blue-600", "text-white", "border-blue-600", "shadow-lg", "scale-110", "font-black", "z-40");
+                        }
+                    });
+
+                    // 3. Update Long Detail Panel Content
+                    const detailTitle = document.getElementById("detail-title");
+                    const detailTitleIcon = document.getElementById("detail-title-icon");
+                    const detailDescription = document.getElementById("detail-description");
+                    const detailCategoryBadge = document.getElementById("detail-category-badge");
+                    const detailContentArea = document.getElementById("detail-content-area");
+
+                    if (detailContentArea) {
+                        detailContentArea.style.opacity = "0";
+                        detailContentArea.style.transform = "translateY(6px)";
+
+                        setTimeout(() => {
+                            if (detailTitleIcon) detailTitleIcon.className = item.icon + " text-blue-600 text-3xl";
+                            if (detailTitle) detailTitle.innerHTML = `<i class="${item.icon} text-blue-600 text-3xl"></i> <span>${item.title}</span>`;
+                            if (detailDescription) detailDescription.innerText = item.desc;
+                            if (detailCategoryBadge) detailCategoryBadge.innerText = item.badge;
+
+                            detailContentArea.style.opacity = "1";
+                            detailContentArea.style.transform = "translateY(0)";
+                        }, 150);
+                    }
+
+                }
+
+                function startAutoRotation() {
+                    stopAutoRotation();
+                    updateValuesUI(currentIndex);
+                    autoTimer = setInterval(() => {
+                        currentIndex = (currentIndex + 1) % valuesData.length;
+                        updateValuesUI(currentIndex);
+                    }, 2000); // 2 Seconds
+                }
+
+                function stopAutoRotation() {
+                    if (autoTimer) clearInterval(autoTimer);
+                }
+
+                window.selectValue = function (index) {
+                    stopAutoRotation();
+                    currentIndex = index;
+                    startAutoRotation();
+                };
+
+                window.nextValue = function () {
+                    stopAutoRotation();
+                    currentIndex = (currentIndex + 1) % valuesData.length;
+                    startAutoRotation();
+                };
+
+                window.prevValue = function () {
+                    stopAutoRotation();
+                    currentIndex = (currentIndex - 1 + valuesData.length) % valuesData.length;
+                    startAutoRotation();
+                };
+
+                // Initialize timer when page loads
+                document.addEventListener("DOMContentLoaded", function () {
+                    startAutoRotation();
+                });
+            })();
+        </script>
+        <!-- ===== WHY CLIENTS CHOOSE US SECTION ===== -->
+        <section
+            class="py-20 lg:py-28 bg-gradient-to-b from-blue-50/50 via-white to-slate-50 relative overflow-hidden border-t border-gray-200/80"
+            id="why-choose-us">
+
+            <!-- Ambient Background Glow Effects -->
+            <div
+                class="absolute top-1/3 right-10 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[140px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-10 left-10 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 sm:space-y-16">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-4" data-aos="fade-up">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs sm:text-sm font-bold shadow-sm">
+                        <i class="fas fa-layer-group text-blue-600"></i>
+                        <span>All-in-One Marketing Ecosystem Under One Roof</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+                        Why Clients Choose Us
+                    </h2>
+                </div>
+
+                <!-- Bento / Feature Grid Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch max-w-6xl mx-auto">
+
+                    <!-- Core Value Banner Box (Top / Side Span) -->
+                    <div class="lg:col-span-12 bg-white border-2 border-blue-500/20 rounded-[32px] p-8 sm:p-10 shadow-xl relative overflow-hidden group hover:border-blue-500/40 transition-all duration-500"
+                        data-aos="fade-up">
+                        <!-- Top Accent Gradient Line -->
+                        <div
+                            class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-l from-blue-600 via-sky-500 to-indigo-600">
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+                            <!-- Icon Box -->
+                            <div
+                                class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-600 text-white flex items-center justify-center text-3xl sm:text-4xl shadow-lg shadow-blue-500/30 flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                                <i class="fas fa-compress-arrows-alt"></i>
+                            </div>
+
+                            <!-- Core Proposition Verbatim Paragraph 1 -->
+                            <div class="space-y-2 flex-grow">
+                                <span
+                                    class="text-xs font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Integrated
+                                    Vision</span>
+                                <h3
+                                    class="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 leading-relaxed sm:leading-snug">
+                                    Because we provide access to a full spectrum of marketing and digital services
+                                    through a single trusted partner, seamlessly interconnected under one cohesive
+                                    strategy.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6 Integrated Service Hub Cards (Visual Representation of Connected Services) -->
+                    <div class="lg:col-span-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5"
+                        data-aos="fade-up" data-aos-delay="100">
+
+                        <!-- Hub 1 -->
+                        <div
+                            class="bg-white border border-gray-200/90 rounded-2xl p-4 text-center space-y-2.5 shadow-sm hover:shadow-md hover:border-blue-400 transition-all duration-300 group">
+                            <div
+                                class="w-10 h-10 mx-auto rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <span class="block text-xs sm:text-sm font-black text-gray-800">Branding</span>
+                        </div>
+
+                        <!-- Hub 2 -->
+                        <div
+                            class="bg-white border border-gray-200/90 rounded-2xl p-4 text-center space-y-2.5 shadow-sm hover:shadow-md hover:border-blue-400 transition-all duration-300 group">
+                            <div
+                                class="w-10 h-10 mx-auto rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-lg group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <span class="block text-xs sm:text-sm font-black text-gray-800">Social Media</span>
+                        </div>
+
+                        <!-- Hub 3 -->
+                        <div
+                            class="bg-white border border-gray-200/90 rounded-2xl p-4 text-center space-y-2.5 shadow-sm hover:shadow-md hover:border-blue-400 transition-all duration-300 group">
+                            <div
+                                class="w-10 h-10 mx-auto rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <span class="block text-xs sm:text-sm font-black text-gray-800">Content Writing</span>
+                        </div>
+
+                        <!-- Hub 4 -->
+                        <div
+                            class="bg-white border border-gray-200/90 rounded-2xl p-4 text-center space-y-2.5 shadow-sm hover:shadow-md hover:border-blue-400 transition-all duration-300 group">
+                            <div
+                                class="w-10 h-10 mx-auto rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <span class="block text-xs sm:text-sm font-black text-gray-800">Ad Campaigns</span>
+                        </div>
+
+                        <!-- Hub 5 -->
+                        <div
+                            class="bg-white border border-gray-200/90 rounded-2xl p-4 text-center space-y-2.5 shadow-sm hover:shadow-md hover:border-blue-400 transition-all duration-300 group">
+                            <div
+                                class="w-10 h-10 mx-auto rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-lg group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <span class="block text-xs sm:text-sm font-black text-gray-800">Web & SEO</span>
+                        </div>
+
+                        <!-- Hub 6 -->
+                        <div
+                            class="bg-white border border-gray-200/90 rounded-2xl p-4 text-center space-y-2.5 shadow-sm hover:shadow-md hover:border-blue-400 transition-all duration-300 group">
+                            <div
+                                class="w-10 h-10 mx-auto rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-photo-video"></i>
+                            </div>
+                            <span class="block text-xs sm:text-sm font-black text-gray-800">Video Production</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Verbatim Paragraph 2 Box: Full Synergy & Ecosystem Strategy -->
+                    <div class="lg:col-span-12 bg-gradient-to-r from-blue-600 via-blue-700 to-sky-600 rounded-[32px] p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden group"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <!-- Decorative Overlay Patterns -->
+                        <div
+                            class="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute -bottom-10 -right-10 w-96 h-96 bg-sky-400/20 rounded-full blur-3xl pointer-events-none">
+                        </div>
+
+                        <div class="relative z-10 space-y-6 max-w-4xl">
+                            <div
+                                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs sm:text-sm font-bold border border-white/30">
+                                <i class="fas fa-bullseye text-amber-300"></i>
+                                <span>Synergy Driving Unified Goals</span>
+                            </div>
+
+                            <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold leading-relaxed text-blue-50">
+                                From brand identity and social media management to targeted ad campaigns, custom web
+                                development, SEO rankings, and cinematic video editing with voiceovers — every element
+                                functions synchronously to achieve your core business objectives.
+                            </p>
+
+                            <div class="pt-4 flex flex-wrap items-center gap-4 border-t border-white/20">
+                                <a href="../index.html#contact"
+                                    class="inline-flex items-center gap-3 px-7 py-3.5 rounded-2xl bg-white text-blue-700 font-black text-sm hover:bg-blue-50 transition-all duration-300 shadow-lg hover:scale-105">
+                                    <span>Start Your Growth Journey With Us</span>
+                                    <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- ===== GEOGRAPHIC REACH - Minimal Clean Ribbon ===== -->
+        <section
+            class="py-16 px-6 border-t border-b border-blue-50 bg-gradient-to-b from-blue-50/20 via-white to-blue-50/10">
+            <div class="max-w-6xl mx-auto text-center space-y-8">
+
+                <!-- Header -->
+                <h4 class="text-gray-800 font-black text-2xl md:text-3xl flex items-center justify-center gap-3">
+                    <span class="relative flex h-8 w-8 items-center justify-center">
+                        <i class="fas fa-globe text-blue-600 relative text-2xl"></i>
+                    </span>
+                    <span>Serving Companies & Brands Across Multiple Markets</span>
+                </h4>
+
+                <!-- Countries List (Connected Path Concept) -->
+                <div class="relative py-10 overflow-x-auto no-scrollbar">
+                    <!-- Connecting Line Background -->
+                    <div class="absolute top-[78px] left-4 right-4 h-0.5 bg-blue-100 z-0 hidden md:block"></div>
+
+                    <!-- Nodes Container -->
+                    <div
+                        class="relative z-10 flex flex-wrap md:flex-nowrap items-center justify-between gap-6 md:gap-0 max-w-5xl mx-auto px-4">
+
+                        <!-- Node 1: Egypt -->
+                        <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+                            <span
+                                class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">Egypt</span>
+                            <div class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10">
+                                <img src="https://flagcdn.com/w40/eg.png" alt="Egypt"
+                                    class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10">
+                            </div>
+                        </div>
+
+                        <!-- Node 2: Saudi Arabia -->
+                        <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+                            <span
+                                class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">Saudi
+                                Arabia</span>
+                            <div class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10">
+                                <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia"
+                                    class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10">
+                            </div>
+                        </div>
+
+                        <!-- Node 3: Kuwait -->
+                        <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+                            <span
+                                class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">Kuwait</span>
+                            <div class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10">
+                                <img src="https://flagcdn.com/w40/kw.png" alt="Kuwait"
+                                    class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10">
+                            </div>
+                        </div>
+
+                        <!-- Node 4: Bahrain -->
+                        <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+                            <span
+                                class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">Bahrain</span>
+                            <div class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10">
+                                <img src="https://flagcdn.com/w40/bh.png" alt="Bahrain"
+                                    class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10">
+                            </div>
+                        </div>
+
+                        <!-- Node 5: Oman -->
+                        <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+                            <span
+                                class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">Oman</span>
+                            <div class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10">
+                                <img src="https://flagcdn.com/w40/om.png" alt="Oman"
+                                    class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10">
+                            </div>
+                        </div>
+
+                        <!-- Node 6: Qatar -->
+                        <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+                            <span
+                                class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">Qatar</span>
+                            <div class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10">
+                                <img src="https://flagcdn.com/w40/qa.png" alt="Qatar"
+                                    class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10">
+                            </div>
+                        </div>
+
+                        <!-- Node 7: UAE -->
+                        <div class="flex flex-col items-center gap-3.5 w-1/3 md:w-auto flex-shrink-0 group">
+                            <span
+                                class="px-5 py-2.5 rounded-2xl bg-white text-gray-800 font-extrabold text-sm md:text-base border border-blue-100/60 shadow-soft group-hover:border-blue-500 group-hover:text-blue-600 group-hover:-translate-y-1.5 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300">UAE</span>
+                            <div class="relative flex items-center justify-center h-10 w-10 hidden md:flex z-10">
+                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE"
+                                    class="relative rounded-full h-9 w-9 object-cover shadow-md transition-transform duration-300 group-hover:scale-115 z-10">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- ===== VERTICAL STEPPER ROADMAP SECTION ===== -->
+            <section
+                class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-blue-50/30 border-t border-gray-200/80"
+                id="our-philosophy">
+
+                <!-- Soft Ambient Background Glows -->
+                <div
+                    class="absolute top-1/3 right-10 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-[140px] pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-10 left-10 w-[500px] h-[500px] bg-sky-400/10 rounded-full blur-[140px] pointer-events-none">
+                </div>
+
+                <div class="max-w-4xl mx-auto relative z-10 space-y-12">
+
+                    <!-- Section Top Header Badge -->
+                    <div class="text-center space-y-3" data-aos="fade-up">
+                        <span
+                            class="bg-blue-100 text-blue-700 border border-blue-200 px-4 py-1.5 rounded-full text-lg sm:text-sm font-bold inline-flex items-center gap-2 shadow-sm">
+                            <i class="fas fa-lightbulb text-blue-600 mr-2"></i>Diagnosing Before Prescribing Solutions
+                        </span>
+                    </div>
+
+                    <!-- Vertical Roadmap Stepper Lines Container -->
+                    <div
+                        class="relative pl-6 sm:pl-10 border-l-2 border-dashed border-blue-300 space-y-12 sm:space-y-16 text-left">
+
+                        <!-- Step 1: Market & Audience Analysis -->
+                        <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                            <!-- Step Icon Badge Marker -->
+                            <div
+                                class="absolute -left-[21px] sm:-left-[25px] top-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600 text-white font-extrabold text-sm sm:text-base flex items-center justify-center shadow-lg shadow-blue-500/30 ring-4 ring-white">
+                                01
+                            </div>
+
+                            <div class="space-y-3">
+                                <span
+                                    class="text-xs font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100 inline-block">Market
+                                    & Audience Analysis</span>
+                                <p
+                                    class="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 leading-relaxed sm:leading-snug">
+                                    We understand that every market has unique characteristics. Therefore, we
+                                    meticulously analyze audience behaviors, competitor landscape, and industry
+                                    specifics before defining the ideal marketing approach.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Solution Philosophy -->
+                        <div class="relative group" data-aos="fade-up" data-aos-delay="150">
+                            <!-- Step Icon Badge Marker -->
+                            <div
+                                class="absolute -left-[21px] sm:-left-[25px] top-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-sky-500 text-white font-extrabold text-sm sm:text-base flex items-center justify-center shadow-lg shadow-sky-500/30 ring-4 ring-white">
+                                02
+                            </div>
+
+                            <div class="space-y-3">
+                                <span
+                                    class="text-xs font-black text-sky-600 bg-sky-50 px-3 py-1 rounded-full border border-sky-100 inline-block">Our
+                                    Solution Philosophy</span>
+                                <h3
+                                    class="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 leading-relaxed sm:leading-snug">
+                                    Fashne is far more than an agency. We firmly believe that sustainable results begin
+                                    with thoroughly diagnosing challenges before prescribing solutions.
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Comprehensive Analysis Pillars -->
+                        <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                            <!-- Step Icon Badge Marker -->
+                            <div
+                                class="absolute -left-[21px] sm:-left-[25px] top-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-600 text-white font-extrabold text-sm sm:text-base flex items-center justify-center shadow-lg shadow-indigo-500/30 ring-4 ring-white">
+                                03
+                            </div>
+
+                            <div class="space-y-4">
+                                <span
+                                    class="text-xs font-black text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100 inline-block">Comprehensive
+                                    Analysis Pillars</span>
+
+                                <p class="text-lg sm:text-xl font-black text-blue-700 flex items-center gap-2">
+                                    <i class="fas fa-search-nodes text-blue-500"></i>
+                                    <span>Every project begins with a deep dive into:</span>
+                                </p>
+
+                                <p
+                                    class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 leading-relaxed sm:leading-loose bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/90 shadow-sm">
+                                    Business model, product offering, target demographic, competitor behavior, market
+                                    dynamics, budget efficiency, and optimal marketing channels — crafting a bespoke
+                                    solution tailored to your goals.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Final Grand Outcome: Verbatim Tagline Banner -->
+                    <div class="pt-8 text-center space-y-6" data-aos="fade-up" data-aos-delay="250">
+                        <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-sky-500 mx-auto rounded-full"></div>
+
+                        <h4 class="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-900 leading-tight">
+                            Fashne: Your Partner in Building Stronger Presence and Sustainable Growth
+                        </h4>
+
+                        <div class="pt-2">
+                            <a href="../index.html#contact"
+                                class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-9 py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 font-bold text-base sm:text-lg">
+                                <i class="fas fa-handshake"></i>
+                                <span>Contact Us & Get Started</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+    </main>
+
+    <!-- Floating Contact Buttons (Mobile Dark Backdrop / Desktop Transparent) -->
+    <div
+        class="fixed bottom-4 left-1/2 -translate-x-1/2 md:bottom-6 md:left-6 md:translate-x-0 z-50 flex flex-row md:flex-col items-center gap-2.5 bg-slate-900/80 backdrop-blur-md p-2 rounded-full border border-slate-700/50 shadow-xl md:bg-transparent md:backdrop-blur-none md:p-0 md:border-none md:shadow-none">
+        <!-- Email -->
+        <a href="mailto:info@fashne.net" title="Email"
+            class="w-11 h-11 md:w-12 md:h-12 bg-[#ea4335] hover:bg-red-600 rounded-full flex items-center justify-center text-white shadow-md transition-all duration-300 hover:scale-110">
+            <i class="fas fa-envelope text-lg"></i>
+        </a>
+
+        <!-- Call -->
+        <a href="tel:01111263618" title="Call Us"
+            class="w-11 h-11 md:w-12 md:h-12 bg-[#1d6bf3] hover:bg-blue-700 rounded-full flex items-center justify-center text-white shadow-md transition-all duration-300 hover:scale-110">
+            <i class="fas fa-phone-alt text-lg"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/201111263618" target="_blank" title="WhatsApp"
+            class="w-11 h-11 md:w-12 md:h-12 bg-[#25d366] hover:bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-md transition-all duration-300 hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer
+        class="relative bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300 overflow-hidden mx-4 mb-4 md:mx-6 md:mb-6 lg:mx-8 lg:mb-8 rounded-[28px] sm:rounded-[36px] md:rounded-[40px] border border-slate-800/80 shadow-2xl shadow-blue-950/40">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-sky-600/5 rounded-full blur-3xl"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-3xl">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 py-16 relative z-10">
+            <!-- Main Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12" data-aos="fade-up">
+                <!-- Column 1: Brand Info -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-32 h-22 rounded-2xl bg-white flex items-center justify-center shadow-lg shadow-blue-500/30">
+                            <img src="../../assets/img/logo.webp" alt="" class="p-2" />
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-sm max-w-xs">
+                        We build an integrated digital presence for brands by combining digital marketing & ad
+                        campaigns, social media management & content writing, graphic design & visual identity, video
+                        editing & motion graphics, web development & design, and search engine optimization (SEO).
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-5 relative inline-block">
+                        Quick Links
+                        <span
+                            class="absolute -bottom-2 left-0 w-10 h-0.5 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Home</a>
+                        </li>
+                        <li>
+                            <a href="../index.html#services"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Services</a>
+                        </li>
+                        <li>
+                            <a href="../our-portfolio/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="../../about-us/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>About
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="../contact-us/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-5 relative inline-block">
+                        Our Services
+                        <span
+                            class="absolute -bottom-2 left-0 w-10 h-0.5 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../digital-marketing-and-ad-campaign-management/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Digital
+                                Marketing & Ad Campaigns</a>
+                        </li>
+                        <li>
+                            <a href="../social-media-management-and-content-writing/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Social
+                                Media & Content Writing</a>
+                        </li>
+                        <li>
+                            <a href="../graphic-design-and-visual-identity/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Brand
+                                Identity & Graphic Design</a>
+                        </li>
+                        <li>
+                            <a href="../seo-and-search-engine-optimization/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Search
+                                Engine Optimization (SEO)</a>
+                        </li>
+                        <li>
+                            <a href="../web-development-and-design/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Web
+                                Development & Design</a>
+                        </li>
+                        <li>
+                            <a href="../video-editing-and-motion-graphics/"
+                                class="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 text-sm group"><i
+                                    class="fas fa-chevron-right text-[10px] text-blue-400 group-hover:translate-x-1 transition"></i>Video
+                                Editing & Motion Graphics</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info & Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-5 relative inline-block">
+                        Contact Us
+                        <span
+                            class="absolute -bottom-2 left-0 w-10 h-0.5 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-sm">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 w-5"></i>
+                            <a href="https://maps.app.goo.gl/MMX2AXWQAYBtz9WY7" target="_blank"
+                                class="text-gray-400">Maghagha, Minya, Egypt</a>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i class="fas fa-phone-alt text-blue-400 w-5"></i>
+                            <a href="tel:+201111263618"
+                                class="text-gray-400 hover:text-white transition">01111263618</a>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i class="fas fa-envelope text-blue-400 w-5"></i>
+                            <a href="mailto:info@fashne.net"
+                                class="text-gray-400 hover:text-white transition">info@fashne.net</a>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i class="fas fa-clock text-blue-400 w-5"></i>
+                            <span class="text-gray-400">Sat - Thu: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                    <!-- Social Media -->
+                    <div class="mt-6">
+                        <h5 class="text-white font-semibold text-sm mb-3">Follow Us</h5>
+                        <div class="flex gap-3">
+                            <a href="https://www.facebook.com/fashne.net" target="_blank" rel="noopener noreferrer"
+                                class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/fashne_net" target="_blank" rel="noopener noreferrer"
+                                class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/fashne_net" target="_blank" rel="noopener noreferrer"
+                                class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@fashne_net" target="_blank" rel="noopener noreferrer"
+                                class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@fashne.net" target="_blank" rel="noopener noreferrer"
+                                class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="mt-10 pt-6 border-t border-gray-800/60 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4 flex-wrap justify-center">
+                    <span class="text-sm text-gray-400">
+                        <i class="fas fa-copyright mr-1"></i> 2026 Fashne. All rights reserved.
+                    </span>
+                    <span class="text-gray-600 hidden md:inline">|</span>
+                    <div class="flex gap-4 text-xs">
+                        <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">FAQ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Top Button -->
+            <button id="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-blue-600 to-sky-600 text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 flex items-center justify-center group">
+                <i class="fas fa-arrow-up group-hover:-translate-y-1 transition-transform"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                    menuToggle.classList.toggle('bg-blue-50');
+                });
+
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        menuToggle.classList.remove('bg-blue-50');
+                    });
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 1024) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        menuToggle.classList.remove('bg-blue-50');
+                    }
+                });
+
+                document.addEventListener('click', function (event) {
+                    const header = document.querySelector('header');
+                    if (header && !header.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        menuToggle.classList.remove('bg-blue-50');
+                    }
+                });
+            }
+
+            // Back to top visibility
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 400) {
+                        backToTopBtn.style.display = 'flex';
+                        backToTopBtn.style.opacity = '1';
+                    } else {
+                        backToTopBtn.style.opacity = '0';
+                        setTimeout(() => {
+                            if (window.scrollY <= 400) {
+                                backToTopBtn.style.display = 'none';
+                            }
+                        }, 300);
+                    }
+                });
+                backToTopBtn.style.display = 'none';
+                backToTopBtn.style.opacity = '0';
+            }
+
+            // Dynamic Header Scroll Effect (Dynamic Island)
+            const header = document.getElementById('main-header');
+            if (header) {
+                const handleScroll = () => {
+                    if (window.scrollY > 40) {
+                        header.classList.add('island-active');
+                    } else {
+                        header.classList.remove('island-active');
+                    }
+                };
+                window.addEventListener('scroll', handleScroll);
+                handleScroll(); // Run once on load to set correct state
+            }
+        });
+    </script>
+
+    <!-- ===== DEDICATED SERVICES SIDE DRAWER ===== -->
+    <div id="services-drawer-overlay"
+        class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300">
+    </div>
+
+    <div id="services-drawer"
+        class="fixed top-0 right-0 h-full w-full sm:w-[460px] bg-white z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+        <div>
+            <!-- Drawer Header -->
+            <div
+                class="p-6 border-b border-gray-100 flex items-center justify-between bg-gradient-to-r from-blue-50/80 via-white to-sky-50/50">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-11 h-11 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl shadow-md shadow-blue-500/25">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-gray-900 text-lg">Fashne Services</h3>
+                        <p class="text-xs text-blue-600 font-bold">Integrated 360° Marketing Ecosystem</p>
+                    </div>
+                </div>
+                <button id="close-services-drawer"
+                    class="w-10 h-10 rounded-full bg-gray-100 hover:bg-red-50 text-gray-500 hover:text-red-600 flex items-center justify-center transition-colors cursor-pointer">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Services List -->
+            <div class="p-5 sm:p-6 space-y-3.5">
+
+                <!-- 1. Digital Marketing & Ad Campaigns -->
+                <a href="../digital-marketing-and-ad-campaign-management/"
+                    class="services-drawer-link group p-4 rounded-2xl border border-gray-100 hover:border-blue-300 hover:bg-blue-50/50 transition-all duration-300 flex items-start gap-4 shadow-sm hover:shadow-md">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white flex items-center justify-center text-lg transition-colors flex-shrink-0">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-base group-hover:text-blue-600 transition-colors">
+                            Digital Marketing & Ad Campaigns</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">Targeted digital marketing strategies and
+                            high-performing ad campaigns that reach your audience and achieve measurable business goals.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 2. Social Media & Content Writing -->
+                <a href="../social-media-management-and-content-writing/"
+                    class="services-drawer-link group p-4 rounded-2xl border border-gray-100 hover:border-sky-300 hover:bg-sky-50/50 transition-all duration-300 flex items-start gap-4 shadow-sm hover:shadow-md">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-sky-100 text-sky-600 group-hover:bg-sky-600 group-hover:text-white flex items-center justify-center text-lg transition-colors flex-shrink-0">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-base group-hover:text-sky-600 transition-colors">Social
+                            Media & Content Writing</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">Professional social media management and
+                            compelling copywriting tailored to engage your community and build brand equity.</p>
+                    </div>
+                </a>
+
+                <!-- 3. SEO & Optimization -->
+                <a href="../seo-and-search-engine-optimization/"
+                    class="services-drawer-link group p-4 rounded-2xl border border-gray-100 hover:border-emerald-300 hover:bg-emerald-50/50 transition-all duration-300 flex items-start gap-4 shadow-sm hover:shadow-md">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center text-lg transition-colors flex-shrink-0">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-base group-hover:text-emerald-600 transition-colors">
+                            Search Engine Optimization (SEO)</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">Comprehensive search engine optimization
+                            to boost organic rankings, drive targeted visitors, and secure Google top results.</p>
+                    </div>
+                </a>
+
+                <!-- 4. Web Development & Design -->
+                <a href="../web-development-and-design/"
+                    class="services-drawer-link group p-4 rounded-2xl border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50/50 transition-all duration-300 flex items-start gap-4 shadow-sm hover:shadow-md">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-indigo-100 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white flex items-center justify-center text-lg transition-colors flex-shrink-0">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-base group-hover:text-indigo-600 transition-colors">
+                            Web Development & Design</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">Custom website and application development
+                            with high speed, responsive UI/UX design, and scalable modern web architecture.</p>
+                    </div>
+                </a>
+
+                <!-- 5. Video Editing & Motion Graphics -->
+                <a href="../video-editing-and-motion-graphics/"
+                    class="services-drawer-link group p-4 rounded-2xl border border-gray-100 hover:border-purple-300 hover:bg-purple-50/50 transition-all duration-300 flex items-start gap-4 shadow-sm hover:shadow-md">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white flex items-center justify-center text-lg transition-colors flex-shrink-0">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-base group-hover:text-purple-600 transition-colors">
+                            Video Editing & Motion Graphics</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">Creative video editing, dynamic motion
+                            graphics, and visual storytelling optimized for high social media engagement.</p>
+                    </div>
+                </a>
+
+                <!-- 6. Graphic Design & Visual Identity -->
+                <a href="../graphic-design-and-visual-identity/"
+                    class="services-drawer-link group p-4 rounded-2xl border border-gray-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all duration-300 flex items-start gap-4 shadow-sm hover:shadow-md">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600 group-hover:bg-amber-600 group-hover:text-white flex items-center justify-center text-lg transition-colors flex-shrink-0">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-gray-900 text-base group-hover:text-amber-600 transition-colors">
+                            Visual Identity & Graphic Design</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed mt-1">Full brand identity creation, memorable
+                            logos, brand style guides, marketing collateral, and distinctive visual assets.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Drawer Footer CTA -->
+        <div class="p-5 sm:p-6 border-t border-gray-100 bg-gray-50/80">
+            <a href="../index.html#contact"
+                class="services-drawer-link w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 transition-all">
+                <i class="fas fa-calendar-check"></i>
+                <span>Book a Comprehensive Consultation</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Services Drawer Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('services-drawer-toggle');
+            const mobileToggleBtn = document.getElementById('mobile-services-drawer-toggle');
+            const drawer = document.getElementById('services-drawer');
+            const overlay = document.getElementById('services-drawer-overlay');
+            const closeBtn = document.getElementById('close-services-drawer');
+            const drawerLinks = document.querySelectorAll('.services-drawer-link');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function openDrawer() {
+                if (!drawer || !overlay) return;
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                overlay.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    drawer.classList.remove('translate-x-full');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeDrawer() {
+                if (!drawer || !overlay) return;
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            if (toggleBtn) toggleBtn.addEventListener('click', openDrawer);
+            if (mobileToggleBtn) mobileToggleBtn.addEventListener('click', openDrawer);
+            if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+            if (overlay) overlay.addEventListener('click', closeDrawer);
+
+            drawerLinks.forEach(link => {
+                link.addEventListener('click', closeDrawer);
+            });
+        });
+    </script>
+
+    <!-- AOS Library JS Script & Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+                once: true,
+                offset: 60
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -43,7 +43,12 @@
 
         /* Dynamic Island Header Styles */
         #main-header {
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            will-change: top, width, border-radius;
+            transition-property: top, width, max-width, border-radius, background-color, border-color, box-shadow, backdrop-filter, -webkit-backdrop-filter;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         #main-header.island-active {
@@ -120,7 +125,13 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-
+
+                    <a href="../../about-us/"
+                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
+                        من نحن
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
                     <!-- Services Dedicated Side Drawer Trigger -->
                     <button id="services-drawer-toggle"
                         class="relative text-blue-600 font-bold group flex items-center gap-1.5 focus:outline-none cursor-pointer">
@@ -133,12 +144,6 @@
                     <a href="../../our-portfolio/"
                         class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
                         سابقة أعمالنا
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="../../about-us/"
-                        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 group">
-                        من نحن
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
@@ -200,6 +205,11 @@
                         class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
                         <i class="fas fa-home text-blue-500 w-5"></i>
                         الرئيسية
+                    </a>
+                    <a href="../../about-us/"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
+                        <i class="fas fa-info-circle text-blue-500 w-5"></i>
+                        من نحن
                     </a>
                     <button id="mobile-services-drawer-toggle"
                         class="flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold cursor-pointer">
@@ -213,11 +223,6 @@
                         class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
                         <i class="fas fa-briefcase text-blue-500 w-5"></i>
                         سابقة أعمالنا
-                    </a>
-                    <a href="../../about-us/"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
-                        <i class="fas fa-info-circle text-blue-500 w-5"></i>
-                        من نحن
                     </a>
                     <a href="../../contact-us/"
                         class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-300 text-gray-700 font-bold">
@@ -1304,15 +1309,15 @@
                     <div class="mt-6">
                         <h5 class="text-white font-semibold text-sm mb-3">تابعنا على</h5>
                         <div class="flex gap-3">
-                            <a href="https://www.facebook.com/fashne.net"
+                            <a href="https://www.facebook.com/fashne.net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-facebook"></i>
                             </a>
-                            <a href="https://www.instagram.com/fashne_net"
+                            <a href="https://www.instagram.com/fashne_net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://x.com/fashne_net"
+                            <a href="https://x.com/fashne_net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                                     <path
@@ -1320,11 +1325,11 @@
                                     </path>
                                 </svg>
                             </a>
-                            <a href="https://www.youtube.com/@fashne_net"
+                            <a href="https://www.youtube.com/@fashne_net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-youtube"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@fashne.net"
+                            <a href="https://www.tiktok.com/@fashne.net" target="_blank" rel="noopener noreferrer"
                                 class="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-blue-600/30 border border-gray-700 hover:border-blue-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
                                 <i class="fab fa-tiktok"></i>
                             </a>
