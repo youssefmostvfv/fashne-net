@@ -5,13 +5,16 @@
 # 1. إعداد الترميز والأمان الأساسي (Encoding & General Settings)
 # ------------------------------------------------------------------------------
 AddDefaultCharset UTF-8
-DefaultLanguage ar
+# اللغة تتحدد من وسم <html lang> في كل صفحة (عربي / إنجليزي)
 
 # منع استعراض محتويات المجلدات (Disable Directory Browsing)
 Options -Indexes +FollowSymLinks
 
 # صفحات الخطأ المخصصة (Custom Error Pages)
 ErrorDocument 404 /404.html
+<If "%{REQUEST_URI} =~ m#^/en(/|$)#">
+    ErrorDocument 404 /en/404.html
+</If>
 
 # ------------------------------------------------------------------------------
 # 2. حماية الملفات الحساسة (Protect Sensitive Files)
